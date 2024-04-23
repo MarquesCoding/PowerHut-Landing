@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 
 import { motion, AnimatePresence, useMotionValue } from "framer-motion";
-import {cn} from "@/utils/cn";
+import {cn} from "@/app/utils/cn";
 import {FaRegHandPointer} from "react-icons/fa";
 
 export const FollowerPointerCard = ({
