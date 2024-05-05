@@ -62,9 +62,6 @@ export function NavigationMenuDemo() {
                             <ListItem href="/docs" title="Server Hosting">
                                 Looking to play games with your friends? Great, we can help!
                             </ListItem>
-                            <ListItem href="/docs/installation" title="Dedicated Servers">
-                                Maybe you want to create your very own network or multiple games all from a single machine.
-                            </ListItem>
                             <ListItem href="/docs/primitives/typography" title="Discord Bots">
                                 Supercharge your Discord server your own bot, wanna play music? Feel free to use our free lavalink music server!
                             </ListItem>
