@@ -307,6 +307,7 @@ export default function Home() {
                               </p>
                               <p className="opacity-50 font-light">We currently only offer in Germany, but are
                                   expanding!</p>
+                              {/* eslint-disable-next-line react/no-unescaped-entities */}
                               <p className="opacity-50 font-light"> Don't see the location that you want? Throw us a
                                   ticket in the Discord!</p>
                           </div>
