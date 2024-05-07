@@ -15,7 +15,7 @@ const Card: React.FunctionComponent<CardProps> = ({
             <div className="flex flex-row justify-between p-8 gap-4 items-center relative z-10">
                 <div className="text-start">
                     <p className="text-md font-semibold md:text-lg">{header}</p>
-                    <p className="text-sm md:text-md opacity-80 font-light max-w-xs">{content}</p>
+                    <p className="text-sm md:text-md opacity-50 max-w-xs">{content}</p>
                 </div>
                 <div className="w-20 min-w-20 h-20 rounded-lg bg-black/40 flex items-center justify-center text-[#FF4D14]">
                     {logo}

@@ -1,10 +1,12 @@
 import React from 'react';
 import Flag from 'react-world-flags'
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
+import {IoPin} from "react-icons/io5";
 export interface PricingTier {
     title: string;
     cpu: string;
     price: number;
+    originalPrice?: number;
     features: string[];
     button: string;
     pill?: {
@@ -18,26 +20,41 @@ export interface PricingTier {
     }
 }
 
-const PricingCard: React.FC<PricingTier> = ({ title, cpu, price, features, button, pill, countries }) => {
+const PricingCard: React.FC<PricingTier> = ({ title, cpu, price, originalPrice, features, button, pill, countries }) => {
     return (
-        <div className="w-auto min-w-72 relative hover:-translate-y-1 duration-300">
+        <div className="w-auto min-w-full md:min-w-72 relative group md:px-0 px-4 duration-300">
             <div
-                className="max-w-xs mx-auto bg-[#141414]/90 border border-white/10 hover:shadow-xl hover:border hover:border-opacity-20 duration-300 shadow-lg rounded-lg overflow-hidden">
+                className="lg:max-w-xs max-w-4xl mx-auto bg-[#141414]/90 border border-white/10 hover:shadow-xl hover:border hover:border-opacity-20 duration-300 shadow-lg rounded-lg overflow-hidden group-hover:-translate-y-1 cursor-pointer">
                 <div className="px-6 py-4">
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-row w-full justify-between items-center">
                             <h3 className={`text-xl font-semibold text-white`}>{title}</h3>
                             {pill && (
-                                <p className="text-sm w-fit bg-zinc-800 border border-white/10 text-white py-1 px-3 rounded-full">
+                                <p className="text-sm w-fit bg-zinc-800 border border-white/10 text-white py-1 px-3 rounded-full animate-pulse">
                                     {pill.text}
                                 </p>
                             )}
                         </div>
                         <p className="text-xs opacity-80 italic">{cpu}</p>
                     </div>
-                    <div className="flex flex-row font-semibold text-white mt-4">
+                    <div className="flex flex-row font-semibold text-white mt-4 relative">
+                        {originalPrice && (
+                            <div
+                                className="absolute w-auto h-full bg-[#FF4D14] rounded-lg z-10 text-white p-2 flex items-center rotate-3 group-hover:-translate-y-12 group-hover:translate-x-1.5 group-hover:rotate-12 duration-300 transition-transform">
+                                <div className="absolute -top-4 right-0 h-4 w-4 rounded-full text-white rotate-12 animate-pulse">
+                                    <IoPin size={24} className={"rotate-12"} />
+                                </div>
+                                <span className="text-sm opacity-50">$</span>
+                                <span className="text-4xl">{price}</span>
+                            </div>
+                        )}
                         <span className="text-sm opacity-50">$</span>
-                        <span className="text-4xl">{price}</span>
+                        {originalPrice && (
+                            <span className="text-4xl">{originalPrice}</span>
+                        )}
+                        {!originalPrice && (
+                            <span className="text-4xl">{price}</span>
+                        )}
                     </div>
                     <p className="text-white italic text-xs opacity-50">per month</p>
                 </div>

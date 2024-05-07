@@ -30,9 +30,9 @@ export default function Home() {
         // },
         {
             title: 'Dev',
-            cpu: 'Ryzen 5 8700GE*',
-            price: 0.5,
-            features: ['Shared CPU Core', '512MB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP', 'Free Reverse Proxy'],
+            cpu: 'Ryzen 7 PRO 8700GE*',
+            price: 2,
+            features: ['Shared CPU Core', '1GB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP', 'Free Reverse Proxy'],
             button: 'Coming soon',
             countries: {
                 europe: true,
@@ -40,8 +40,8 @@ export default function Home() {
         },
         {
             title: 'Basic',
-            cpu: 'Ryzen 5 8700GE*',
-            price: 4,
+            cpu: 'Ryzen 7 PRO 8700GE*',
+            price: 8,
             features: ['Shared CPU Core', '4GB DDR5 RAM**','1GBit/s Connection', '30GB NVMe SSD', 'Shared IP', 'Free Reverse Proxy'],
             button: 'Coming soon',
             countries: {
@@ -51,7 +51,8 @@ export default function Home() {
         {
             title: 'Advanced',
             cpu: 'Ryzen 7 7700*',
-            price: 10,
+            price: 12,
+            originalPrice: 16,
             features: ['Dedicated CPU Core', '10GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP', 'Free Reverse Proxy'],
             button: 'Coming soon',
             pill: {
@@ -64,7 +65,8 @@ export default function Home() {
         {
             title: 'Pro',
             cpu: 'Ryzen 7 7950X3D*',
-            price: 12,
+            price: 16,
+            originalPrice: 20,
             features: ['Dedicated CPU Core', '12GB DDR5 RAM**','1GBit/s Connection', '100GB NVMe SSD', 'Dedicated IP' , 'Free Reverse Proxy'],
             button: 'Coming soon',
             countries: {
@@ -74,7 +76,8 @@ export default function Home() {
         {
             title: 'Top',
             cpu: 'Ryzen 7 7950X3D*',
-            price: 16,
+            price: 20,
+            originalPrice: 24,
             features: ['Dedicated CPU Core', '16GB DDR5 RAM**','1GBit/s Connection', 'Unmetered NVMe SSD***', 'Dedicated IP' , 'Free Reverse Proxy'],
             button: 'Coming soon',
             countries: {
@@ -99,8 +102,8 @@ export default function Home() {
                       opacity: {duration: 1}
                   }}
                   className="w-full h-auto py-2 bg-[#FF4D14] text-[#141414] fixed top-0 left-0 z-40 lg:text-lg text-sm flex justify-center items-center gap-2 shadow-lg shadow-[#141414]">
-                  Use code : <span className="font-semibold hover:opacity-50 duration-300">POWER</span> and
-                  enjoy 25% off your first month!
+                  Use code : <span className="font-semibold font-mono hover:opacity-50 duration-300 bg-white px-2 rounded-md">POWER</span> and
+                  enjoy 15% off your first month!
               </motion.div>
               <motion.div
                   initial={{
@@ -177,7 +180,7 @@ export default function Home() {
                                   delay: 2,
                               }}
                           >
-                              <p className="text-zinc-600 mt-4 lg:max-w-full max-w-sm">
+                              <p className="text-zinc-600 mt-4 lg:max-w-full max-w-sm font-mono font-semibold">
                                   We guarantee the <span className="text-[#FF4D14]">best hosting experience</span> from
                                   hardware to support.
                               </p>
