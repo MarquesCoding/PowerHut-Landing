@@ -16,36 +16,36 @@ import {cn} from "@/app/utils/cn";
 const components: { title: string; href: string; description: string }[] = [
     {
         title: "About us",
-        href: "/docs/primitives/alert-dialog",
+        href: "/about",
         description:
             "Wanna learn more about about our founding members? How we started our journey?",
     },
     {
         title: "Our Power Panel",
-        href: "/docs/primitives/hover-card",
+        href: "/panel",
         description:
             "Powered under the hood by Pterodactyl, our fully custom built Game Panel",
     },
     {
         title: "Support",
-        href: "/docs/primitives/progress",
+        href: "/support",
         description:
             "Get all of your questions answered in our discord server or contact support.",
     },
     {
         title: "Guides",
-        href: "/docs/primitives/scroll-area",
+        href: "/guides",
         description: "Learn how to manage your server to get the most out of it!",
     },
     {
         title: "Terms of Service",
-        href: "/docs/primitives/tabs",
+        href: "/terms",
         description:
             "",
     },
     {
         title: "Privacy Policy",
-        href: "/docs/primitives/tooltip",
+        href: "/privacy",
         description:
             "",
     },
@@ -58,12 +58,9 @@ export function NavigationMenuDemo() {
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Hosting</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                            <ListItem href="/docs" title="Server Hosting">
+                        <ul className="grid gap-3 p-6 md:w-[100px] lg:w-[400px] bg-[#141414]">
+                            <ListItem href="/plans" title="Server Hosting">
                                 Looking to play games with your friends? Great, we can help!
-                            </ListItem>
-                            <ListItem href="/docs/primitives/typography" title="Discord Bots">
-                                Supercharge your Discord server your own bot, wanna play music? Feel free to use our free lavalink music server!
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>
@@ -71,7 +68,7 @@ export function NavigationMenuDemo() {
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Information</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-[#141414]">
                             {components.map((component) => (
                                 <ListItem
                                     key={component.title}

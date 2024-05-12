@@ -14,77 +14,10 @@ import {RiHardDriveFill} from "react-icons/ri";
 import {FaDiscord, FaGlobeEurope, FaInstagramSquare, FaTiktok, FaTwitter} from "react-icons/fa";
 import Card from "@/app/components/Card/Card";
 import {BsFillMouseFill} from "react-icons/bs";
+import Footer from "@/app/components/Footer";
+import {pricingTiers} from "@/app/utils/pricing";
 
 export default function Home() {
-    const pricingTiers: PricingTier[] = [
-        // {
-        //     title: 'Web',
-        //     cpu: 'Ryzen 5 3600*',
-        //     price: 3,
-        //     features: ['3 Domains', '3 Databases','AutoSSL - CPanel', '50GB NVMe SSD', 'Unlimited Bandwidth', 'Shared IP'],
-        //     button: 'Get Started',
-        //     countries: {
-        //         america: true,
-        //         europe: true,
-        //     }
-        // },
-        {
-            title: 'Dev',
-            cpu: 'Ryzen 7 PRO 8700GE*',
-            price: 2,
-            features: ['Shared CPU Core', '1GB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP', 'Free Reverse Proxy'],
-            button: 'Coming soon',
-            countries: {
-                europe: true,
-            }
-        },
-        {
-            title: 'Basic',
-            cpu: 'Ryzen 7 PRO 8700GE*',
-            price: 8,
-            features: ['Shared CPU Core', '4GB DDR5 RAM**','1GBit/s Connection', '30GB NVMe SSD', 'Shared IP', 'Free Reverse Proxy'],
-            button: 'Coming soon',
-            countries: {
-                europe: true,
-            }
-        },
-        {
-            title: 'Advanced',
-            cpu: 'Ryzen 7 7700*',
-            price: 12,
-            originalPrice: 16,
-            features: ['Dedicated CPU Core', '10GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP', 'Free Reverse Proxy'],
-            button: 'Coming soon',
-            pill: {
-                text: 'Most Popular',
-            },
-            countries: {
-                europe: true,
-            }
-        },
-        {
-            title: 'Pro',
-            cpu: 'Ryzen 7 7950X3D*',
-            price: 16,
-            originalPrice: 20,
-            features: ['Dedicated CPU Core', '12GB DDR5 RAM**','1GBit/s Connection', '100GB NVMe SSD', 'Dedicated IP' , 'Free Reverse Proxy'],
-            button: 'Coming soon',
-            countries: {
-                europe: true,
-            }
-        },
-        {
-            title: 'Top',
-            cpu: 'Ryzen 7 7950X3D*',
-            price: 20,
-            originalPrice: 24,
-            features: ['Dedicated CPU Core', '16GB DDR5 RAM**','1GBit/s Connection', 'Unmetered NVMe SSD***', 'Dedicated IP' , 'Free Reverse Proxy'],
-            button: 'Coming soon',
-            countries: {
-                europe: true,
-            }
-        },
-    ];
   return (
       // <FollowerPointerCard>
       <>
@@ -328,78 +261,7 @@ export default function Home() {
                       </div>
                   </div>
               </div>
-              <div className="bg-[#FF4D14] w-full h-auto p-12">
-                  <div className="flex flex-col lg:flex-row gap-24 justify-between text-black">
-                      <div className="flex flex-col gap-12">
-                          <div className="flex flex-row gap-4">
-                              <img className="cursor-pointer hover:opacity-50 duration-300 w-8" src={"/logo-black.png"}
-                                   alt={"logo"}/>
-                              <p className="max-w-xs opacity-70">
-                                  PowerHut is a game focused hosting company that started in early 2021.
-                              </p>
-                          </div>
-                          <div className="flex flex-row gap-4">
-                              <FaDiscord size={33}
-                                         className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
-                              <FaTwitter size={33}
-                                         className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
-                              <FaInstagramSquare size={33}
-                                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
-                              <FaTiktok size={33}
-                                        className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
-                          </div>
-                          <p className="max-w-lg opacity-70 text-sm">
-                              © 2019 - 2024 | PowerHut, LLC. | All rights reserved.
-                          </p>
-                      </div>
-                      <div className="flex flex-col sm:flex-row gap-12">
-                          <div className="flex flex-col gap-2">
-                              <p className="underline font-semibold">Support</p>
-                              <a href={'https://docs.powerhut.pro/faq'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>FAQ</a>
-                              <a href={'https://discord.powerhut.pro'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Discord</a>
-                              <a href={'https://docs.powerhut.pro'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Knowledgebase</a>
-                              <a href={'https://monitor.powerhut.pro'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Server
-                                  Status</a>
-                              <a href={'https://grafana.powerhut.pro'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Grafana</a>
-                          </div>
-                          <div className="flex flex-col gap-2">
-                              <p className="underline font-semibold">Client</p>
-                              <a href={'https://billing.powerhut.pro/register.php'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Register</a>
-                              <a href={'https://billing.powerhut.pro/index.php?rp=/login'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Login</a>
-                              <a href={'https://panel.powerhut.pro'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Game
-                                  Panel</a>
-                              <a href={'https://billing.powerhut.pro/submitticket.php?step=2&deptid=1'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Submit
-                                  a Ticket</a>
-                          </div>
-                          <div className="flex flex-col gap-2">
-                              <a href={'/'} className="underline font-semibold">Legal</a>
-                              <a href={'/'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Terms
-                                  of Service</a>
-                              <a href={'/'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Privacy
-                                  Policy</a>
-                              <a href={'/'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Fair
-                                  Usage Policy</a>
-                              <a href={'/'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Minecraft
-                                  EULA</a>
-                              <a href={'/'}
-                                 className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Abuse</a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+              <Footer/>
           </div>
       </>
       // </FollowerPointerCard>

@@ -50,7 +50,12 @@ const PricingCard: React.FC<PricingTier> = ({ title, cpu, price, originalPrice, 
                         )}
                         <span className="text-sm opacity-50">$</span>
                         {originalPrice && (
-                            <span className="text-4xl">{originalPrice}</span>
+                            <div className="flex items-center justify-center">
+                                <div className="w-10 h-1 bg-[#FF4D14] rotate-[30deg] absolute">
+
+                                </div>
+                                <span className="text-4xl opacity-50">{originalPrice}</span>
+                            </div>
                         )}
                         {!originalPrice && (
                             <span className="text-4xl">{price}</span>
