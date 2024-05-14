@@ -3,7 +3,7 @@ import React from "react";
 import {motion} from "framer-motion";
 import {NavigationMenuDemo} from "@/app/components/Navigation/Navigation";
 import Footer from "@/app/components/Footer";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/app/components/ui/accordion";
 import Link from "next/link";
 import {pricingTiers} from "@/app/utils/pricing";
 import PricingCard from "@/app/components/PricingCard/PricingCard";
