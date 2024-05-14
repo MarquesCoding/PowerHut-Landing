@@ -34,7 +34,7 @@ const components: { title: string; href: string; description: string }[] = [
     },
     {
         title: "Guides",
-        href: "/guides",
+        href: "https://billing.powerhut.pro/index.php?rp=/knowledgebase",
         description: "Learn how to manage your server to get the most out of it!",
     },
     {
@@ -82,14 +82,27 @@ export function NavigationMenuDemo() {
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <Link href="/docs" legacyBehavior passHref>
-                        <NavigationMenuLink className={cn(
-                            navigationMenuTriggerStyle(),
-                            "bg-white text-black hover:bg-[#FF4D14] hover:text-white"
-                        )}>
-                            Login
-                        </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuTrigger
+                        className="bg-white text-black hover:bg-[#FF4D14] hover:text-white"
+                    >Login</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                        <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-1 bg-[#141414]">
+                            <ListItem
+                                key="Billing Panel"
+                                title="Billing Panel"
+                                href="https://billing.powerhut.pro"
+                            >
+                                Panel for where you order a server
+                            </ListItem>
+                            <ListItem
+                                key="Game Panel"
+                                title="Game Panel"
+                                href="https://panel.powerhut.pro"
+                            >
+                                Panel for where you control & monitor your purchased servers
+                            </ListItem>
+                        </ul>
+                    </NavigationMenuContent>
                 </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>

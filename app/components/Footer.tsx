@@ -1,13 +1,13 @@
-import {FaDiscord, FaInstagramSquare, FaTiktok, FaTwitter} from "react-icons/fa";
+import {FaDiscord, FaInstagram, FaTiktok, FaTwitter} from "react-icons/fa";
 import React from "react";
 
 const Footer = () => {
     return (
         <div className="bg-[#FF4D14] w-full h-auto p-12">
-            <div className="flex flex-col lg:flex-row gap-24 justify-between text-black">
+            <div className="flex flex-col lg:flex-row gap-24 justify-between text-white">
                 <div className="flex flex-col gap-12">
-                    <div className="flex flex-row gap-4">
-                        <img className="cursor-pointer hover:opacity-50 duration-300 w-8" src={"/logo-black.png"}
+                    <div className="flex flex-row gap-4 items-center">
+                        <img className="cursor-pointer hover:opacity-50 duration-300 w-auto h-10 mr-4" src={"/logo-white.png"}
                              alt={"logo"}/>
                         <p className="max-w-xs opacity-70">
                             PowerHut is a game focused hosting company that started in early 2021.
@@ -18,7 +18,7 @@ const Footer = () => {
                                    className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
                         <FaTwitter size={33}
                                    className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
-                        <FaInstagramSquare size={33}
+                        <FaInstagram size={33}
                                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
                         <FaTiktok size={33}
                                   className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
@@ -30,11 +30,11 @@ const Footer = () => {
                 <div className="flex flex-col sm:flex-row gap-12">
                     <div className="flex flex-col gap-2">
                         <p className="underline font-semibold">Support</p>
-                        <a href={'https://docs.powerhut.pro/faq'}
+                        <a href={'/support'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>FAQ</a>
                         <a href={'https://discord.powerhut.pro'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Discord</a>
-                        <a href={'https://docs.powerhut.pro'}
+                        <a href={'https://billing.powerhut.pro/index.php?rp=/knowledgebase'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Knowledgebase</a>
                         <a href={'https://monitor.powerhut.pro'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Server
@@ -57,19 +57,19 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-col gap-2">
                         <a href={'/'} className="underline font-semibold">Legal</a>
-                        <a href={'/'}
+                        <a href={'/terms'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Terms
                             of Service</a>
-                        <a href={'/'}
+                        <a href={'/policy'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Privacy
                             Policy</a>
-                        <a href={'/'}
+                        <a href={'/fair'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Fair
                             Usage Policy</a>
-                        <a href={'/'}
+                        <a href={'https://www.minecraft.net/en-us/eula'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Minecraft
                             EULA</a>
-                        <a href={'/'}
+                        <a href={'/support'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Abuse</a>
                     </div>
                 </div>
