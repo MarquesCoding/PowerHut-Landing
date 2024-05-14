@@ -6,7 +6,6 @@ import Footer from "@/app/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/app/components/ui/accordion";
 import Link from "next/link";
 
-
 export default function Page() {
     return (
         <div className="w-full h-full flex flex-col">
