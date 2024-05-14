@@ -178,7 +178,9 @@ export default function Page() {
                                             <li>
                                                 <strong>Company</strong><b
                                                 className="text-white/50 font-medium"> (referred
+                                                {/* eslint-disable-next-line react/no-unescaped-entities */}
                                                 to as either "the
+                                                {/* eslint-disable-next-line react/no-unescaped-entities */}
                                                 Company", "We", "Us" or "Our" in this
                                                 Agreement) refers to PowerHut.</b>
                                             </li>
@@ -225,6 +227,7 @@ export default function Page() {
                                             <li>
                                                 <strong>Terms and Conditions</strong><b
                                                 className="text-white/50 font-medium"> (also referred as
+                                                {/* eslint-disable-next-line react/no-unescaped-entities */}
                                                 "Terms") mean these Terms and Conditions
                                                 that form the entire agreement between You and the Company regarding the
                                                 use
@@ -478,6 +481,7 @@ export default function Page() {
                                     the service is at your sole risk. The service and all products and services
                                     delivered to
                                     you through the
+                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                                     service are (except as expressly stated by us) provided 'as is' and 'as available'
                                     for
                                     your use, without
@@ -566,6 +570,7 @@ export default function Page() {
                                     We reserve the right, at Our sole discretion, to modify or replace these Terms at
                                     any
                                     time. If a
+                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                                     revision is material We will make reasonable efforts to provide at least 30 days'
                                     notice
                                     prior to any

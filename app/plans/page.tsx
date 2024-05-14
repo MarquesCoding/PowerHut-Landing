@@ -102,7 +102,9 @@ export default function Page() {
                                 <p className="text-lg">Off-Site Regular Backups</p>
                             </div>
                             <p className="opacity-50">Nobody likes losing data, and especially not for your
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
                                 game-servers. We've setup a reliable and easy to use backups system, that can
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
                                 automatically create backups for you. Bonus points, they're all stored off-site in case
                                 of emergencies.</p>
                         </div>
