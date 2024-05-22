@@ -65,7 +65,7 @@ const Footer = () => {
                         <a href={'/terms'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Terms
                             of Service</a>
-                        <a href={'/policy'}
+                        <a href={'/privacy'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Privacy
                             Policy</a>
                         <a href={'/fair'}

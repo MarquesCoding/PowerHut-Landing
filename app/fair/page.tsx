@@ -67,7 +67,7 @@ export default function Page() {
                         }}
                         className="flex flex-col items-center"
                     >
-                        <p className="text-8xl font-bold">Fair usage Policy</p>
+                        <p className="text-3xl lg:text-8xl font-bold">Fair usage Policy</p>
                         <div className="max-w-2xl text-start mt-12 flex flex-col gap-4">
                             <p>Last Updated : 05/12/2024</p>
 
@@ -87,7 +87,7 @@ export default function Page() {
                     opacity: {duration: 1}
                 }}
 
-                className="w-full h-auto flex items-center justify-center bg-gradient-to-br from-[#FF4D14]/10 to-transparent bg-opacity-50 mb-24">
+                className="w-full h-auto flex items-center justify-center bg-gradient-to-br from-[#FF4D14]/10 to-transparent bg-opacity-50 mb-24 p-4 lg:p-0">
                 <div className="mt-12 flex flex-col gap-4 max-w-2xl min-w-2xl w-full">
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">

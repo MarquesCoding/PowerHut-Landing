@@ -21,7 +21,7 @@ export default function Home() {
   return (
       // <FollowerPointerCard>
       <>
-          <div className="w-full h-full flex flex-col">
+          <div className="w-full h-full flex flex-col max-w-screen">
               <motion.div
                   initial={{
                       opacity: 0
@@ -178,16 +178,16 @@ export default function Home() {
                           use and ready whenever you want.`}</p>
                   </div>
                   <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4">
-                      <div className="w-full flex items-center justify-center max-w-2xl opacity-80 translate-x-40">
+                      <div className="w-full flex items-center justify-center max-w-2xl opacity-80 lg:translate-x-40 p-4">
                           <img src={'/panel-01.png'} alt="panel"
                                className="rounded-lg"/>
                       </div>
                       <div
-                          className="w-full flex items-center justify-center max-w-5xl relative z-10 hover:scale-150 duration-300">
+                          className="w-full flex items-center justify-center max-w-5xl relative z-10 hover:scale-150 duration-300 p-4">
                           <img src={'/panel.png'} alt="panel"
                                className="rounded-lg shadow-2xl shadow-[#FF4D14]/30"/>
                       </div>
-                      <div className="w-full flex items-center justify-center max-w-2xl opacity-80 -translate-x-40">
+                      <div className="w-full flex items-center justify-center max-w-2xl opacity-80 lg:-translate-x-40 p-4">
                           <img src={'/panel-02.png'} alt="panel"
                                className="rounded-lg"/>
                       </div>

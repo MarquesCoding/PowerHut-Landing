@@ -77,7 +77,8 @@ export default function Page() {
                         }}
                         className="flex flex-col items-center"
                     >
-                        <p className="text-8xl font-bold">How can <span className="text-[#FF4D14]">We </span> help You?
+                        <p className="text-3xl lg:text-8xl font-bold">How can <span
+                            className="text-[#FF4D14]">We </span> help You?
                         </p>
                         <div className="max-w-2xl mt-4 flex flex-col gap-4 opacity-50">
                             <p>Our Support Team is ready for all your questions, at almost any hour during the day.
@@ -100,7 +101,7 @@ export default function Page() {
 
                 className="w-full h-auto flex items-center justify-center bg-gradient-to-tl to-[#FF4D14]/10 from-transparent bg-opacity-50 pb-10">
                 <div
-                    className="w-auto h-auto select-none rounded-2xl bg-[#141414]/90 border border-white/10 relative flex items-center justify-center duration-300">
+                    className="w-full lg:w-auto m-4 lg:m-0 h-auto select-none rounded-2xl bg-[#141414]/90 border border-white/10 relative flex flex-col lg:flex-row items-center justify-center duration-300">
                     <div
                         className="w-full h-full absolute bg-dot-white/[0.23] rounded-2xl z-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
                     <div className="flex flex-col justify-between p-8 gap-4 items-center relative z-10">
@@ -120,7 +121,7 @@ export default function Page() {
                             </a>
                         </div>
                     </div>
-                    <div className="w-0.5 h-40 bg-white rounded-lg opacity-5 relative flex"/>
+                    <div className="w-40 h-0.5 lg:w-0.5 lg:h-40 bg-white rounded-lg opacity-5 relative flex"/>
                     <div className="flex flex-col justify-between p-8 gap-4 items-center relative z-10">
                         <div className="text-center flex flex-col gap-4 items-center">
                             <p className="text-md font-semibold md:text-2xl">Billing Area</p>
@@ -138,7 +139,7 @@ export default function Page() {
                             </a>
                         </div>
                     </div>
-                    <div className="w-0.5 h-40 bg-white rounded-lg opacity-5  relative flex"/>
+                    <div className="w-40 h-0.5 lg:w-0.5 lg:h-40 bg-white rounded-lg opacity-5 relative flex"/>
                     <div className="flex flex-col justify-between p-8 gap-4 items-center relative z-10">
                         <div className="text-center flex flex-col gap-4 items-center">
                             <p className="text-md font-semibold md:text-2xl">Knowledgebase</p>
@@ -170,7 +171,7 @@ export default function Page() {
                     opacity: {duration: 1}
                 }}
 
-                className="w-full h-auto flex items-center justify-center bg-gradient-to-tr from-[#FF4D14]/10 to-transparent bg-opacity-50 pb-24">
+                className="w-full h-auto flex items-center justify-center bg-gradient-to-tr from-[#FF4D14]/10 to-transparent bg-opacity-50 pb-24 p-4 lg:0">
                 <div className="flex flex-col min-w-2xl w-full items-center">
                     <div className="mt-12 flex flex-col gap-4 max-w-2xl min-w-2xl w-full">
                         <Accordion type="single" collapsible className="w-full">
