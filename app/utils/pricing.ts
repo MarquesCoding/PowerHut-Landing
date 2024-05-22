@@ -20,6 +20,7 @@ export const pricingTiers: PricingTier[] = [
         button: 'Coming soon',
         countries: {
             europe: true,
+            america: true
         }
     },
     {
@@ -30,11 +31,12 @@ export const pricingTiers: PricingTier[] = [
         button: 'Coming soon',
         countries: {
             europe: true,
+            america: true
         }
     },
     {
         title: 'Advanced',
-        cpu: 'Ryzen 7 7700*',
+        cpu: 'Ryzen 7 PRO 8700GE*',
         price: 12,
         originalPrice: 16,
         features: ['Dedicated CPU Core', '10GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP', 'Free Reverse Proxy'],
@@ -44,6 +46,7 @@ export const pricingTiers: PricingTier[] = [
         },
         countries: {
             europe: true,
+            america: true
         }
     },
     {
@@ -55,6 +58,7 @@ export const pricingTiers: PricingTier[] = [
         button: 'Coming soon',
         countries: {
             europe: true,
+            america: true
         }
     },
     {
@@ -66,6 +70,7 @@ export const pricingTiers: PricingTier[] = [
         button: 'Coming soon',
         countries: {
             europe: true,
+            america: true
         }
     },
 ];

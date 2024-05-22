@@ -3,7 +3,6 @@ import React from "react";
 import {motion} from "framer-motion";
 import {NavigationMenuDemo} from "@/app/components/Navigation/Navigation";
 import Footer from "@/app/components/Footer";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/app/components/ui/accordion";
 import Link from "next/link";
 import {pricingTiers} from "@/app/utils/pricing";
 import PricingCard from "@/app/components/PricingCard/PricingCard";
@@ -127,7 +126,7 @@ export default function Page() {
                                 <div><IoIosSwitch  size={32} className="text-[#FF4D14]"/></div>
                                 <p className="text-lg">Easily Switch your Jars and Games</p>
                             </div>
-                            <p className="opacity-50">Keeping all your game-jars up to date can be a hassle, to which we said; no more! Using our built-in Claws feature, easily switch or update your server jars without having to search for the proper one and upload them through the panel.</p>
+                            <p className="opacity-50">Keeping all your game-jars up to date can be a hassle, to which we said; no more! Using our built-in jar-changer feature, easily switch or update your server jars without having to search for the proper one and upload them through the panel.</p>
                         </div>
                     </div>
                     <div className="flex w-full h-auto flex-wrap justify-center gap-2 mb-24">

@@ -1,5 +1,6 @@
 import {FaDiscord, FaInstagram, FaTiktok, FaTwitter} from "react-icons/fa";
 import React from "react";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
@@ -10,21 +11,25 @@ const Footer = () => {
                         <img className="cursor-pointer hover:opacity-50 duration-300 w-auto h-10 mr-4" src={"/logo-white.png"}
                              alt={"logo"}/>
                         <p className="max-w-xs opacity-70">
-                            PowerHut is a game focused hosting company that started in early 2021.
+                            PowerHut is a game focused hosting company that started in late 2023.
                         </p>
                     </div>
                     <div className="flex flex-row gap-4">
-                        <FaDiscord size={33}
-                                   className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
-                        <FaTwitter size={33}
-                                   className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
-                        <FaInstagram size={33}
-                                           className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
-                        <FaTiktok size={33}
-                                  className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
+                        <a href={'https://discord.gg/invite/powerhut'}>
+                            <FaDiscord size={33}
+                                       className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
+                        </a>
+                        <a href="https://twitter.com/PowerHutpro">
+                        <FaSquareXTwitter size={33}
+                                          className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
+                        </a>
+                            <a href="https://www.tiktok.com/@powerhutpro">
+                                <FaTiktok size={33}
+                                          className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
+                            </a>
                     </div>
                     <p className="max-w-lg opacity-70 text-sm">
-                        © 2019 - 2024 | PowerHut, LLC. | All rights reserved.
+                        © 2024 | PowerHut, LTD. | All rights reserved.
                     </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-12">
@@ -32,7 +37,7 @@ const Footer = () => {
                         <p className="underline font-semibold">Support</p>
                         <a href={'/support'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>FAQ</a>
-                        <a href={'https://discord.powerhut.pro'}
+                        <a href={'https://discord.gg/invite/powerhut'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Discord</a>
                         <a href={'https://billing.powerhut.pro/index.php?rp=/knowledgebase'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Knowledgebase</a>

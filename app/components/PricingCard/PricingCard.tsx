@@ -92,7 +92,7 @@ const PricingCard: React.FC<PricingTier> = ({ title, cpu, price, originalPrice, 
                                     <Flag code="us" className="w-6 rounded" />
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                    Florida, New Jersey
+                                    New York City, Los Angeles
                                 </TooltipContent>
                             </Tooltip>
                         </TooltipProvider>

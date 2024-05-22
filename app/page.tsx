@@ -241,7 +241,7 @@ export default function Home() {
                               <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
                                   Our Locations
                               </p>
-                              <p className="opacity-50 font-light">We currently only offer in Germany, but are
+                              <p className="opacity-50 font-light">We currently only offer in Germany & USA, but are
                                   expanding!</p>
                               {/* eslint-disable-next-line react/no-unescaped-entities */}
                               <p className="opacity-50 font-light"> Don't see the location that you want? Throw us a
@@ -254,8 +254,8 @@ export default function Home() {
                               {x: 46, y: 25.5, name: `Germany - FSN`},
                               // {x: 92, y: 80, name: `Australia - SYD`},
                               // {x: 78, y: 60, name: `Asia - SGP`},
-                              // {x: 21, y: 30, name: `America - NJ`},
-                              // {x: 18.5, y: 40, name: `America - FL`},
+                              {x: 25, y: 24, name: `America - NYC`},
+                              {x: 8, y: 35, name: `America - LA`},
                           ]}
                                         mapSrc={'https://upload.wikimedia.org/wikipedia/commons/a/a0/World_map_with_points.svg'}/>
                       </div>
