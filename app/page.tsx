@@ -1,6 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
-import PricingCard, { PricingTier } from "./components/PricingCard/PricingCard";
+import PricingCard from "./components/PricingCard/PricingCard";
 import { NavigationMenuDemo } from "./components/Navigation/Navigation";
 import React from "react";
 import { BackgroundBeams } from "./components/Backgrounds/Beam";
@@ -11,7 +11,6 @@ import {PiGameControllerFill} from "react-icons/pi";
 import {FaMoneyBill, FaShieldHeart, FaToolbox, FaXTwitter} from "react-icons/fa6";
 import {LuNetwork} from "react-icons/lu";
 import {RiHardDriveFill} from "react-icons/ri";
-import {FaDiscord, FaGlobeEurope, FaInstagramSquare, FaTiktok, FaTwitter} from "react-icons/fa";
 import Card from "@/app/components/Card/Card";
 import {BsFillMouseFill} from "react-icons/bs";
 import Footer from "@/app/components/Footer";
