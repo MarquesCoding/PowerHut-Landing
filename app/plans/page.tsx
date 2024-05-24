@@ -134,6 +134,7 @@ export default function Page() {
                             <PricingCard key={index} {...tier} />
                         ))}
                     </div>
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                     <p className="text-center opacity-30 text-sm mb-4">* Free Dedicated IP's only for our Advanced + tiers</p>
                 </div>
             </motion.div>
