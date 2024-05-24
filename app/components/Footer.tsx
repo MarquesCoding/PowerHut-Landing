@@ -5,10 +5,10 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className="bg-[#FF4D14] w-full h-auto p-12">
-            <div className="flex flex-col lg:flex-row gap-24 justify-between text-white">
+            <div className="flex flex-col lg:flex-row gap-24 justify-between text-black">
                 <div className="flex flex-col gap-12">
                     <div className="flex flex-row gap-4 items-center">
-                        <img className="cursor-pointer hover:opacity-50 duration-300 w-auto h-10 mr-4" src={"/logo-white.png"}
+                        <img className="cursor-pointer hover:opacity-50 duration-300 w-auto h-10 mr-4" src={"/logo-black.png"}
                              alt={"logo"}/>
                         <p className="max-w-xs opacity-70">
                             PowerHut is a game focused hosting company that started in late 2023.
@@ -75,7 +75,8 @@ const Footer = () => {
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Minecraft
                             EULA</a>
                         <a href={'/support'}
-                           className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Abuse</a>
+                           className={"hover:opacity-10" +
+                               "0 opacity-70 duration-300 cursor-pointer hover:text-white"}>Abuse</a>
                     </div>
                 </div>
             </div>

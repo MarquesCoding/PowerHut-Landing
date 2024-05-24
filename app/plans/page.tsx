@@ -117,9 +117,9 @@ export default function Page() {
                         <div className="max-w-xl">
                             <div className="flex gap-4 items-center">
                                 <div><RiHomeWifiFill  size={32} className="text-[#FF4D14]"/></div>
-                                <p className="text-lg">Free Dedicated IPs & Reverse Proxies</p>
+                                <p className="text-lg">Free Dedicated IPs</p>
                             </div>
-                            <p className="opacity-50">To give you the best possible experience, certain features are a must in our eyes. Features like free dedicated IPs*, reverse proxies, multiple backup slots and more all from within our panel, at no additional cost.</p>
+                            <p className="opacity-50">To give you the best possible experience, certain features are a must in our eyes. Features like free dedicated IPs*, multiple backup slots and more all from within our panel, at no additional cost.</p>
                         </div>
                         <div className="max-w-xl">
                             <div className="flex gap-4 items-center">
@@ -134,6 +134,7 @@ export default function Page() {
                             <PricingCard key={index} {...tier} />
                         ))}
                     </div>
+                    <p className="text-center opacity-30 text-sm mb-4">* Free Dedicated IP's only for our Advanced + tiers</p>
                 </div>
             </motion.div>
             <Footer/>

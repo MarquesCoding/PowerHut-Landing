@@ -4,11 +4,12 @@ export const pricingTiers: PricingTier[] = [
     // {
     //     title: 'Web',
     //     cpu: 'Ryzen 5 3600*',
-    //     price: 3,
+    //     price: 1,
     //     features: ['3 Domains', '3 Databases','AutoSSL - CPanel', '50GB NVMe SSD', 'Unlimited Bandwidth', 'Shared IP'],
-    //     button: 'Get Started',
+    //     button: {
+    //         text: 'Coming soon',
+    //     },
     //     countries: {
-    //         america: true,
     //         europe: true,
     //     }
     // },
@@ -16,8 +17,11 @@ export const pricingTiers: PricingTier[] = [
         title: 'Dev',
         cpu: 'Ryzen 7 PRO 8700GE*',
         price: 2,
-        features: ['Shared CPU Core', '1GB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP', 'Free Reverse Proxy'],
-        button: 'Coming soon',
+        features: ['Shared CPU Core', '1GB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP'],
+        button: {
+            text: 'Order',
+            link: "https://billing.powerhut.pro"
+        },
         countries: {
             europe: true,
             america: true
@@ -27,8 +31,11 @@ export const pricingTiers: PricingTier[] = [
         title: 'Basic',
         cpu: 'Ryzen 7 PRO 8700GE*',
         price: 8,
-        features: ['Shared CPU Core', '4GB DDR5 RAM**','1GBit/s Connection', '30GB NVMe SSD', 'Shared IP', 'Free Reverse Proxy'],
-        button: 'Coming soon',
+        features: ['Shared CPU Core', '4GB DDR5 RAM**','1GBit/s Connection', '30GB NVMe SSD', 'Shared IP'],
+        button: {
+            text: 'Order',
+            link: "https://billing.powerhut.pro"
+        },
         countries: {
             europe: true,
             america: true
@@ -39,8 +46,11 @@ export const pricingTiers: PricingTier[] = [
         cpu: 'Ryzen 7 PRO 8700GE*',
         price: 12,
         originalPrice: 16,
-        features: ['Dedicated CPU Core', '10GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP', 'Free Reverse Proxy'],
-        button: 'Coming soon',
+        features: ['Dedicated CPU Core', '10GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP'],
+        button: {
+            text: 'Order',
+            link: "https://billing.powerhut.pro"
+        },
         pill: {
             text: 'Most Popular',
         },
@@ -54,8 +64,10 @@ export const pricingTiers: PricingTier[] = [
         cpu: 'Ryzen 7 7950X3D*',
         price: 16,
         originalPrice: 20,
-        features: ['Dedicated CPU Core', '12GB DDR5 RAM**','1GBit/s Connection', '100GB NVMe SSD', 'Dedicated IP' , 'Free Reverse Proxy'],
-        button: 'Coming soon',
+        features: ['Dedicated CPU Core', '12GB DDR5 RAM**','1GBit/s Connection', '100GB NVMe SSD', 'Dedicated IP'],
+        button: {
+            text: 'Coming soon',
+        },
         countries: {
             europe: true,
             america: true
@@ -66,8 +78,10 @@ export const pricingTiers: PricingTier[] = [
         cpu: 'Ryzen 7 7950X3D*',
         price: 20,
         originalPrice: 24,
-        features: ['Dedicated CPU Core', '16GB DDR5 RAM**','1GBit/s Connection', 'Unmetered NVMe SSD***', 'Dedicated IP' , 'Free Reverse Proxy'],
-        button: 'Coming soon',
+        features: ['Dedicated CPU Core', '16GB DDR5 RAM**','1GBit/s Connection', 'Unmetered NVMe SSD***', 'Dedicated IP'],
+        button: {
+            text: 'Coming soon',
+        },
         countries: {
             europe: true,
             america: true

@@ -8,7 +8,10 @@ export interface PricingTier {
     price: number;
     originalPrice?: number;
     features: string[];
-    button: string;
+    button: {
+        text: string;
+        link?: string;
+    }
     pill?: {
         text: string;
     }
@@ -136,8 +139,10 @@ const PricingCard: React.FC<PricingTier> = ({ title, cpu, price, originalPrice, 
                 </div>
                 <div className="px-6 pb-6">
                     <div
-                        className="text-center cursor-pointer duration-300 w-full px-4 opacity-30 cursor-not-allowed py-2 bg-gradient-to-t to-[#FF4D14] from-[#FF4D14] text-white rounded hover:opacity-50">
-                        {button}
+                        onClick={() => window.location.href = `${button.link}`}
+
+                        className={`text-center ${button.link ? 'cursor-pointer' : 'cursor-not-allowed'} duration-300 w-full px-4 py-2 bg-gradient-to-t to-[#FF4D14] from-[#FF4D14] text-white rounded hover:opacity-50`}>
+                        {button.text}
                     </div>
                 </div>
             </div>

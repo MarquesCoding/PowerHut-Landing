@@ -132,7 +132,7 @@ export default function Page() {
                             <p className="text-sm md:text-md opacity-50 max-w-xs">Response Time</p>
                             <p className="text-sm md:text-lg max-w-xs">Generally under 2 hours</p>
                             <p className="text-sm md:text-lg text-[#FF4D14] max-w-xs mb-4">Online Now!</p>
-                            <a href="https://discord.gg/invite/powerhut">
+                            <a href="https://billing.powerhut.pro/contact.php">
                                 <Button variant="secondary">
                                     Create a Ticket
                                 </Button>
@@ -150,7 +150,7 @@ export default function Page() {
                             <p className="text-sm md:text-md opacity-50 max-w-xs">Response Time</p>
                             <p className="text-sm md:text-lg max-w-xs">Always Available</p>
                             <p className="text-sm md:text-lg text-[#FF4D14] max-w-xs mb-4">Online Now!</p>
-                            <a href="https://discord.gg/invite/powerhut">
+                            <a href="https://billing.powerhut.pro/index.php?rp=/knowledgebase">
                                 <Button variant="secondary">
                                     View Articles
                                 </Button>

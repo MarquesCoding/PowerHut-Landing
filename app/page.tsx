@@ -35,7 +35,8 @@ export default function Home() {
                       opacity: {duration: 1}
                   }}
                   className="w-full h-auto py-2 bg-[#FF4D14] text-[#141414] fixed top-0 left-0 z-40 lg:text-lg text-sm flex justify-center items-center gap-2 shadow-lg shadow-[#141414]">
-                  Use code : <span className="font-semibold font-mono hover:opacity-50 duration-300 bg-white px-2 rounded-md">POWER</span> and
+                  Use code : <span
+                  className="font-semibold font-mono hover:opacity-50 duration-300 bg-white px-2 rounded-md">POWER</span> and
                   enjoy 15% off your first month!
               </motion.div>
               <motion.div
@@ -178,7 +179,8 @@ export default function Home() {
                           use and ready whenever you want.`}</p>
                   </div>
                   <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4">
-                      <div className="w-full flex items-center justify-center max-w-2xl opacity-80 lg:translate-x-40 p-4">
+                      <div
+                          className="w-full flex items-center justify-center max-w-2xl opacity-80 lg:translate-x-40 p-4">
                           <img src={'/panel-01.png'} alt="panel"
                                className="rounded-lg"/>
                       </div>
@@ -187,14 +189,27 @@ export default function Home() {
                           <img src={'/panel.png'} alt="panel"
                                className="rounded-lg shadow-2xl shadow-[#FF4D14]/30"/>
                       </div>
-                      <div className="w-full flex items-center justify-center max-w-2xl opacity-80 lg:-translate-x-40 p-4">
+                      <div
+                          className="w-full flex items-center justify-center max-w-2xl opacity-80 lg:-translate-x-40 p-4">
                           <img src={'/panel-02.png'} alt="panel"
                                className="rounded-lg"/>
                       </div>
                   </div>
               </div>
               <div
-                  className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-bl to-[#FF4D14]/10 from-transparent pb-24">
+                  className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-tr from-[#FF4D14]/10 to-transparent pb-24">
+                  <div className="mb-20 text-center flex flex-col gap-4">
+                      <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">Great Transparency</p>
+                      <p className="opacity-50 font-light">We want to be as open as possible with you guys! Feel free to see our server stats etc</p>
+                  </div>
+                  <div
+                      className="flex w-full h-auto justify-center items-center flex-col">
+                      <img src={'/grafana.png'} alt="panel"
+                           className="rounded-lg border-2 border-[#FF4D14] lg:max-w-6xl shadow-2xl shadow-[#FF4D14]/30"/>
+                  </div>
+              </div>
+              <div
+                  className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-tl to-[#FF4D14]/10 from-transparent pb-24">
                   <div className="mb-20 text-center flex flex-col gap-4">
                       <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">Awesome
                           Prices!</p>
@@ -220,7 +235,7 @@ export default function Home() {
                   </div>
               </div>
               <div
-                  className="flex flex-row items-center justify-center py-20 md:h-auto bg-gradient-to-tl to-[#FF4D14]/10 from-transparent relative w-full">
+                  className="flex flex-row items-center justify-center py-20 md:h-auto bg-gradient-to-bl to-[#FF4D14]/10 from-transparent relative w-full">
                   <div
                       className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4 flex flex-col items-center">
                       <motion.div
