@@ -204,7 +204,7 @@ export default function Home() {
                   <div
                       className="flex w-full h-auto justify-center items-center flex-col">
                       <img onClick={() => window.location.href = "https://grafana.powerhut.pro"} src={'/grafana.png'} alt="panel"
-                           className="rounded-lg border-2 border-[#FF4D14] lg:max-w-6xl shadow-2xl shadow-[#FF4D14]/30"/>
+                           className="rounded-lg border-2 border-[#FF4D14] lg:max-w-6xl shadow-2xl shadow-[#FF4D14]/30 cursor-pointer hover:opacity-50 duration-300 transition-all"/>
                   </div>
               </div>
               <div
