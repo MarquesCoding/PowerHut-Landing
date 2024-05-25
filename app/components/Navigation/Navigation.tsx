@@ -14,18 +14,18 @@ import {cn} from "@/app/utils/cn";
 
 
 const components: { title: string; href: string; description: string }[] = [
-    {
-        title: "About us",
-        href: "/about",
-        description:
-            "Wanna learn more about about our founding members? How we started our journey?",
-    },
-    {
-        title: "Our Power Panel",
-        href: "/panel",
-        description:
-            "Powered under the hood by Pterodactyl, our fully custom built Game Panel",
-    },
+    // {
+    //     title: "About us",
+    //     href: "/about",
+    //     description:
+    //         "Wanna learn more about about our founding members? How we started our journey?",
+    // },
+    // {
+    //     title: "Our Power Panel",
+    //     href: "/panel",
+    //     description:
+    //         "Powered under the hood by Pterodactyl, our fully custom built Game Panel",
+    // },
     {
         title: "Support",
         href: "/support",
