@@ -95,7 +95,7 @@ const PricingCard: React.FC<PricingTier> = ({ title, cpu, price, originalPrice, 
                                     <Flag code="us" className="w-6 rounded" />
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                    New York City (Currently Unavailable), Los Angeles (Currently Unavailable)
+                                    New York City
                                 </TooltipContent>
                             </Tooltip>
                         </TooltipProvider>
