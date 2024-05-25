@@ -267,8 +267,8 @@ export default function Home() {
                               {x: 46, y: 25.5, name: `Germany - FSN`},
                               // {x: 92, y: 80, name: `Australia - SYD`},
                               // {x: 78, y: 60, name: `Asia - SGP`},
-                              {x: 25, y: 24, name: `America - NYC`},
-                              {x: 8, y: 35, name: `America - LA`},
+                              {x: 25, y: 24, name: `America - NYC (Currently Unavailable)`},
+                              {x: 8, y: 35, name: `America - LA (Currently Unavailable)`},
                           ]}
                                         mapSrc={'https://upload.wikimedia.org/wikipedia/commons/a/a0/World_map_with_points.svg'}/>
                       </div>
