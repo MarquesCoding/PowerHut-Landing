@@ -192,7 +192,7 @@ export default function Page() {
                                         <p className="leading-7 mt-6 text-white/50">
                                             Servers are available as soon as your payment has been processed, typically
                                             {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                            within a few minutes. If they aren't throw us a message.
+                                            {' '}within a few minutes. If they aren't throw us a message.
                                         </p>
                                     </AccordionContent>
                                 </AccordionItem>
@@ -216,7 +216,7 @@ export default function Page() {
                                             We use a heavily customized version of the Pterodactyl panel.
                                             As such, you can expect a fast, lag-free, and secure experience to take care
                                             {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                            of all your server's needs!
+                                            {' '}of all your server's needs!
                                         </p>
                                     </AccordionContent>
                                 </AccordionItem>
@@ -240,7 +240,7 @@ export default function Page() {
                                             Absolutely, just create a ticket and we will handle everything! And the best
                                             part?
                                             {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                            Upgrades are pro-rated so, you won't have to worry about being overcharged!
+                                            {' '}Upgrades are pro-rated so, you won't have to worry about being overcharged!
                                         </p>
                                     </AccordionContent>
                                 </AccordionItem>
@@ -277,7 +277,7 @@ export default function Page() {
                                             We have a huge variety of supported games such as Minecraft, Valheim,
                                             Terria, Factorio, Rust, Satisfactory and much more! Feel free to recommend a
                                             {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                            game in the discord if we don't currently support it!
+                                            {' '}game in the discord if we don't currently support it!
                                         </p>
                                     </AccordionContent>
                                 </AccordionItem>

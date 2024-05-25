@@ -213,7 +213,7 @@ export default function Home() {
                       <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">Awesome
                           Prices!</p>
                       <p className="opacity-50 font-light">Choose from our wide range of plans to fit your
-                          server</p>
+                          needs</p>
                   </div>
                   <div
                       className="flex w-full h-auto justify-center items-center flex-col">
@@ -227,8 +227,7 @@ export default function Home() {
                               server
                               location - will be equivalent</p>
                           <p className="text-center text-white opacity-50 w-full text-xs">** Additional RAM can be
-                              purchased
-                              at checkout</p>
+                              purchased through a support ticket (billing / discord)</p>
                           <p className="text-center text-white opacity-50 w-full text-xs">*** Fair Use Policy</p>
                       </div>
                   </div>
