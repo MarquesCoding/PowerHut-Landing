@@ -29,7 +29,7 @@ const Footer = () => {
                             </a>
                     </div>
                     <p className="max-w-lg opacity-70 text-sm">
-                        © 2024 | PowerHut, LTD. | All rights reserved.
+                        © 2024 | PowerHut | All rights reserved.
                     </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-12">
