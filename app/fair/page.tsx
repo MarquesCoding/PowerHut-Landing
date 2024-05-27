@@ -107,7 +107,7 @@ export default function Page() {
                             <AccordionTrigger>Threats</AccordionTrigger>
                             <AccordionContent>
                                 <p className="leading-7 mt-6 text-white/50">
-                                    Use of the PowerHyt services to transmit any material (by e-mail, uploading, posting or otherwise sharing) that threatens or encourages bodily harm or destruction of property is strictly forbidden.
+                                    Use of the PowerHut services to transmit any material (by e-mail, uploading, posting or otherwise sharing) that threatens or encourages bodily harm or destruction of property is strictly forbidden.
                                 </p>
                             </AccordionContent>
                         </AccordionItem>

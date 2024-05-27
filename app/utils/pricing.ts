@@ -46,7 +46,7 @@ export const pricingTiers: PricingTier[] = [
         cpu: '',
         price: 12,
         originalPrice: 16,
-        features: ['Dedicated CPU Core', '10GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP'],
+        features: ['Dedicated CPU Core', '6GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP'],
         button: {
             text: 'Order',
             link: "https://billing.powerhut.pro"
@@ -66,7 +66,8 @@ export const pricingTiers: PricingTier[] = [
         originalPrice: 20,
         features: ['Dedicated CPU Core', '12GB DDR5 RAM**','1GBit/s Connection', '100GB NVMe SSD', 'Dedicated IP'],
         button: {
-            text: 'Coming soon',
+            text: 'Order',
+            link: "https://billing.powerhut.pro"
         },
         countries: {
             europe: true,
@@ -80,7 +81,8 @@ export const pricingTiers: PricingTier[] = [
         originalPrice: 24,
         features: ['Dedicated CPU Core', '16GB DDR5 RAM**','1GBit/s Connection', 'Unmetered NVMe SSD***', 'Dedicated IP'],
         button: {
-            text: 'Coming soon',
+            text: 'Order',
+            link: "https://billing.powerhut.pro"
         },
         countries: {
             europe: true,
