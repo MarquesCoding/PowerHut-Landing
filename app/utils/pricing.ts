@@ -86,6 +86,7 @@ export const pricingTiers: PricingTier[] = [
         },
         countries: {
             europe: true,
+            america: true
         }
     },
 ];
