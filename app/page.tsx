@@ -8,7 +8,7 @@ import GameCard from "./components/GameCard/GameCard";
 import MapComponent from "./components/Globe/Globe";
 import {HiLightningBolt} from "react-icons/hi";
 import {PiGameControllerFill} from "react-icons/pi";
-import {FaMoneyBill, FaShieldHeart, FaToolbox, FaXTwitter} from "react-icons/fa6";
+import {FaMoneyBill, FaShieldHeart, FaToolbox, FaTwitch, FaXTwitter} from "react-icons/fa6";
 import {LuNetwork} from "react-icons/lu";
 import {RiHardDriveFill} from "react-icons/ri";
 import Card from "@/app/components/Card/Card";
@@ -198,12 +198,15 @@ export default function Home() {
               <div
                   className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-tr from-[#FF4D14]/10 to-transparent pb-24">
                   <div className="mb-20 text-center flex flex-col gap-4">
-                      <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">Great Transparency</p>
-                      <p className="opacity-50 font-light">We want to be as open as possible with you guys! Feel free to see our server stats etc</p>
+                      <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">Great
+                          Transparency</p>
+                      <p className="opacity-50 font-light">We want to be as open as possible with you guys! Feel free to
+                          see our server stats etc</p>
                   </div>
                   <div
                       className="flex w-full h-auto justify-center items-center flex-col">
-                      <img onClick={() => window.location.href = "https://grafana.powerhut.pro"} src={'/grafana.png'} alt="panel"
+                      <img onClick={() => window.location.href = "https://grafana.powerhut.pro"} src={'/grafana.png'}
+                           alt="panel"
                            className="rounded-lg border-2 border-[#FF4D14] lg:max-w-6xl shadow-2xl shadow-[#FF4D14]/30 cursor-pointer hover:opacity-50 duration-300 transition-all"/>
                   </div>
               </div>
@@ -271,6 +274,32 @@ export default function Home() {
                               // {x: 8, y: 35, name: `America - LA (Currently Unavailable)`},
                           ]}
                                         mapSrc={'https://upload.wikimedia.org/wikipedia/commons/a/a0/World_map_with_points.svg'}/>
+                      </div>
+                  </div>
+              </div>
+              <div
+                  className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-tl to-[#FF4D14]/10 from-transparent pb-24">
+                  <div className="mb-20 text-center flex flex-col gap-4">
+                      <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">Our Partners</p>
+                      <p className="opacity-50 font-light">We love to help out the community, show them some love ❤️</p>
+                  </div>
+                  <div
+                      className="flex flex-col lg:flex-row w-full h-auto justify-center items-center gap-12">
+                      <div className="flex flex-col items-center gap-4">
+                          <div className="w-28 h-28 rounded-full flex items-center justify-center">
+                              <img className="border-2 border-white rounded-full w-24 h-24" alt="invalid"
+                                   src="https://static-cdn.jtvnw.net/jtv_user_pictures/78b0003e-dd51-497e-9220-1856e0be003a-profile_image-70x70.png"/>
+                          </div>
+                          <p className="font-semibold font-mono text-lg opacity-50">invalidm_</p>
+                          <FaTwitch size={32} className="hover:opacity-50 duration-300 cursor-pointer" onClick={() => window.location.href = "https://www.twitch.tv/invalidm_"} />
+                      </div>
+                      <div className="flex flex-col items-center gap-4">
+                          <div className="w-28 h-28 rounded-full flex items-center justify-center">
+                              <img className="border-2 border-white rounded-full w-24 h-24" alt="invalid"
+                                   src="https://static-cdn.jtvnw.net/jtv_user_pictures/1d665c15-f692-4a40-9a68-962e8a44ef82-profile_image-70x70.png"/>
+                          </div>
+                          <p className="font-semibold font-mono text-lg opacity-50">orangecreamsicle3</p>
+                          <FaTwitch size={32} className="hover:opacity-50 duration-300 cursor-pointer" onClick={() => window.location.href = "https://www.twitch.tv/orangecreamsicle3"} />
                       </div>
                   </div>
               </div>
