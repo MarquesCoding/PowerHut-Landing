@@ -15,6 +15,8 @@ import Card from "@/app/components/Card/Card";
 import { BsFillMouseFill } from "react-icons/bs";
 import Footer from "@/app/components/Footer";
 import { pricingTiers } from "@/app/utils/pricing";
+import { Button } from "./components/ui/button";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/app/components/ui/tooltip";
 
 export default function Home() {
     return (
@@ -120,6 +122,20 @@ export default function Home() {
                                     <span className="text-[#FF4D14]">best hosting experience</span>{" "}
                                     from hardware to support.
                                 </p>
+                                <div className="mt-12">
+                                    <TooltipProvider>
+                                        <Tooltip>
+                                            <TooltipTrigger>
+                                                <Button variant="outline">
+                                                    mc.powerhut.pro
+                                                </Button>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                <p>Join our public test Minecraft server</p>
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                </div>
                             </motion.div>
                         </motion.div>
                     </div>
