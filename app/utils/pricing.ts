@@ -61,7 +61,7 @@ export const pricingTiers: PricingTier[] = [
     },
     {
         title: 'Pro',
-        cpu: 'Ryzen 7 7950X*',
+        cpu: 'Ryzen 9 7950X*',
         price: 16,
         originalPrice: 20,
         features: ['Dedicated CPU Core', '12GB DDR5 RAM**','1GBit/s Connection', '100GB NVMe SSD', 'Dedicated IP'],
@@ -76,7 +76,7 @@ export const pricingTiers: PricingTier[] = [
     },
     {
         title: 'Top',
-        cpu: 'Ryzen 7 7950X*',
+        cpu: 'Ryzen 9 7950X*',
         price: 20,
         originalPrice: 24,
         features: ['Dedicated CPU Core', '16GB DDR5 RAM**','1GBit/s Connection', 'Unmetered NVMe SSD***', 'Dedicated IP'],
