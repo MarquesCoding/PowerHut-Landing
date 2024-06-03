@@ -13,6 +13,7 @@ export interface PricingTier {
         link?: string;
     }
     pill?: {
+        color?: boolean;
         text: string;
     }
     countries: {
@@ -33,9 +34,18 @@ const PricingCard: React.FC<PricingTier> = ({ title, cpu, price, originalPrice, 
                         <div className="flex flex-row w-full justify-between items-center">
                             <h3 className={`text-xl font-semibold text-white`}>{title}</h3>
                             {pill && (
-                                <p className="text-sm w-fit bg-zinc-800 border border-white/10 text-white py-1 px-3 rounded-full animate-pulse">
-                                    {pill.text}
-                                </p>
+                                <>
+                                    {pill.color && (
+                                        <p className="text-sm w-fit bg-orange-700 border border-white/10 text-white py-1 px-3 ml-4 rounded-full">
+                                            {pill.text}
+                                        </p>
+                                    )}
+                                    {!pill.color && (
+                                        <p className="text-sm w-fit bg-zinc-800 border border-white/10 text-white py-1 px-3 ml-4 rounded-full animate-pulse">
+                                        {pill.text}
+                                        </p>
+                                    )}
+                                </>
                             )}
                         </div>
                         <p className="text-xs opacity-80 italic">{cpu}</p>

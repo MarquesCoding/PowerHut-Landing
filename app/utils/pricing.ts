@@ -17,10 +17,28 @@ export const pricingTiers: PricingTier[] = [
         title: 'Dev',
         cpu: 'Ryzen 7 8700GE*',
         price: 2,
-        features: ['Shared CPU Core', '1GB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP'],
+        features: ['Shared CPU Core', '1GB DDR5 RAM','1GBit/s Connection', '10GB NVMe SSD', 'Shared IP'],
         button: {
             text: 'Order',
             link: "https://billing.powerhut.pro"
+        },
+        countries: {
+            europe: true,
+            america: true
+        }
+    },
+    {
+        title: 'Friends',
+        cpu: 'Ryzen 7 8700GE*',
+        price: 4,
+        features: ['Shared CPU Core', '2GB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP'],
+        button: {
+            text: 'Order',
+            link: "https://billing.powerhut.pro"
+        },
+        pill: {
+            text: 'Good for 1-4 players',
+            color: true,
         },
         countries: {
             europe: true,
