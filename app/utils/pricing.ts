@@ -15,7 +15,7 @@ export const pricingTiers: PricingTier[] = [
     // },
     {
         title: 'Dev',
-        cpu: '',
+        cpu: 'Ryzen 7 8700GE*',
         price: 2,
         features: ['Shared CPU Core', '1GB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP'],
         button: {
@@ -29,7 +29,7 @@ export const pricingTiers: PricingTier[] = [
     },
     {
         title: 'Basic',
-        cpu: '',
+        cpu: 'Ryzen 7 8700GE*',
         price: 8,
         features: ['Shared CPU Core', '4GB DDR5 RAM**','1GBit/s Connection', '30GB NVMe SSD', 'Shared IP'],
         button: {
@@ -43,7 +43,7 @@ export const pricingTiers: PricingTier[] = [
     },
     {
         title: 'Advanced',
-        cpu: '',
+        cpu: 'Ryzen 7 8700GE*',
         price: 12,
         originalPrice: 16,
         features: ['Dedicated CPU Core', '6GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP'],
@@ -61,7 +61,7 @@ export const pricingTiers: PricingTier[] = [
     },
     {
         title: 'Pro',
-        cpu: '',
+        cpu: 'Ryzen 7 7950X*',
         price: 16,
         originalPrice: 20,
         features: ['Dedicated CPU Core', '12GB DDR5 RAM**','1GBit/s Connection', '100GB NVMe SSD', 'Dedicated IP'],
@@ -76,7 +76,7 @@ export const pricingTiers: PricingTier[] = [
     },
     {
         title: 'Top',
-        cpu: '',
+        cpu: 'Ryzen 7 7950X*',
         price: 20,
         originalPrice: 24,
         features: ['Dedicated CPU Core', '16GB DDR5 RAM**','1GBit/s Connection', 'Unmetered NVMe SSD***', 'Dedicated IP'],

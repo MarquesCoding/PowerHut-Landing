@@ -332,9 +332,9 @@ export default function Home() {
                             ))}
                         </div>
                         <div className="opacity-60 mt-4">
-                            {/*<p className="text-center text-white opacity-50 w-full text-xs">*CPU will vary based on*/}
-                            {/*    server*/}
-                            {/*    location - will be equivalent</p>*/}
+                            <p className="text-center text-white opacity-50 w-full text-xs">*CPU will vary based on
+                                server
+                                location - will be equivalent</p>
                             <p className="text-center text-white opacity-50 w-full text-xs">
                                 ** Additional RAM can be purchased through a support ticket
                                 (billing / discord)
