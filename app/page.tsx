@@ -17,6 +17,9 @@ import Footer from "@/app/components/Footer";
 import { pricingTiers } from "@/app/utils/pricing";
 import { Button } from "./components/ui/button";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/app/components/ui/tooltip";
+import {VscGraph, VscLayoutPanelRight} from "react-icons/vsc";
+import {TbChevronLeftPipe} from "react-icons/tb";
+import {FaGlobeAfrica} from "react-icons/fa";
 
 export default function Home() {
     return (
@@ -153,57 +156,86 @@ export default function Home() {
                             Key Features
                         </p>
                         <p className="opacity-50 font-light">
-                            A few things that we like to boast about
+                            {/* eslint-disable-next-line react/no-unescaped-entities */}
+                            You shouldn't have to pay extra for basic features
                         </p>
                     </div>
                     <div className="flex w-full h-auto flex-wrap justify-center gap-6 max-w-[100rem]">
                         <Card
-                            logo={<HiLightningBolt size={44} />}
+                            logo={<FaGlobeAfrica  size={16} />}
+                            header={"NA & EU Locations"}
+                            content={
+                                "We've got servers in locations such as NA & EU and expanding!"
+                            }
+                        />
+                        <Card
+                            logo={<VscLayoutPanelRight  size={16} />}
+                            header={"Custom Game Control Panel"}
+                            content={
+                                "Our Custom-made Power Panel is what powers all our servers! Expect 100% uptime!"
+                            }
+                        />
+                        <Card
+                            logo={<TbChevronLeftPipe  size={16} />}
+                            header={"Full FTP Access"}
+                            content={
+                                "Take full control of all of your file 24/7"
+                            }
+                        />
+                        <Card
+                            logo={<VscGraph  size={16} />}
+                            header={"Transparent Resource Analytics"}
+                            content={
+                                "We never oversell our servers and we want to be 100% transparent with you by providing graphs, feedback and much more."
+                            }
+                        />
+                        <Card
+                            logo={<HiLightningBolt size={16} />}
                             header={"Instant Deployments"}
                             content={
                                 "Get started within minutes with our instant deployment technology."
                             }
                         />
                         <Card
-                            logo={<PiGameControllerFill size={44} />}
+                            logo={<PiGameControllerFill size={16} />}
                             header={"Easy to use Power Panel"}
                             content={
                                 "We've compiled our best features into one single panel, easy to use and ready whenever you want."
                             }
                         />
                         <Card
-                            logo={<FaShieldHeart size={44} />}
+                            logo={<FaShieldHeart size={16} />}
                             header={"DDoS Protection"}
                             content={
                                 "All of our servers are outfitted with DDoS protection to help you avoid downtime."
                             }
                         />
                         <Card
-                            logo={<FaMoneyBill size={44} />}
+                            logo={<FaMoneyBill size={16} />}
                             header={"Pro-rated"}
                             content={
                                 "All of our servers are pro-rated, cancel and request a refund for the difference! *Subject to terms*"
                             }
                         />
                         <Card
-                            logo={<FaToolbox size={44} />}
+                            logo={<FaToolbox size={16} />}
                             header={"One-click Installer"}
                             content={
                                 "Want to play modded? Want to play vanilla? Change games and modpacks with one click."
                             }
                         />
                         <Card
-                            logo={<LuNetwork size={44} />}
-                            header={"Free Dedicated IP"}
+                            logo={<LuNetwork size={16} />}
+                            header={"Free Dedicated IP*"}
                             content={
                                 "When you choose any of our servers above Basic you get a dedicated IP, with up to 5 additional ports."
                             }
                         />
                         <Card
-                            logo={<RiHardDriveFill size={44} />}
+                            logo={<RiHardDriveFill size={16} />}
                             header={"Solid-Slate Drives"}
                             content={
-                                "No Hard-Drivers here. Our servers are exclusively hosted on NVMe Solid Slate Drives in RAID 0."
+                                "No Hard-Drivers here (Only for your backups). Our servers are exclusively hosted on NVMe Solid Slate Drives in RAID 0."
                             }
                         />
                         {/*<Card logo={(<FaGlobeEurope size={44}/>)}*/}

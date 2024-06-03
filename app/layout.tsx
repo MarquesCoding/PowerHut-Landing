@@ -1,4 +1,3 @@
-// @ts-nocheck
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -37,16 +36,6 @@ export default function RootLayout({
         <meta content="https://www.powerhut.pro/logo-white.png" property="twitter:image"/>
         <meta content="#FF4D14" data-react-helmet="true" name="theme-color"/>
         <body className={inter.className}>{children}</body>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            {/* @ts-ignore */}
-            function gtag(){dataLayer.push(arguments)}
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            gtag('js', new Date());
-
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            gtag('config', 'AW-16590765741');
-        </script>
         </html>
     );
 }
