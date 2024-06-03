@@ -19,7 +19,7 @@ import { Button } from "./components/ui/button";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/app/components/ui/tooltip";
 import {VscGraph, VscLayoutPanelRight} from "react-icons/vsc";
 import {TbChevronLeftPipe} from "react-icons/tb";
-import {FaGlobeAfrica} from "react-icons/fa";
+import {FaGlobeAfrica, FaRegCheckCircle} from "react-icons/fa";
 
 export default function Home() {
     return (
@@ -36,7 +36,7 @@ export default function Home() {
                     }}
                     transition={{
                         ease: "linear",
-                        opacity: { duration: 1 },
+                        opacity: {duration: 1},
                     }}
                     className="w-full h-auto py-2 bg-[#FF4D14] text-[#141414] fixed top-0 left-0 z-40 lg:text-lg text-sm flex justify-center items-center gap-2 shadow-lg shadow-[#141414]"
                 >
@@ -55,11 +55,12 @@ export default function Home() {
                     }}
                     transition={{
                         ease: "linear",
-                        opacity: { duration: 1 },
+                        opacity: {duration: 1},
                     }}
                     className="w-full h-screen bg-gradient-to-tr from-[#FF4D14]/10 to-transparent bg-opacity-50 relative"
                 >
-                    <div className="mt-24 -mb-44 text-white relative w-full flex items-center justify-between gap-4 z-20">
+                    <div
+                        className="mt-24 -mb-44 text-white relative w-full flex items-center justify-between gap-4 z-20">
                         <div className="w-96">
                             <img
                                 className="hover:opacity-50 duration-300 mx-8 md:mx-24 w-6 md:w-8"
@@ -68,11 +69,12 @@ export default function Home() {
                             />
                         </div>
                         <div className="">
-                            <NavigationMenuDemo />
+                            <NavigationMenuDemo/>
                         </div>
                         <div className="w-96"></div>
                     </div>
-                    <div className="w-full h-full flex items-center justify-center relative z-10 flex-col pt-48 text-center">
+                    <div
+                        className="w-full h-full flex items-center justify-center relative z-10 flex-col pt-48 text-center">
                         <motion.div
                             initial={{
                                 opacity: 0,
@@ -82,7 +84,7 @@ export default function Home() {
                             }}
                             transition={{
                                 ease: "linear",
-                                opacity: { duration: 1 },
+                                opacity: {duration: 1},
                             }}
                             className="flex flex-col items-center"
                         >
@@ -97,7 +99,7 @@ export default function Home() {
                                 }}
                                 transition={{
                                     ease: "linear",
-                                    opacity: { duration: 1 },
+                                    opacity: {duration: 1},
                                 }}
                             >
                                 <p className="text-sm bg-gradient-to-br from-orange-500 to-orange-600 text-transparent bg-clip-text">
@@ -116,7 +118,7 @@ export default function Home() {
                                 }}
                                 transition={{
                                     ease: "linear",
-                                    opacity: { duration: 1 },
+                                    opacity: {duration: 1},
                                     delay: 2,
                                 }}
                             >
@@ -142,7 +144,7 @@ export default function Home() {
                             </motion.div>
                         </motion.div>
                     </div>
-                    <BackgroundBeams />
+                    <BackgroundBeams/>
                     <div className="w-full h-4 flex flex-row items-center justify-center">
                         <BsFillMouseFill
                             className="mb-24 animate-bounce opacity-50"
@@ -150,7 +152,8 @@ export default function Home() {
                         />
                     </div>
                 </motion.div>
-                <div className="w-full h-auto flex flex-col justify-center p-12 items-center bg-gradient-to-tl to-[#FF4D14]/10 from-transparent pb-48">
+                <div
+                    className="w-full h-auto flex flex-col justify-center p-12 items-center bg-gradient-to-tl to-[#FF4D14]/10 from-transparent pb-48">
                     <div className="mb-20 text-center flex flex-col gap-4">
                         <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
                             Key Features
@@ -162,77 +165,77 @@ export default function Home() {
                     </div>
                     <div className="flex w-full h-auto flex-wrap justify-center gap-6 max-w-[100rem]">
                         <Card
-                            logo={<FaGlobeAfrica  size={16} />}
+                            logo={<FaGlobeAfrica size={16}/>}
                             header={"NA & EU Locations"}
                             content={
                                 "We've got servers in locations such as NA & EU and expanding!"
                             }
                         />
                         <Card
-                            logo={<VscLayoutPanelRight  size={16} />}
+                            logo={<VscLayoutPanelRight size={16}/>}
                             header={"Custom Game Control Panel"}
                             content={
                                 "Our Custom-made Power Panel is what powers all our servers! Expect 100% uptime!"
                             }
                         />
                         <Card
-                            logo={<TbChevronLeftPipe  size={16} />}
+                            logo={<TbChevronLeftPipe size={16}/>}
                             header={"Full FTP Access"}
                             content={
                                 "Take full control of all of your file 24/7"
                             }
                         />
                         <Card
-                            logo={<VscGraph  size={16} />}
+                            logo={<VscGraph size={16}/>}
                             header={"Transparent Resource Analytics"}
                             content={
                                 "We never oversell our servers and we want to be 100% transparent with you by providing graphs, feedback and much more."
                             }
                         />
                         <Card
-                            logo={<HiLightningBolt size={16} />}
+                            logo={<HiLightningBolt size={16}/>}
                             header={"Instant Deployments"}
                             content={
                                 "Get started within minutes with our instant deployment technology."
                             }
                         />
                         <Card
-                            logo={<PiGameControllerFill size={16} />}
+                            logo={<PiGameControllerFill size={16}/>}
                             header={"Easy to use Power Panel"}
                             content={
                                 "We've compiled our best features into one single panel, easy to use and ready whenever you want."
                             }
                         />
                         <Card
-                            logo={<FaShieldHeart size={16} />}
+                            logo={<FaShieldHeart size={16}/>}
                             header={"DDoS Protection"}
                             content={
                                 "All of our servers are outfitted with DDoS protection to help you avoid downtime."
                             }
                         />
                         <Card
-                            logo={<FaMoneyBill size={16} />}
+                            logo={<FaMoneyBill size={16}/>}
                             header={"Pro-rated"}
                             content={
                                 "All of our servers are pro-rated, cancel and request a refund for the difference! *Subject to terms*"
                             }
                         />
                         <Card
-                            logo={<FaToolbox size={16} />}
+                            logo={<FaToolbox size={16}/>}
                             header={"One-click Installer"}
                             content={
                                 "Want to play modded? Want to play vanilla? Change games and modpacks with one click."
                             }
                         />
                         <Card
-                            logo={<LuNetwork size={16} />}
+                            logo={<LuNetwork size={16}/>}
                             header={"Free Dedicated IP*"}
                             content={
                                 "When you choose any of our servers above Basic you get a dedicated IP, with up to 5 additional ports."
                             }
                         />
                         <Card
-                            logo={<RiHardDriveFill size={16} />}
+                            logo={<RiHardDriveFill size={16}/>}
                             header={"Solid-Slate Drives"}
                             content={
                                 "No Hard-Drivers here (Only for your backups). Our servers are exclusively hosted on NVMe Solid Slate Drives in RAID 0."
@@ -256,15 +259,128 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="flex w-full h-auto flex-wrap justify-center gap-6">
-                        <GameCard imageSrc={"/minecraft.webp"} />
-                        <GameCard imageSrc={"/rust.webp"} />
-                        <GameCard imageSrc={"/satisfactory.webp"} />
-                        <GameCard imageSrc={"/palworld.webp"} />
-                        <GameCard imageSrc={"/terraria.webp"} />
-                        <GameCard imageSrc={"/tf2.webp"} />
+                        <GameCard imageSrc={"/minecraft.webp"}/>
+                        <GameCard imageSrc={"/rust.webp"}/>
+                        <GameCard imageSrc={"/satisfactory.webp"}/>
+                        <GameCard imageSrc={"/palworld.webp"}/>
+                        <GameCard imageSrc={"/terraria.webp"}/>
+                        <GameCard imageSrc={"/tf2.webp"}/>
                     </div>
                 </div>
-                <div className="flex flex-col justify-center item-center w-full h-full py-24 bg-gradient-to-tl to-[#FF4D14]/10 from-transparent pb-40">
+                <div
+                    className="flex flex-col justify-center item-center w-full h-full py-24  bg-gradient-to-tl to-[#FF4D14]/10 from-transparent pb-40">
+                    <div className="mb-20 text-center flex flex-col gap-4">
+                        <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
+                            Competition is key
+                        </p>
+                        <p className="opacity-50 font-light">
+                            {`We do more than the competition for less`}
+                        </p>
+                    </div>
+                    <div className="lg:px-40 p-4 flex items-center justify-center">
+                        <div className="overflow-x-auto  max-w-[120rem]">
+                            <table className="min-w-full border border-white/10 rounded-lg">
+                                <thead className="bg-[#FF4D14]">
+                                <tr>
+                                    <th className="p-4 lg:p-6 text-left"></th>
+                                    <th className="p-4 lg:p-6 text-left">PowerHut</th>
+                                    <th className="p-4 lg:p-6 text-left">DedicatedMC</th>
+                                    <th className="p-4 lg:p-6 text-left">BloomHost</th>
+                                    <th className="p-4 lg:p-6 text-left">Shockbyte</th>
+                                    <th className="p-4 lg:p-6 text-left">Bisect Hosting</th>
+                                    <th className="p-4 lg:p-6 text-left">PebbleHost</th>
+                                    <th className="p-4 lg:p-6 text-left">Apex Hosting</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr className="hover:bg-white/10 duration-300">
+                                    <td className="p-4 lg:p-6">Server Splitting</td>
+                                    <td className="p-4 lg:p-6 opacity-50">Coming soon</td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                </tr>
+                                <tr className="hover:bg-white/10 duration-300">
+                                    <td className="p-4 lg:p-6">Dedicated CPU cores</td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                </tr>
+                                <tr className="hover:bg-white/10 duration-300">
+                                    <td className="p-4 lg:p-6">Free dedicated IP</td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                </tr>
+                                <tr className="hover:bg-white/10 duration-300">
+                                    <td className="p-4 lg:p-6">Free user-managed off-site backups</td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                </tr>
+                                <tr className="hover:bg-white/10 duration-300">
+                                    <td className="p-4 lg:p-6 ">Free reverse proxy</td>
+                                    <td className="p-4 lg:p-6 opacity-50">Coming soon</td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
+                                </tr>
+                                <tr className="hover:bg-white/10 duration-300">
+                                    <td className="p-4 lg:p-6">Price</td>
+                                    <td className="p-4 lg:p-6 text-lg text-orange-600 font-bold">$16/mo. <span
+                                        className="text-xs">(12GB)</span></td>
+                                    <td className="p-4 lg:p-6">$28/mo. <span
+                                        className="text-xs">(8GB)</span></td>
+                                    <td className="p-4 lg:p-6">$18/mo. <span
+                                        className="text-xs">(8GB)</span></td>
+                                    <td className="p-4 lg:p-6">$20/mo. <span
+                                        className="text-xs">(8GB)</span></td>
+                                    <td className="p-4 lg:p-6">$40/mo. <span
+                                        className="text-xs">(8GB)</span></td>
+                                    <td className="p-4 lg:p-6">$42/mo. <span
+                                        className="text-xs">(8GB)</span></td>
+                                    <td className="p-4 lg:p-6 ">$40/mo. <span
+                                        className="text-xs">(8GB)</span></td>
+                                </tr>
+                                <tr className="hover:bg-white/10 duration-300">
+                                    <td className="p-4 lg:p-6">CPU</td>
+                                    <td className="p-4 lg:p-6 opacity-50">8700GE*, 7950X*</td>
+                                    <td className="p-4 lg:p-6 opacity-50">3600, 5950X & 7950X</td>
+                                    <td className="p-4 lg:p-6 opacity-50">3900, 5950X</td>
+                                    <td className="p-4 lg:p-6 opacity-50">E-2386, 3600X</td>
+                                    <td className="p-4 lg:p-6 opacity-50">Unknown</td>
+                                    <td className="p-4 lg:p-6 opacity-50">E-1630V3, 7700K</td>
+                                    <td className="p-4 lg:p-6 opacity-50">5700X, 5900X</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p className="text-xs mt-2 opacity-50">
+                                Comparison data accurate as of June 1st, 2024
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div
+                    className="flex flex-col justify-center item-center w-full h-full py-24 bg-gradient-to-bl to-[#FF4D14]/10 from-transparent pb-40">
                     <div className="mb-20 text-center flex flex-col gap-4">
                         <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
                             Top-Tier Panel
@@ -274,21 +390,24 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4">
-                        <div className="w-full flex items-center justify-center max-w-2xl opacity-80 lg:translate-x-40 p-4">
+                        <div
+                            className="w-full flex items-center justify-center max-w-2xl opacity-80 lg:translate-x-40 p-4">
                             <img
                                 src={"/panel-01.png"}
                                 alt="panel"
                                 className="rounded-lg"
                             />
                         </div>
-                        <div className="w-full flex items-center justify-center max-w-5xl relative z-10 hover:scale-150 duration-300 p-4">
+                        <div
+                            className="w-full flex items-center justify-center max-w-5xl relative z-10 hover:scale-150 duration-300 p-4">
                             <img
                                 src={"/panel.png"}
                                 alt="panel"
                                 className="rounded-lg shadow-2xl shadow-[#FF4D14]/30"
                             />
                         </div>
-                        <div className="w-full flex items-center justify-center max-w-2xl opacity-80 lg:-translate-x-40 p-4">
+                        <div
+                            className="w-full flex items-center justify-center max-w-2xl opacity-80 lg:-translate-x-40 p-4">
                             <img
                                 src={"/panel-02.png"}
                                 alt="panel"
@@ -297,7 +416,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-tr from-[#FF4D14]/10 to-transparent pb-24">
+                <div
+                    className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-br from-[#FF4D14]/10 to-transparent pb-24">
                     <div className="mb-20 text-center flex flex-col gap-4">
                         <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
                             Great Transparency
@@ -316,7 +436,8 @@ export default function Home() {
                         />
                     </div>
                 </div>
-                <div className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-tl to-[#FF4D14]/10 from-transparent pb-24">
+                <div
+                    className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-bl to-[#FF4D14]/10 from-transparent pb-24">
                     <div className="mb-20 text-center flex flex-col gap-4">
                         <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
                             Awesome Prices!
@@ -345,8 +466,10 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row items-center justify-center py-20 md:h-auto bg-gradient-to-bl to-[#FF4D14]/10 from-transparent relative w-full">
-                    <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4 flex flex-col items-center">
+                <div
+                    className="flex flex-row items-center justify-center py-20 md:h-auto bg-gradient-to-tl to-[#FF4D14]/10 from-transparent relative w-full">
+                    <div
+                        className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4 flex flex-col items-center">
                         <motion.div
                             initial={{
                                 opacity: 0,
@@ -380,10 +503,10 @@ export default function Home() {
                             <MapComponent
                                 locations={[
                                     // {x: 44.5, y: 21.5, name: `London - UK`},
-                                    { x: 46, y: 25.5, name: `Germany - FSN` },
+                                    {x: 46, y: 25.5, name: `Germany - FSN`},
                                     // {x: 92, y: 80, name: `Australia - SYD`},
                                     // {x: 78, y: 60, name: `Asia - SGP`},
-                                    { x: 25, y: 24, name: `America - NYC` },
+                                    {x: 25, y: 24, name: `America - NYC`},
                                     // {x: 8, y: 35, name: `America - LA (Currently Unavailable)`},
                                 ]}
                                 mapSrc={
@@ -393,7 +516,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-tl to-[#FF4D14]/10 from-transparent pb-24">
+                <div
+                    className="flex flex-col justify-center item-center w-full h-auto bg-gradient-to-bl to-[#FF4D14]/10 from-transparent pb-24">
                     <div className="mb-20 text-center flex flex-col gap-4">
                         <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
                             Our Partners
@@ -444,7 +568,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <Footer />
+                <Footer/>
             </div>
         </>
         // </FollowerPointerCard>
