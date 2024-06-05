@@ -14,12 +14,12 @@ import { RiHardDriveFill } from "react-icons/ri";
 import Card from "@/app/components/Card/Card";
 import { BsFillMouseFill } from "react-icons/bs";
 import Footer from "@/app/components/Footer";
-import { pricingTiers } from "@/app/utils/pricing";
 import { Button } from "./components/ui/button";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/app/components/ui/tooltip";
 import {VscGraph, VscLayoutPanelRight} from "react-icons/vsc";
 import {TbChevronLeftPipe} from "react-icons/tb";
 import {FaGlobeAfrica, FaRegCheckCircle} from "react-icons/fa";
+import {pricingTiers} from "@/app/utils/pricing";
 
 export default function Home() {
     return (
@@ -447,7 +447,7 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="flex w-full h-auto justify-center items-center flex-col">
-                        <div className="flex w-full h-auto flex-wrap justify-center gap-2">
+                        <div className="flex w-full h-auto flex-wrap justify-center gap-5">
                             {pricingTiers.map((tier, index) => (
                                 <PricingCard key={index} {...tier} />
                             ))}

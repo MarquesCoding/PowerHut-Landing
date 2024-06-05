@@ -97,7 +97,7 @@ export default function Page() {
                     <div className="flex w-full h-auto flex-wrap justify-center max-w-7xl mb-24 gap-24 lg:p-0 p-12">
                         <div className="max-w-xl">
                             <div className="flex gap-4 items-center">
-                                <div><LuDatabaseBackup size={32} className="text-[#FF4D14]" /></div>
+                                <div><LuDatabaseBackup size={32} className="text-[#FF4D14]"/></div>
                                 <p className="text-lg">Off-Site Regular Backups</p>
                             </div>
                             <p className="opacity-50">Nobody likes losing data, and especially not for your
@@ -113,33 +113,52 @@ export default function Page() {
                         </div>
                         <div className="max-w-xl">
                             <div className="flex gap-4 items-center">
-                                <div><MdOutlineSwitchAccessShortcutAdd  size={32} className="text-[#FF4D14]"/></div>
+                                <div><MdOutlineSwitchAccessShortcutAdd size={32} className="text-[#FF4D14]"/></div>
                                 <p className="text-lg">Host Games, Tools & More</p>
                             </div>
-                            <p className="opacity-50">Sometimes you just want to play another game, as you should. With our Panel, you can easily switch between your favorite games, and even host a multitude of easy to use and useful tools, all from the same panel.</p>
+                            <p className="opacity-50">Sometimes you just want to play another game, as you should. With
+                                our Panel, you can easily switch between your favorite games, and even host a multitude
+                                of easy to use and useful tools, all from the same panel.</p>
                         </div>
                         <div className="max-w-xl">
                             <div className="flex gap-4 items-center">
-                                <div><RiHomeWifiFill  size={32} className="text-[#FF4D14]"/></div>
+                                <div><RiHomeWifiFill size={32} className="text-[#FF4D14]"/></div>
                                 <p className="text-lg">Free Dedicated IPs</p>
                             </div>
-                            <p className="opacity-50">To give you the best possible experience, certain features are a must in our eyes. Features like free dedicated IPs*, multiple backup slots and more all from within our panel, at no additional cost.</p>
+                            <p className="opacity-50">To give you the best possible experience, certain features are a
+                                must in our eyes. Features like free dedicated IPs*, multiple backup slots and more all
+                                from within our panel, at no additional cost.</p>
                         </div>
                         <div className="max-w-xl">
                             <div className="flex gap-4 items-center">
-                                <div><IoIosSwitch  size={32} className="text-[#FF4D14]"/></div>
+                                <div><IoIosSwitch size={32} className="text-[#FF4D14]"/></div>
                                 <p className="text-lg">Easily Switch your Jars and Games</p>
                             </div>
-                            <p className="opacity-50">Keeping all your game-jars up to date can be a hassle, to which we said; no more! Using our built-in jar-changer feature, easily switch or update your server jars without having to search for the proper one and upload them through the panel.</p>
+                            <p className="opacity-50">Keeping all your game-jars up to date can be a hassle, to which we
+                                said; no more! Using our built-in jar-changer feature, easily switch or update your
+                                server jars without having to search for the proper one and upload them through the
+                                panel.</p>
                         </div>
                     </div>
-                    <div className="flex w-full h-auto flex-wrap justify-center gap-2 mb-24">
-                        {pricingTiers.map((tier, index) => (
-                            <PricingCard key={index} {...tier} />
-                        ))}
+                    <div className="flex w-full h-auto flex-wrap justify-center gap-2 pb-24">
+                        <div className="flex w-full h-auto flex-wrap justify-center gap-2 ">
+                            {pricingTiers.map((tier, index) => (
+                                <PricingCard key={index} {...tier} />
+                            ))}
+                        </div>
+                        <div className="opacity-60 mt-4">
+                            <p className="text-center text-white opacity-50 w-full text-xs">*CPU will vary based on
+                                server
+                                location - will be equivalent</p>
+                            <p className="text-center text-white opacity-50 w-full text-xs">
+                                ** Additional RAM can be purchased through a support ticket
+                                (billing / discord)
+                            </p>
+                            <p className="text-center text-white opacity-50 w-full text-xs">
+                                *** Fair Use Policy
+                            </p>
+                        </div>
                     </div>
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    <p className="text-center opacity-30 text-sm mb-4">* Free Dedicated IP's only for our Advanced + tiers</p>
                 </div>
             </motion.div>
             <Footer/>
