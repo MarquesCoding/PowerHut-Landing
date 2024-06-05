@@ -285,7 +285,7 @@ export default function Home() {
                                     <th className="p-4 lg:p-6 text-left"></th>
                                     <th className="p-4 lg:p-6 text-left">PowerHut</th>
                                     <th className="p-4 lg:p-6 text-left">DedicatedMC</th>
-                                    <th className="p-4 lg:p-6 text-left">BloomHost</th>
+                                    <th className="p-4 lg:p-6 text-left">CreeperHost</th>
                                     <th className="p-4 lg:p-6 text-left">Shockbyte</th>
                                     <th className="p-4 lg:p-6 text-left">Bisect Hosting</th>
                                     <th className="p-4 lg:p-6 text-left">PebbleHost</th>
@@ -297,7 +297,7 @@ export default function Home() {
                                     <td className="p-4 lg:p-6">Server Splitting</td>
                                     <td className="p-4 lg:p-6 opacity-50">Coming soon</td>
                                     <td className="p-4 lg:p-6 opacity-50"></td>
-                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
                                     <td className="p-4 lg:p-6 opacity-50"></td>
                                     <td className="p-4 lg:p-6 opacity-50"></td>
                                     <td className="p-4 lg:p-6 opacity-50"></td>
@@ -307,7 +307,7 @@ export default function Home() {
                                     <td className="p-4 lg:p-6">Dedicated CPU cores</td>
                                     <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
                                     <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
-                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
                                     <td className="p-4 lg:p-6 opacity-50"></td>
                                     <td className="p-4 lg:p-6 opacity-50"></td>
                                     <td className="p-4 lg:p-6 opacity-50"></td>
@@ -337,7 +337,7 @@ export default function Home() {
                                     <td className="p-4 lg:p-6 ">Free reverse proxy</td>
                                     <td className="p-4 lg:p-6 opacity-50">Coming soon</td>
                                     <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
-                                    <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                    <td className="p-4 lg:p-6 opacity-50"></td>
                                     <td className="p-4 lg:p-6 opacity-50"></td>
                                     <td className="p-4 lg:p-6 opacity-50"></td>
                                     <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
@@ -349,7 +349,7 @@ export default function Home() {
                                         className="text-xs">(12GB)</span></td>
                                     <td className="p-4 lg:p-6">$28/mo. <span
                                         className="text-xs">(8GB)</span></td>
-                                    <td className="p-4 lg:p-6">$18/mo. <span
+                                    <td className="p-4 lg:p-6">$42/mo. <span
                                         className="text-xs">(8GB)</span></td>
                                     <td className="p-4 lg:p-6">$20/mo. <span
                                         className="text-xs">(8GB)</span></td>
@@ -364,7 +364,7 @@ export default function Home() {
                                     <td className="p-4 lg:p-6">CPU</td>
                                     <td className="p-4 lg:p-6 opacity-50">8700GE*, 7950X*</td>
                                     <td className="p-4 lg:p-6 opacity-50">3600, 5950X & 7950X</td>
-                                    <td className="p-4 lg:p-6 opacity-50">3900, 5950X</td>
+                                    <td className="p-4 lg:p-6 opacity-50">Unknown</td>
                                     <td className="p-4 lg:p-6 opacity-50">E-2386, 3600X</td>
                                     <td className="p-4 lg:p-6 opacity-50">Unknown</td>
                                     <td className="p-4 lg:p-6 opacity-50">E-1630V3, 7700K</td>
