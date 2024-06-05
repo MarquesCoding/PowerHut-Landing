@@ -34,8 +34,7 @@ const PricingCard: React.FC<PricingTier> = ({ logo, title, description, cpu, pri
     return (
 
         <div className="w-96 h-auto bg-[#141414]/90 rounded-lg shadow text-white p-6 relative border border-white/10">
-            <div
-                className="w-full h-full absolute bg-dot-white/[0.23] pointer-events-none -m-6 rounded-2xl z-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
+            {/*<div className="w-full h-full absolute bg-dot-white/[0.23] pointer-events-none -m-6 rounded-2xl z-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>*/}
             {pill && (
                 <div
                     className="absolute top-0 right-5 bg-[#FF4D14] py-0.5 px-2 rounded-b-lg uppercase text-sm">
@@ -65,6 +64,56 @@ const PricingCard: React.FC<PricingTier> = ({ logo, title, description, cpu, pri
                         </li>
                     ))}
                 </ul>
+            </div>
+            <div className="flex gap-4 pt-4">
+                {countries.america && (
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger>
+                                <Flag code="us" className="w-8"/>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                New York City
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+                )}
+                {countries.asia && (
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger>
+                                <Flag code="SG" className="w-8 rounded"/>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                Singapore
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+                )}
+                {countries.europe && (
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger>
+                                <Flag code="EU" className="w-8"/>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                Falkenstein
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+                )}
+                {countries.australia && (
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger>
+                                <Flag code="aus" className="w-6 rounded"/>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                Sydney
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+                )}
             </div>
         </div>
         // <div className="w-auto min-w-full md:min-w-72 relative group md:px-0 px-4 duration-300">
