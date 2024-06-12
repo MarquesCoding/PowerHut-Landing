@@ -570,9 +570,9 @@ export default function Home() {
                                     src="https://static-cdn.jtvnw.net/jtv_user_pictures/78b0003e-dd51-497e-9220-1856e0be003a-profile_image-70x70.png"
                                 />
                             </div>
-                            <p className="font-semibold font-mono text-lg opacity-50">
+                            <Button variant="secondary hover:bg-white">
                                 invalidm_
-                            </p>
+                            </Button>
                             <FaTwitch
                                 size={32}
                                 className="hover:opacity-50 duration-300 cursor-pointer"
@@ -589,9 +589,9 @@ export default function Home() {
                                     src="https://static-cdn.jtvnw.net/jtv_user_pictures/1d665c15-f692-4a40-9a68-962e8a44ef82-profile_image-70x70.png"
                                 />
                             </div>
-                            <p className="font-semibold font-mono text-lg opacity-50">
+                            <Button variant="secondary hover:bg-white">
                                 orangecreamsicle3
-                            </p>
+                            </Button>
                             <FaTwitch
                                 size={32}
                                 className="hover:opacity-50 duration-300 cursor-pointer"
