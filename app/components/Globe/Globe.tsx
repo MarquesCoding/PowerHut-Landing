@@ -4,7 +4,7 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '../ui/to
 interface Location {
     x: number;
     y: number;
-    name: string;
+    name: string | JSX.Element;
 }
 
 interface MapProps {

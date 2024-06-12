@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import PricingCard from "./components/PricingCard/PricingCard";
 import { NavigationMenuDemo } from "./components/Navigation/Navigation";
-import React from "react";
+import React, {useEffect} from "react";
 import { BackgroundBeams } from "./components/Backgrounds/Beam";
 import GameCard from "./components/GameCard/GameCard";
 import MapComponent from "./components/Globe/Globe";
@@ -20,8 +20,21 @@ import {VscGraph, VscLayoutPanelRight} from "react-icons/vsc";
 import {TbChevronLeftPipe} from "react-icons/tb";
 import {FaGlobeAfrica, FaRegCheckCircle} from "react-icons/fa";
 import {pricingTiers} from "@/app/utils/pricing";
+import axios from "axios";
 
 export default function Home() {
+
+    const handlePing = async(ip: string) => {
+        axios.get('https://api.viewdns.info/ping/?host=twitter.com&apikey=yourapikey&output=json').then((res) => {
+            return res.data;
+        })
+    }
+
+    useEffect(() => {
+       handlePing('https://geekflare.com').then((res) => console.log(res));
+    },[])
+
+
     return (
         // <FollowerPointerCard>
         <>
@@ -489,8 +502,7 @@ export default function Home() {
                                     Our Locations
                                 </p>
                                 <p className="opacity-50 font-light">
-                                    We currently only offer in Germany &amp; USA, but are
-                                    expanding!
+                                    We have limited stock of servers, so keep an eye out here!
                                 </p>
                                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                                 <p className="opacity-50 font-light">
@@ -502,12 +514,32 @@ export default function Home() {
                         <div className="w-full h-auto sm:h-96 flex items-center justify-center">
                             <MapComponent
                                 locations={[
-                                    // {x: 44.5, y: 21.5, name: `London - UK`},
+                                    {x: 44.5, y: 21.5, name: (
+                                            <div className="flex items-center justify-center flex-col">
+                                                <p>London - UK</p>
+                                                <p className="opacity-50 text-xs">Coming soon</p>
+                                            </div>
+                                        )},
                                     {x: 46, y: 25.5, name: `Germany - FSN`},
-                                    // {x: 92, y: 80, name: `Australia - SYD`},
-                                    // {x: 78, y: 60, name: `Asia - SGP`},
+                                    {x: 92, y: 80, name: (
+                                            <div className="flex items-center justify-center flex-col">
+                                                <p>Australia - MB</p>
+                                                <p className="opacity-50 text-xs">Coming soon</p>
+                                            </div>
+                                        )},
+                                    {x: 78, y: 60, name: (
+                                            <div className="flex items-center justify-center flex-col">
+                                                <p>Asia - SG</p>
+                                                <p className="opacity-50 text-xs">Coming soon</p>
+                                            </div>
+                                        )},
                                     {x: 25, y: 24, name: `America - NYC`},
-                                    // {x: 8, y: 35, name: `America - LA (Currently Unavailable)`},
+                                    {x: 8, y: 35, name: (
+                                            <div className="flex items-center justify-center flex-col">
+                                                <p>America - LA</p>
+                                                <p className="opacity-50 text-xs">Coming soon</p>
+                                            </div>
+                                        )},
                                 ]}
                                 mapSrc={
                                     "https://upload.wikimedia.org/wikipedia/commons/a/a0/World_map_with_points.svg"
