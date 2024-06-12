@@ -570,7 +570,7 @@ export default function Home() {
                                     src="https://static-cdn.jtvnw.net/jtv_user_pictures/78b0003e-dd51-497e-9220-1856e0be003a-profile_image-70x70.png"
                                 />
                             </div>
-                            <Button variant="secondary hover:bg-white">
+                            <Button variant="secondary">
                                 invalidm_
                             </Button>
                             <FaTwitch
@@ -589,7 +589,7 @@ export default function Home() {
                                     src="https://static-cdn.jtvnw.net/jtv_user_pictures/1d665c15-f692-4a40-9a68-962e8a44ef82-profile_image-70x70.png"
                                 />
                             </div>
-                            <Button variant="secondary hover:bg-white">
+                            <Button variant="secondary">
                                 orangecreamsicle3
                             </Button>
                             <FaTwitch
