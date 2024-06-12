@@ -5,8 +5,12 @@ import {NavigationMenuDemo} from "@/app/components/Navigation/Navigation";
 import Footer from "@/app/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/app/components/ui/accordion";
 import Link from "next/link";
+import Intercom from "@intercom/messenger-js-sdk";
 
 export default function Page() {
+    Intercom({
+        app_id: 'dcisso7v',
+    });
     return (
         <div className="w-full h-full flex flex-col">
             <motion.div

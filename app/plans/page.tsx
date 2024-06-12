@@ -10,8 +10,12 @@ import { LuDatabaseBackup } from "react-icons/lu";
 import {MdOutlineSwitchAccessShortcutAdd} from "react-icons/md";
 import {RiHomeWifiFill} from "react-icons/ri";
 import {IoIosSwitch} from "react-icons/io";
+import Intercom from "@intercom/messenger-js-sdk";
 
 export default function Page() {
+    Intercom({
+        app_id: 'dcisso7v',
+    });
     return (
         <div className="w-full h-full flex flex-col">
             <motion.div

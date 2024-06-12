@@ -21,9 +21,12 @@ import {TbChevronLeftPipe} from "react-icons/tb";
 import {FaGlobeAfrica, FaRegCheckCircle} from "react-icons/fa";
 import {pricingTiers} from "@/app/utils/pricing";
 import axios from "axios";
+import Intercom from "@intercom/messenger-js-sdk";
 
 export default function Home() {
-
+    Intercom({
+        app_id: 'dcisso7v',
+    });
     const handlePing = async(ip: string) => {
         axios.get('https://api.viewdns.info/ping/?host=twitter.com&apikey=yourapikey&output=json').then((res) => {
             return res.data;

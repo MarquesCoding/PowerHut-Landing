@@ -15,8 +15,12 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/ap
 import {FaBook, FaDiscord} from "react-icons/fa";
 import {Button} from "@/app/components/ui/button";
 import {FiBook} from "react-icons/fi";
+import Intercom from "@intercom/messenger-js-sdk";
 
 export default function Page() {
+    Intercom({
+        app_id: 'dcisso7v',
+    });
     return (
         <div className="w-full h-full flex flex-col">
             <motion.div

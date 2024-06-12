@@ -1,6 +1,7 @@
 import {FaDiscord, FaInstagram, FaTiktok, FaTwitter} from "react-icons/fa";
 import React from "react";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import {FaSquareXTwitter, FaStar} from "react-icons/fa6";
+import {Button} from "@/app/components/ui/button";
 
 const Footer = () => {
     return (
@@ -8,7 +9,8 @@ const Footer = () => {
             <div className="flex flex-col lg:flex-row gap-24 justify-between text-black">
                 <div className="flex flex-col gap-12">
                     <div className="flex flex-row gap-4 items-center">
-                        <img className="cursor-pointer hover:opacity-50 duration-300 w-auto h-10 mr-4" src={"/logo-black.png"}
+                        <img className="cursor-pointer hover:opacity-50 duration-300 w-auto h-10 mr-4"
+                             src={"/logo-black.png"}
                              alt={"logo"}/>
                         <p className="max-w-xs opacity-70">
                             PowerHut is a game focused hosting company that started in late 2023.
@@ -20,17 +22,25 @@ const Footer = () => {
                                        className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
                         </a>
                         <a href="https://twitter.com/PowerHutpro">
-                        <FaSquareXTwitter size={33}
-                                          className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
+                            <FaSquareXTwitter size={33}
+                                              className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
                         </a>
-                            <a href="https://www.tiktok.com/@powerhutpro">
-                                <FaTiktok size={33}
-                                          className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
-                            </a>
+                        <a href="https://www.tiktok.com/@powerhutpro">
+                            <FaTiktok size={33}
+                                      className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}/>
+                        </a>
                     </div>
                     <p className="max-w-lg opacity-70 text-sm">
                         © 2024 | PowerHut | All rights reserved.
                     </p>
+                </div>
+                <div className="flex items-center flex-col gap-2">
+                    <p className="text-sm">Review us on Trustpilot!</p>
+                    <Button className="flex items-center justify-center gap-1" onClick={() => window.location.href = "https://uk.trustpilot.com/review/powerhut.pro"}
+                            rel="noopener">
+                        <FaStar fill="#00B67A" />
+                        Trustpilot
+                    </Button>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-12">
                     <div className="flex flex-col gap-2">
