@@ -6,6 +6,7 @@ import Footer from "@/app/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/app/components/ui/accordion";
 import Link from "next/link";
 import Intercom from "@intercom/messenger-js-sdk";
+import Promo from "@/app/components/Promo/Promo";
 
 export default function Page() {
     Intercom({
@@ -13,23 +14,7 @@ export default function Page() {
     });
     return (
         <div className="w-full h-full flex flex-col">
-            <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    opacity: 100,
-                    translateY: [-40, 0]
-                }}
-                transition={{
-                    ease: "linear",
-                    opacity: {duration: 1}
-                }}
-                className="w-full h-auto py-2 bg-[#FF4D14] text-[#141414] fixed top-0 left-0 z-40 lg:text-lg text-sm flex justify-center items-center gap-2 shadow-lg shadow-[#141414]">
-                Use code : <span
-                className="font-semibold font-mono hover:opacity-50 duration-300 bg-white px-2 rounded-md">POWER</span> and
-                enjoy 15% off your first month!
-            </motion.div>
+            <Promo/>
             <motion.div
                 initial={{
                     opacity: 0
