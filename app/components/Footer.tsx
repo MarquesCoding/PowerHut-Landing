@@ -47,7 +47,7 @@ const Footer = () => {
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>FAQ</a>
                         <a href={'https://discord.gg/invite/powerhut'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Discord</a>
-                        <a href={'https://billing.powerhut.pro/index.php?rp=/knowledgebase'}
+                        <a href={'https://docs.powerhut.pro/'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Knowledgebase</a>
                         <a href={'https://monitor.powerhut.pro'}
                            className={"hover:opacity-100 opacity-70 duration-300 cursor-pointer hover:text-white"}>Server
