@@ -1,6 +1,6 @@
 import React from 'react';
 export interface GameCardProps {
-    imageSrc: string
+    imageSrc?: string
 }
 
 const GameCard: React.FC<GameCardProps> = ({ imageSrc }) => {
@@ -11,7 +11,14 @@ const GameCard: React.FC<GameCardProps> = ({ imageSrc }) => {
             <div className="w-full h-full absolute bg-gradient-to-t to-[#FF4D14]/20 rounded-2xl from-transparent group-hover:opacity-0 duration-300">
 
             </div>
-            <img src={imageSrc} className={"w-72 h-96 bg-zinc-800 rounded-xl"} alt='image'/>
+            {imageSrc && (
+                <img src={imageSrc} className={"w-72 h-96 bg-zinc-800 rounded-xl"} alt='image'/>
+            )}
+            {!imageSrc && (
+                <div className="w-72 h-96 bg-zinc-800 rounded-xl flex items-center justify-center">
+                    <p className="text-4xl font-semibold">+ more!</p>
+                </div>
+            )}
         </div>
     );
 };

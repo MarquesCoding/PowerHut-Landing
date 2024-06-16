@@ -33,7 +33,7 @@ export interface PricingTier {
 const PricingCard: React.FC<PricingTier> = ({ logo, title, description, cpu, price, originalPrice, features, button, pill, countries }) => {
     return (
 
-        <div className="w-96 h-auto bg-[#141414]/90 rounded-lg shadow text-white p-6 relative border border-white/10 hover:border-white/30 duration-300 hover:-translate-y-0.5">
+        <div className="w-96 h-auto bg-[#141414]/60 rounded-lg shadow text-white p-6 relative border border-white/10 hover:border-white/30 duration-300 hover:-translate-y-0.5">
             {/*<div className="w-full h-full absolute bg-dot-white/[0.23] pointer-events-none -m-6 rounded-2xl z-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>*/}
             {pill && (
                 <div
@@ -42,20 +42,19 @@ const PricingCard: React.FC<PricingTier> = ({ logo, title, description, cpu, pri
                 </div>
             )}
             {logo}
-            <div className="mt-6">
-                <p className="text-2xl text-[#FF4D14] font-semibold">{title}</p>
-                <p className="text-gray-400">{description}</p>
-            </div>
-            <div className="mt-2 flex flex-row gap-4 items-center">
-                <p className="text-6xl text-white font-semibold">${price}</p>
-                {originalPrice && (
-                    <p className="text-6xl text-gray-400/20 line-through font-light">${originalPrice}</p>
-                )}
-            </div>
             <div className="divide-y divide-dashed divide-white/30 mt-4 flex flex-col gap-6">
-                <Button variant="outline"
-                        onClick={() => window.location.href = `${button.link}`}
-                        className="w-full h-16 rounded-lg border-[0.1rem] border-black text-lg font-semibold bg-[#FF4D14]">Purchase</Button>
+                <div>
+                    <div>
+                        <p className="text-2xl text-[#FF4D14] font-semibold">{title}</p>
+                        <p className="text-gray-400">{description}</p>
+                    </div>
+                    <div className="mt-2 flex flex-row gap-4 items-center">
+                        <p className="text-6xl text-white font-semibold">${price}</p>
+                        {originalPrice && (
+                            <p className="text-6xl text-gray-400/20 line-through font-light">${originalPrice}</p>
+                        )}
+                    </div>
+                </div>
                 <ul className="py-2">
                     {features.map((feature, index) => (
                         <li key={index} className="flex items-center py-2 gap-2">
@@ -115,6 +114,9 @@ const PricingCard: React.FC<PricingTier> = ({ logo, title, description, cpu, pri
                     </TooltipProvider>
                 )}
             </div>
+            <Button variant="outline"
+                    onClick={() => window.location.href = `${button.link}`}
+                    className="w-full h-16 mt-4 rounded-lg border-[0.1rem] text-lg font-semibold border-[#FF4D14]/50">Purchase</Button>
         </div>
         // <div className="w-auto min-w-full md:min-w-72 relative group md:px-0 px-4 duration-300">
         //     <div

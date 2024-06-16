@@ -32,6 +32,21 @@ body {
   font-family: 'Lexend', sans-serif;
 }
 
+.background-tr {
+  @apply bg-gradient-to-tr from-[#FF4D14]/10 to-transparent bg-opacity-50 relative flex items-center justify-center w-full h-auto;
+}
+.background-tl {
+  @apply bg-gradient-to-tl from-[#FF4D14]/10 to-transparent bg-opacity-50 relative flex items-center justify-center w-full h-auto;
+}
+.background-br {
+  @apply bg-gradient-to-br from-[#FF4D14]/10 to-transparent bg-opacity-50 relative flex items-center justify-center w-full h-auto;
+}
+.background-bl {
+  @apply bg-gradient-to-bl from-[#FF4D14]/10 to-transparent bg-opacity-50 relative flex items-center justify-center w-full h-auto;
+}
+.max {
+  @apply max-w-[100rem];
+}
 
 @layer base {
     :root {
