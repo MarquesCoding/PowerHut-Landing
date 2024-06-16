@@ -33,7 +33,7 @@ export interface PricingTier {
 const PricingCard: React.FC<PricingTier> = ({ logo, title, description, cpu, price, originalPrice, features, button, pill, countries }) => {
     return (
 
-        <div className="w-96 h-auto bg-[#141414]/60 rounded-lg shadow text-white p-6 relative border border-white/10 hover:border-white/30 duration-300 hover:-translate-y-0.5">
+        <div className={`w-96 h-auto bg-[#141414]/60 hover:bg-[#141414] rounded-lg shadow text-white p-6 relative border border-white/10 hover:border-white/30 duration-300 hover:-translate-y-0.5`}>
             {/*<div className="w-full h-full absolute bg-dot-white/[0.23] pointer-events-none -m-6 rounded-2xl z-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>*/}
             {pill && (
                 <div

@@ -25,6 +25,7 @@ import Intercom from "@intercom/messenger-js-sdk";
 import Promo from "@/app/components/Promo/Promo";
 import FAQ from "@/app/components/FAQ/FAQ";
 import Space from "@/app/components/Space/Space";
+import NavigationBar from "@/app/components/NavigationBar/NavigationBar";
 
 export default function Home() {
     Intercom({
@@ -44,29 +45,29 @@ export default function Home() {
     return (
         // <FollowerPointerCard>
         <>
-            <motion.div className="w-full h-full flex flex-col max-w-screen items-center">
+            <motion.div
+                initial={{
+                    opacity: 0,
+                }}
+                animate={{
+                    opacity: 100,
+                }}
+                transition={{
+                    ease: "linear",
+                    opacity: {duration: 1},
+                }}
+                className="w-full h-full flex flex-col max-w-screen items-center">
                 <Promo/>
                 <Space/>
+                <BackgroundBeams/>
                 <div className="w-full h-auto background-tr flex items-center justify-center">
                     <div className="w-full h-[70vh] max">
-                        <div
-                            className="mt-24 -mb-44 text-white relative w-full flex items-center justify-between gap-4 z-20">
-                            <div className="w-96">
-                                <img
-                                    className="hover:opacity-50 duration-300 w-6 md:w-8"
-                                    src={"/logo-white.png"}
-                                    alt={"logo"}
-                                />
-                            </div>
-                            <div className="">
-                                <NavigationMenuDemo/>
-                            </div>
-                        </div>
+                        <NavigationBar/>
                         <div
                             className="w-full h-full flex items-center justify-center relative z-10 flex-col pt-48">
                             <div className="flex flex-col w-full">
                                 <div
-                                    className="w-fit h-auto rounded-full mb-4 text-sm text-[#FF4D14] flex gap-4 py-1 px-2 border border-[#FF4D14]/50 bg-[#FF4D14]/10"
+                                    className="w-fit h-auto rounded-full mb-4 text-sm flex items-center gap-4 py-1 px-2 border border-[#FF4D14]/50 bg-[#FF4D14]/10"
                                 >
                                     <TbBrandMinecraft fill={"#141414"} size={22}/>
                                     Minecraft 1.21: The Tricky Trails Update, released!
@@ -77,11 +78,11 @@ export default function Home() {
                                 </span>
                                     {' '}
                                     <br/>
-                                    <span>
+                                    <span className="text-zinc-400">
                                     Host
                                 </span>,
                                     {' '}
-                                    <span>
+                                    <span className="text-zinc-400">
                                     Game
                                 </span>,
                                     {' '}
@@ -94,20 +95,6 @@ export default function Home() {
                                         We are committed to transparency and user-friendly features, ensuring a superior
                                         gaming experience for our customers worldwide.
                                     </p>
-                                    <div className="mt-12">
-                                        <TooltipProvider>
-                                            <Tooltip>
-                                                <TooltipTrigger>
-                                                    <Button variant="outline">
-                                                        mc.powerhut.pro
-                                                    </Button>
-                                                </TooltipTrigger>
-                                                <TooltipContent>
-                                                    <p>Join our public test Minecraft server</p>
-                                                </TooltipContent>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +255,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="background-tr">
-                        <div className="flex max flex-col w-full h-full py-24  pb-40">
+                        <div className="flex max flex-col w-full h-full  pb-40">
                             <div className="mb-20 flex flex-col gap-4">
                                 <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
                                     Competition is key
@@ -345,8 +332,8 @@ export default function Home() {
                                         </tr>
                                         <tr className="hover:bg-white/10 duration-300">
                                             <td className="p-4 lg:p-6">Price</td>
-                                            <td className="p-4 lg:p-6 text-lg text-orange-600 font-bold">$16/mo. <span
-                                                className="text-xs">(12GB)</span></td>
+                                            <td className="p-4 lg:p-6 text-lg text-orange-600 font-bold">$12/mo. <span
+                                                className="text-xs">(8GB)</span></td>
                                             <td className="p-4 lg:p-6">$28/mo. <span
                                                 className="text-xs">(8GB)</span></td>
                                             <td className="p-4 lg:p-6">$42/mo. <span
@@ -381,7 +368,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="background-br">
-                        <div className="flex max flex-col justify-center item-center w-full h-full py-24  pb-40">
+                        <div className="flex max flex-col justify-center item-center w-full h-full  pb-40">
                             <div className="mb-20 flex flex-col gap-4">
                                 <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
                                     Custom Game Panel

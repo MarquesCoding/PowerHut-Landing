@@ -18,6 +18,7 @@ import {FiBook} from "react-icons/fi";
 import Intercom from "@intercom/messenger-js-sdk";
 import Promo from "@/app/components/Promo/Promo";
 import FAQ from "@/app/components/FAQ/FAQ";
+import NavigationBar from "@/app/components/NavigationBar/NavigationBar";
 
 export default function Page() {
     Intercom({
@@ -38,19 +39,9 @@ export default function Page() {
                     opacity: {duration: 1}
                 }}
 
-                className="w-full h-[50vh] bg-gradient-to-tr from-[#FF4D14]/10 to-transparent bg-opacity-50 relative">
-                <div className="mt-24 -mb-44 text-white relative w-full flex items-center justify-between gap-4 z-20">
-                    <Link href="/" className="w-96">
-                        <img className="hover:opacity-50 duration-300 mx-8 md:mx-24 w-6 md:w-8"
-                             src={"/logo-white.png"}
-                             alt={"logo"}/>
-                    </Link>
-                    <div className="">
-                        <NavigationMenuDemo/>
-                    </div>
-                    <div className="w-96">
-
-                    </div>
+                className="w-full h-[50vh] bg-gradient-to-tr from-[#FF4D14]/10 to-transparent flex items-center flex-col bg-opacity-50 relative">
+                <div className="max w-full">
+                    <NavigationBar/>
                 </div>
                 <div
                     className="w-full h-full flex items-center justify-center relative z-10 flex-col pt-48 text-center">
