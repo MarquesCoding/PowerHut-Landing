@@ -155,6 +155,8 @@ export default function Home() {
                                 <GameCard imageSrc={"/palworld.webp"}/>
                                 <GameCard imageSrc={"/terraria.webp"}/>
                                 <GameCard imageSrc={"/tf2.webp"}/>
+                                <GameCard imageSrc={"/garrys.jpg"}/>
+                                <GameCard imageSrc={"/cs2.jpg"}/>
                                 <GameCard />
                             </div>
                         </div>
@@ -421,7 +423,7 @@ export default function Home() {
                                     onClick={() => (window.location.href = "https://grafana.powerhut.pro")}
                                     src={"/grafana.png"}
                                     alt="panel"
-                                    className="rounded-lg border-2 border-[#FF4D14] lg:max-w-6xl shadow-2xl shadow-[#FF4D14]/30 cursor-pointer hover:opacity-50 duration-300 transition-all"
+                                    className="rounded-lg border-2 border-[#FF4D14] shadow-2xl shadow-[#FF4D14]/30 cursor-pointer hover:opacity-50 duration-300 transition-all"
                                 />
                             </div>
                         </div>
