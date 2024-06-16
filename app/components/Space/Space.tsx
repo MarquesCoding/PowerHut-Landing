@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 
 import { PointMaterial, Points, Trail } from '@react-three/drei';

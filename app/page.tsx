@@ -137,7 +137,7 @@ export default function Home() {
                     </div>
                     <div className="background-tr">
                         <div className="w-full h-auto pb-24 max">
-                            <div className="mb-20 flex flex-col gap-4">
+                            <div className="mb-20 flex flex-col gap-4 items-center lg:items-start">
                                 <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
                                     Supported Games
                                 </p>
@@ -148,7 +148,7 @@ export default function Home() {
                                     If you have any suggestions, throw them in the Discord!
                                 </p>
                             </div>
-                            <div className="flex w-full h-auto flex-wrap gap-6">
+                            <div className="flex w-full h-auto flex-wrap gap-6 items-center lg:items-start justify-center lg:justify-start">
                                 <GameCard imageSrc={"/minecraft.webp"}/>
                                 <GameCard imageSrc={"/rust.webp"}/>
                                 <GameCard imageSrc={"/satisfactory.webp"}/>
