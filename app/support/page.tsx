@@ -21,6 +21,16 @@ import FAQ from "@/app/components/FAQ/FAQ";
 import NavigationBar from "@/app/components/NavigationBar/NavigationBar";
 
 export default function Page() {
+
+    const isTimeWithinRange = (): boolean => {
+        const now = new Date();
+        const gmtHours = now.getUTCHours();
+
+        // 9 AM to 11 PM in 24-hour format is 9 to 23
+        return gmtHours >= 9 && gmtHours < 23;
+    };
+
+
     Intercom({
         app_id: 'dcisso7v',
     });
@@ -65,6 +75,7 @@ export default function Page() {
                             <p>Our Support Team is ready for all your questions, at almost any hour during the day.
                                 Outstanding Support is what we believe in, and what you deserve!</p>
                         </div>
+                        <b className="italic mt-4">NOTE - We are currently not available 24/7. <br/>We typically reply between 9AM GMT - 11PM GMT</b>
                     </motion.div>
                 </div>
             </motion.div>
@@ -94,7 +105,7 @@ export default function Page() {
                             </div>
                             <p className="text-sm md:text-md opacity-50 max-w-xs">Response Time</p>
                             <p className="text-sm md:text-lg max-w-xs">Generally 2-3 minutes</p>
-                            <p className="text-sm md:text-lg text-[#FF4D14] max-w-xs mb-4">Online Now!</p>
+                            <p className="text-sm md:text-lg text-[#FF4D14] max-w-xs mb-4">{isTimeWithinRange() ? 'Online Now' : 'Offline'}</p>
                             <a href="https://discord.gg/invite/powerhut">
                                 <Button variant="secondary">
                                     Join Server
@@ -112,7 +123,7 @@ export default function Page() {
                             </div>
                             <p className="text-sm md:text-md opacity-50 max-w-xs">Response Time</p>
                             <p className="text-sm md:text-lg max-w-xs">Generally under 2 hours</p>
-                            <p className="text-sm md:text-lg text-[#FF4D14] max-w-xs mb-4">Online Now!</p>
+                            <p className="text-sm md:text-lg text-[#FF4D14] max-w-xs mb-4">{isTimeWithinRange() ? 'Online Now' : 'Offline'}</p>
                             <a href="https://billing.powerhut.pro/contact.php">
                                 <Button variant="secondary">
                                     Create a Ticket
