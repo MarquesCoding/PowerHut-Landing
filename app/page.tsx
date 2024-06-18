@@ -333,6 +333,16 @@ export default function Home() {
                                             <td className="p-4 lg:p-6 opacity-50"></td>
                                         </tr>
                                         <tr className="hover:bg-white/10 duration-300">
+                                            <td className="p-4 lg:p-6 ">Free subdomain</td>
+                                            <td className="p-4 lg:p-6 opacity-50">Early Access*</td>
+                                            <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                            <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                            <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                            <td className="p-4 lg:p-6 opacity-50"></td>
+                                            <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
+                                            <td className="p-4 lg:p-6 opacity-50"></td>
+                                        </tr>
+                                        <tr className="hover:bg-white/10 duration-300">
                                             <td className="p-4 lg:p-6">Price</td>
                                             <td className="p-4 lg:p-6 text-lg text-orange-600 font-bold">$12/mo. <span
                                                 className="text-xs">(8GB)</span></td>
@@ -363,6 +373,9 @@ export default function Home() {
                                     </table>
                                     <p className="text-xs mt-2 opacity-50">
                                         Comparison data accurate as of June 1st, 2024
+                                    </p>
+                                    <p className="text-xs mt-2 opacity-50">
+                                        * This is currently a work in progress, but you might see it in the panel already!
                                     </p>
                                 </div>
                             </div>
