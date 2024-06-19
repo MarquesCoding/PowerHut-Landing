@@ -116,7 +116,7 @@ const PricingCard: React.FC<PricingTier> = ({ logo, title, description, cpu, pri
             </div>
             <Button variant="outline"
                     onClick={() => window.location.href = `${button.link}`}
-                    className="w-full h-16 mt-4 rounded-lg border-[0.1rem] text-lg font-semibold border-[#FF4D14]/50">Purchase</Button>
+                    className="w-full h-16 mt-4 rounded-lg border-[0.1rem] text-lg font-semibold border-[#FF4D14]/50">{button.text}</Button>
         </div>
         // <div className="w-auto min-w-full md:min-w-72 relative group md:px-0 px-4 duration-300">
         //     <div

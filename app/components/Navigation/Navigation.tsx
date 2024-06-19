@@ -56,11 +56,22 @@ export function NavigationMenuDemo() {
         <NavigationMenu>
             <NavigationMenuList>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Hosting</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>Game Hosting</NavigationMenuTrigger>
                     <NavigationMenuContent>
                         <ul className="grid gap-3 p-6 md:w-[100px] lg:w-[400px] bg-[#141414]">
-                            <ListItem href="/plans" title="Server Hosting">
+                            <ListItem href="/game" title="Hosting">
                                 Looking to play games with your friends? Great, we can help!
+                            </ListItem>
+                        </ul>
+                    </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                    <NavigationMenuTrigger>Web Hosting</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                        <ul className="grid gap-3 p-6 md:w-[100px] lg:w-[400px] bg-[#141414]">
+                            <ListItem href="/web" title="Hosting">
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                Want to host a simple or complex website? We've got you!
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>

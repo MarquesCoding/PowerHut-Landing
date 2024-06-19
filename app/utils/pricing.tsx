@@ -1,22 +1,10 @@
 import {PricingTier} from "@/app/components/PricingCard/PricingCard";
-import {MdCode, MdGroup} from "react-icons/md";
+import {MdCode, MdGroup, MdSignalWifi1Bar, MdSignalWifi2Bar, MdSignalWifi3Bar, MdSignalWifi4Bar} from "react-icons/md";
 import React from "react";
 import {HiMiniUserGroup} from "react-icons/hi2";
 import {FaBolt, FaGamepad, FaUserFriends} from "react-icons/fa";
 
 export const pricingTiers: PricingTier[] = [
-    // {
-    //     title: 'Web',
-    //     cpu: 'Ryzen 5 3600*',
-    //     price: 1,
-    //     features: ['3 Domains', '3 Databases','AutoSSL - CPanel', '50GB NVMe SSD', 'Unlimited Bandwidth', 'Shared IP'],
-    //     button: {
-    //         text: 'Coming soon',
-    //     },
-    //     countries: {
-    //         europe: true,
-    //     }
-    // },
     {
         logo: (
             <MdCode
@@ -28,7 +16,7 @@ export const pricingTiers: PricingTier[] = [
         price: 2,
         features: ['Shared CPU Core', '2GB DDR5 RAM','1GBit/s Connection', '10GB NVMe SSD', 'Shared IP', 'Custom Game Changer'],
         button: {
-            text: 'Order',
+            text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/test-server"
         },
         countries: {
@@ -47,7 +35,7 @@ export const pricingTiers: PricingTier[] = [
         price: 4,
         features: ['Shared CPU Core', '4GB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP' , 'Custom Game Changer'],
         button: {
-            text: 'Order',
+            text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/friends"
         },
         countries: {
@@ -67,7 +55,7 @@ export const pricingTiers: PricingTier[] = [
         originalPrice: 12,
         features: ['Shared CPU Core', '6GB DDR5 RAM**','1GBit/s Connection', '30GB NVMe SSD', 'Shared IP', 'Custom Game Changer'],
         button: {
-            text: 'Order',
+            text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/basic"
         },
         countries: {
@@ -87,7 +75,7 @@ export const pricingTiers: PricingTier[] = [
         originalPrice: 16,
         features: ['Dedicated CPU Core', '8GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP', 'Custom Game Changer'],
         button: {
-            text: 'Order',
+            text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/advanced"
         },
         pill: {
@@ -110,7 +98,7 @@ export const pricingTiers: PricingTier[] = [
         originalPrice: 20,
         features: ['Dedicated CPU Core', '12GB DDR5 RAM**','1GBit/s Connection', '100GB NVMe SSD', 'Dedicated IP' , 'Custom Game Changer'],
         button: {
-            text: 'Order',
+            text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/pro"
         },
         countries: {
@@ -130,12 +118,72 @@ export const pricingTiers: PricingTier[] = [
         originalPrice: 24,
         features: ['Dedicated CPU Core', '16GB DDR5 RAM**','1GBit/s Connection', 'Unmetered NVMe SSD***', 'Dedicated IP' , 'Custom Game Changer'],
         button: {
-            text: 'Order',
+            text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/top"
         },
         countries: {
             europe: true,
             america: true
+        }
+    },
+];
+
+export const webTiers: PricingTier[] = [
+    {
+        logo: (
+            <MdSignalWifi1Bar
+                className="p-2 bg-white/10 w-10 h-10 flex  items-center justify-center rounded-xl"/>
+        ),
+        title: 'Beginner',
+        description: 'Perfect for beginners',
+        cpu: 'Ryzen 9 7950X*',
+        price: 1,
+        originalPrice: 5,
+        features: ['50GB NVMe SSD', '100GB Bandwidth','50 FTP Accounts', '50 Email Addresses', '25 Databases' , 'Auto SSL Certificates'],
+        button: {
+            text: 'Coming Soon',
+            link: "#"
+        },
+        countries: {
+            europe: true,
+        }
+    },
+    {
+        logo: (
+            <MdSignalWifi2Bar
+                className="p-2 bg-white/10 w-10 h-10 flex  items-center justify-center rounded-xl"/>
+        ),
+        title: 'Standard',
+        description: 'Great for personal websites',
+        cpu: 'Ryzen 9 7950X*',
+        price: 3,
+        originalPrice: 8,
+        features: ['100GB NVMe SSD', '200GB Bandwidth','75 FTP Accounts', '75 Email Addresses', '50 Databases' , 'Auto SSL Certificates'],
+        button: {
+            text: 'Coming Soon',
+            link: "#"
+        },
+        countries: {
+            europe: true,
+        }
+    },
+    {
+        logo: (
+            <MdSignalWifi4Bar
+                className="p-2 bg-white/10 w-10 h-10 flex text-[#FF4D14] items-center justify-center rounded-xl"/>
+        ),
+        title: 'Extreme',
+        description: 'Level up with more power',
+        cpu: 'Ryzen 9 7950X*',
+        price: 4,
+        originalPrice: 12,
+        features: ['200GB NVMe SSD', 'Unlimited Bandwidth***','100 FTP Accounts', '100 Email Addresses', '60 Databases' , 'Auto SSL Certificates'],
+        button: {
+            text: 'Coming Soon',
+            link: "#"
+        },
+        countries: {
+            europe: true,
         }
     },
 ];
