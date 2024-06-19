@@ -19,7 +19,7 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/app/co
 import {VscGraph, VscLayoutPanelRight} from "react-icons/vsc";
 import {TbBrandMinecraft, TbChevronLeftPipe} from "react-icons/tb";
 import {FaGlobeAfrica, FaRegCheckCircle} from "react-icons/fa";
-import {pricingTiers} from "@/app/utils/pricing";
+import {pricingTiers, webTiers} from "@/app/utils/pricing";
 import axios from "axios";
 import Intercom from "@intercom/messenger-js-sdk";
 import Promo from "@/app/components/Promo/Promo";
@@ -65,14 +65,14 @@ export default function Home() {
                         <NavigationBar/>
                         <div
                             className="w-full h-full flex items-center justify-center relative z-10 flex-col pt-48">
-                            <div className="flex flex-col w-full">
+                            <div className="flex flex-col w-full px-4 md:p-0">
                                 <div
                                     className="w-fit h-auto rounded-full mb-4 text-sm flex items-center gap-4 py-1 px-2 border border-[#FF4D14]/50 bg-[#FF4D14]/10"
                                 >
                                     <TbBrandMinecraft fill={"#141414"} size={22}/>
                                     Minecraft 1.21: The Tricky Trails Update, released!
                                 </div>
-                                <div className="text-7xl lg:text-9xl font-semibold">
+                                <div className="text-5xl lg:text-9xl font-semibold">
                                 <span>
                                     Power up your play.
                                 </span>
@@ -105,40 +105,57 @@ export default function Home() {
                     <div className="background-br">
                         <div className="flex flex-col justify-center max item-center w-full h-auto pb-24">
                             <div className="flex w-full h-auto justify-center items-center flex-col">
-                                <div className="flex w-full h-auto flex-wrap justify-center gap-5">
-                                    {pricingTiers
-                                        .filter((_, index) => [0, 2, 3, 5].includes(index))
-                                        .map((tier, index) => (
-                                            <PricingCard key={index} {...tier} />
-                                        ))
-                                    }
+                                <div className="flex flex-col md:flex-row gap-2 items-center">
+                                    <div>
+                                        <p className="mb-2 opacity-50 text-xl text-center">Web Hosting</p>
+                                        <div className="flex w-fit h-fit flex-wrap justify-center gap-2">
+                                            {webTiers
+                                                .filter((_, index) => [0].includes(index))
+                                                .map((tier, index) => (
+                                                    <PricingCard key={index} {...tier} />
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
+                                    <div className="md:w-0.5 md:h-96 w-96 h-0.5 bg-orange-500 opacity-50"></div>
+                                    <div>
+                                        <p className="mb-2 opacity-50 text-xl text-center">Game Hosting</p>
+                                        <div className="flex w-fit h-fit flex-wrap justify-center gap-2">
+                                            {pricingTiers
+                                                .filter((_, index) => [2, 3, 5].includes(index))
+                                                .map((tier, index) => (
+                                                    <PricingCard key={index} {...tier} />
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="mt-4">
-                                    <p className="mt-4 mb-3 font-bold">
+                                    <p className="mt-4 mb-3 font-bold text-center md:text-start">
                                         Looking for more prices? These are only our recommendations. Get started
                                         with <a
                                         href="/plans" className="underline">Server Hosting</a>.
                                     </p>
                                     <p className="opacity-60 text-center text-white w-full text-xs">*CPU will vary
-                                        based
-                                        on
-                                        server
-                                        location - will be equivalent</p>
-                                    <p className="opacity-60 text-center text-white w-full text-xs">
-                                        ** Additional RAM can be purchased through a support ticket
-                                        (billing / discord)
-                                    </p>
-                                    <p className=" opacity-60 text-center text-white w-full text-xs">
-                                        *** Fair Use Policy
-                                    </p>
+                                            based
+                                            on
+                                            server
+                                            location - will be equivalent</p>
+                                        <p className="opacity-60 text-center text-white w-full text-xs">
+                                            ** Additional RAM can be purchased through a support ticket
+                                            (billing / discord)
+                                        </p>
+                                        <p className=" opacity-60 text-center text-white w-full text-xs">
+                                            *** Fair Use Policy
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="background-tr">
+                        <div className="background-tr">
                         <div className="w-full h-auto pb-24 max">
                             <div className="mb-20 flex flex-col gap-4 items-center lg:items-start">
-                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
+                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl text-center md:text-start">
                                     Supported Games
                                 </p>
                                 <p className="opacity-50 font-light">
@@ -164,7 +181,7 @@ export default function Home() {
                     <div className="background-br">
                         <div className="w-full max h-auto flex flex-col pb-48">
                             <div className="mb-20 flex flex-col gap-4">
-                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
+                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl text-center md:text-start">
                                     Key Features
                                 </p>
                                 <p className="opacity-50 font-light">
@@ -259,7 +276,7 @@ export default function Home() {
                     <div className="background-tr">
                         <div className="flex max flex-col w-full h-full  pb-40">
                             <div className="mb-20 flex flex-col gap-4">
-                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
+                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl text-center md:text-start">
                                     Competition is key
                                 </p>
                                 <p className="opacity-50 font-light">
@@ -385,7 +402,7 @@ export default function Home() {
                     <div className="background-br">
                         <div className="flex max flex-col justify-center item-center w-full h-full  pb-40">
                             <div className="mb-20 flex flex-col gap-4">
-                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
+                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl text-center md:text-start">
                                     Custom Game Panel
                                 </p>
                                 <p className="opacity-50 font-light">
@@ -423,7 +440,7 @@ export default function Home() {
                     <div className="background-tr">
                         <div className="flex max flex-col justify-center item-center w-full h-auto pb-24">
                             <div className="mb-20 flex flex-col gap-4">
-                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
+                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl text-center md:text-start">
                                     Great Transparency
                                 </p>
                                 <p className="opacity-50 font-light">

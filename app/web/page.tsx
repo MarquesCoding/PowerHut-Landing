@@ -84,6 +84,7 @@ export default function Page() {
                             {/* eslint-disable-next-line react/no-unescaped-entities */}
                             <p className="opacity-50">When it comes to managing your website, ease and efficiency are
                                 key. With cPanel, you can effortlessly switch between a variety of powerful tools and
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
                                 features, all from a single, user-friendly interface. Whether you're managing your
                                 files, databases, or emails.</p>
                         </div>
