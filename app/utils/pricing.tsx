@@ -139,10 +139,10 @@ export const webTiers: PricingTier[] = [
         cpu: 'Ryzen 9 7950X*',
         price: 2,
         originalPrice: 5,
-        features: ['50GB NVMe SSD', '100GB Bandwidth','50 FTP Accounts', '50 Email Addresses', '25 Databases' , 'Auto SSL Certificates'],
+        features: ['50GB NVMe SSD', '100GB Bandwidth', '50 FTP Accounts', '50 Email Addresses', '25 Databases' , 'Auto SSL Certificates'],
         button: {
-            text: 'Coming Soon',
-            link: "#"
+            text: 'Purchase',
+            link: "https://billing.powerhut.pro/index.php?rp=/store/web-hosting/Beginner"
         },
         countries: {
             europe: true,
@@ -160,8 +160,8 @@ export const webTiers: PricingTier[] = [
         originalPrice: 8,
         features: ['100GB NVMe SSD', '200GB Bandwidth','75 FTP Accounts', '75 Email Addresses', '50 Databases' , 'Auto SSL Certificates'],
         button: {
-            text: 'Coming Soon',
-            link: "#"
+            text: 'Purchase',
+            link: "https://billing.powerhut.pro/index.php?rp=/store/web-hosting/standard"
         },
         countries: {
             europe: true,
@@ -177,10 +177,10 @@ export const webTiers: PricingTier[] = [
         cpu: 'Ryzen 9 7950X*',
         price: 6,
         originalPrice: 12,
-        features: ['200GB NVMe SSD', 'Unlimited Bandwidth***','100 FTP Accounts', '100 Email Addresses', '60 Databases' , 'Auto SSL Certificates'],
+        features: ['200GB NVMe SSD', 'Unlimited Bandwidth***','100 FTP Accounts', '100 Email Addresses', '100 Databases' , 'Auto SSL Certificates'],
         button: {
-            text: 'Coming Soon',
-            link: "#"
+            text: 'Purchase',
+            link: "https://billing.powerhut.pro/index.php?rp=/store/web-hosting/extreme"
         },
         countries: {
             europe: true,
