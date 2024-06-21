@@ -34,7 +34,7 @@ const components: { title: string; href: string; description: string }[] = [
     },
     {
         title: "Guides",
-        href: "https://billing.powerhut.pro/index.php?rp=/knowledgebase",
+        href: "https://docs.powerhut.pro",
         description: "Learn how to manage your server to get the most out of it!",
     },
     {
