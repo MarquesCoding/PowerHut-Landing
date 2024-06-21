@@ -137,7 +137,7 @@ export const webTiers: PricingTier[] = [
         title: 'Beginner',
         description: 'Perfect for beginners',
         cpu: 'Ryzen 9 7950X*',
-        price: 1,
+        price: 2,
         originalPrice: 5,
         features: ['50GB NVMe SSD', '100GB Bandwidth','50 FTP Accounts', '50 Email Addresses', '25 Databases' , 'Auto SSL Certificates'],
         button: {
@@ -156,7 +156,7 @@ export const webTiers: PricingTier[] = [
         title: 'Standard',
         description: 'Great for personal websites',
         cpu: 'Ryzen 9 7950X*',
-        price: 3,
+        price: 4,
         originalPrice: 8,
         features: ['100GB NVMe SSD', '200GB Bandwidth','75 FTP Accounts', '75 Email Addresses', '50 Databases' , 'Auto SSL Certificates'],
         button: {
@@ -175,7 +175,7 @@ export const webTiers: PricingTier[] = [
         title: 'Extreme',
         description: 'Level up with more power',
         cpu: 'Ryzen 9 7950X*',
-        price: 4,
+        price: 6,
         originalPrice: 12,
         features: ['200GB NVMe SSD', 'Unlimited Bandwidth***','100 FTP Accounts', '100 Email Addresses', '60 Databases' , 'Auto SSL Certificates'],
         button: {
