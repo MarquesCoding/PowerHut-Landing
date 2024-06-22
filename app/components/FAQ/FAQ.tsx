@@ -90,10 +90,7 @@ const FAQ = () => {
                                 future?</AccordionTrigger>
                             <AccordionContent>
                                 <p className="leading-7 mt-6 text-white/50">
-                                    Absolutely, just create a ticket and we will handle everything! And the best
-                                    part?
-                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                    {' '}Upgrades are pro-rated so, you won't have to worry about being overcharged!
+                                    Absolutely, just create a ticket and we will handle everything!
                                 </p>
                             </AccordionContent>
                         </AccordionItem>

@@ -240,13 +240,6 @@ export default function Home() {
                                     }
                                 />
                                 <Card
-                                    logo={<FaMoneyBill size={16}/>}
-                                    header={"Pro-rated"}
-                                    content={
-                                        "All of our servers are pro-rated, cancel and request a refund for the difference!"
-                                    }
-                                />
-                                <Card
                                     logo={<FaToolbox size={16}/>}
                                     header={"One-click Installer"}
                                     content={
