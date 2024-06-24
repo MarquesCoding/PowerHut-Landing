@@ -13,13 +13,16 @@ const Card: React.FunctionComponent<CardProps> = ({
                                                   }) => {
     return (
         <div
-            className="w-96 h-32 flex-1 hover:scale-105 overflow-ellipsis overflow-hidden min-w-96 select-none rounded-lg hover:border-main bg-[#141414]/90 border border-white/10 relative flex duration-300">
+            className="w-96 h-32 flex-1 hover:scale-105 overflow-ellipsis overflow-hidden min-w-96 select-none rounded-lg hover:border-main border border-white/10 relative flex duration-300">
             <div
                 className="w-full h-full absolute bg-dot-white/[0.23] rounded-2xl z-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
             <div className="flex flex-row justify-between p-4 gap-4 relative z-10">
                 <div className="text-start">
-                    <p className="font-semibold text-2xl">{header}</p>
-                    <p className="max-w-xs opacity-50">{content}</p>
+                    <div className="flex flex-row items-center gap-4">
+                        <p className="text-main">{logo}</p>
+                        <p className="font-semibold text-2xl">{header}</p>
+                    </div>
+                    <p className="max-w-xs opacity-50 mt-3">{content}</p>
                 </div>
             </div>
 

@@ -101,7 +101,7 @@ export const FollowPointer = ({
                 opacity: 0,
             }}
         >
-            <FaRegHandPointer size={28} />
+
         </motion.div>
     );
 };

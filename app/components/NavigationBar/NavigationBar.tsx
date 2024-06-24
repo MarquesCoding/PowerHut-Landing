@@ -4,7 +4,7 @@ import React from "react";
 const NavigationBar = () => {
     return (
         <div
-            className="mt-24 -mb-44 text-white relative w-full flex items-center justify-between gap-4 z-20">
+            className="mt-24 -mb-44 text-white relative w-full flex items-center justify-between gap-4 z-20 px-8">
             <div className="w-96">
                 <img
                     onClick={() => window.location.href = "/"}

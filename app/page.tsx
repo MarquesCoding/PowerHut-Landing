@@ -8,24 +8,23 @@ import GameCard from "./components/GameCard/GameCard";
 import MapComponent from "./components/Globe/Globe";
 import { HiLightningBolt } from "react-icons/hi";
 import { PiGameControllerFill } from "react-icons/pi";
-import { FaMoneyBill, FaShieldHeart, FaToolbox, FaTwitch } from "react-icons/fa6";
+import { FaShieldHeart, FaToolbox } from "react-icons/fa6";
 import { LuNetwork } from "react-icons/lu";
 import { RiHardDriveFill } from "react-icons/ri";
 import Card from "@/app/components/Card/Card";
-import { BsFillMouseFill } from "react-icons/bs";
 import Footer from "@/app/components/Footer";
-import { Button } from "./components/ui/button";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/app/components/ui/tooltip";
 import {VscGraph, VscLayoutPanelRight} from "react-icons/vsc";
 import {TbBrandMinecraft, TbChevronLeftPipe} from "react-icons/tb";
-import {FaGlobeAfrica, FaRegCheckCircle} from "react-icons/fa";
+import {FaBolt, FaGlobeAfrica, FaRegCheckCircle, FaRegHandPointer} from "react-icons/fa";
 import {pricingTiers, webTiers} from "@/app/utils/pricing";
 import axios from "axios";
 import Intercom from "@intercom/messenger-js-sdk";
 import Promo from "@/app/components/Promo/Promo";
-import FAQ from "@/app/components/FAQ/FAQ";
-import Space from "@/app/components/Space/Space";
 import NavigationBar from "@/app/components/NavigationBar/NavigationBar";
+import {Button} from "@/app/components/ui/button";
+import AnimatedCursor from "react-animated-cursor";
+import Space from "@/app/components/Space/Space";
+import {BiSupport} from "react-icons/bi";
 
 export default function Home() {
     Intercom({
@@ -58,7 +57,7 @@ export default function Home() {
                 }}
                 className="w-full h-full flex flex-col max-w-screen items-center">
                 <Promo/>
-                {/*<Space/>*/}
+                <Space/>
                 <BackgroundBeams/>
                 <div className="w-full h-auto background-tr flex items-center justify-center">
                     <div className="w-full h-[70vh] max">
@@ -72,29 +71,37 @@ export default function Home() {
                                     <TbBrandMinecraft fill={"#141414"} size={22}/>
                                     Minecraft 1.21: The Tricky Trails Update, released!
                                 </div>
-                                <div className="text-5xl lg:text-9xl font-semibold">
-                                <span>
+                                <div className="text-5xl lg:text-9xl font-semibold selection:bg-white">
+                                <span className="selection:bg-main ">
                                     Power up your play.
                                 </span>
                                     {' '}
                                     <br/>
-                                    <span className="text-zinc-400">
+                                    <span className="text-zinc-400 selection:bg-white">
                                     Host
                                 </span>,
                                     {' '}
-                                    <span className="text-zinc-400">
+                                    <span className="text-zinc-400 selection:bg-white">
                                     Game
                                 </span>,
                                     {' '}
-                                    <span className="text-main">
+                                    <span className="text-main selection:bg-white">
                                     Dominate
                                 </span>.
                                 </div>
                                 <div>
-                                    <p className="mt-8 max-w-[40rem] opacity-80">
+                                    <p className="mt-8 max-w-[40rem] selection:bg-main">
                                         We are committed to transparency and user-friendly features, ensuring a superior
                                         gaming experience for our customers worldwide.
                                     </p>
+                                </div>
+                                <div className="flex flex-row gap-5 mt-12">
+                                    <Button variant="secondary" onClick={() => window.location.href = "https://billing.powerhut.pro"}>
+                                        GET STARTED
+                                    </Button>
+                                    <Button variant="outline" className={"flex gap-2"} onClick={() => window.location.href = "https://billing.powerhut.pro/knowledgebase"}>
+                                        <BiSupport size={22} />SUPPORT
+                                    </Button>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +114,7 @@ export default function Home() {
                             <div className="flex w-full h-auto justify-center items-center flex-col">
                                 <div className="flex flex-col md:flex-row gap-2 items-center">
                                     <div>
-                                        <p className="mb-2 opacity-50 text-xl text-center">Web Hosting</p>
+                                        {/*<p className="mb-2 opacity-50 text-xl text-center">Web Hosting</p>*/}
                                         <div className="flex w-fit h-fit flex-wrap justify-center gap-2">
                                             {webTiers
                                                 .filter((_, index) => [0].includes(index))
@@ -119,7 +126,7 @@ export default function Home() {
                                     </div>
                                     <div className="md:w-0.5 md:h-96 w-96 h-0.5 bg-orange-500 opacity-50"></div>
                                     <div>
-                                        <p className="mb-2 opacity-50 text-xl text-center">Game Hosting</p>
+                                        {/*<p className="mb-2 opacity-50 text-xl text-center">Game Hosting</p>*/}
                                         <div className="flex w-fit h-fit flex-wrap justify-center gap-2">
                                             {pricingTiers
                                                 .filter((_, index) => [2, 3, 5].includes(index))
@@ -155,14 +162,16 @@ export default function Home() {
                         <div className="background-tr">
                         <div className="w-full h-auto pb-24 max">
                             <div className="mb-20 flex flex-col gap-4 items-center lg:items-start">
-                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl text-center md:text-start">
-                                    Supported Games
+                                <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
+                                    <p>SUPPORTED GAMES</p>
+                                </Button>
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                    Old & New supported games
                                 </p>
-                                <p className="opacity-50 font-light">
-                                    {`We've got a huge library of supported games.`}
-                                </p>
-                                <p className="opacity-30 text-xs italic -mt-4">
-                                    If you have any suggestions, throw them in the Discord!
+                                <p className="opacity-50 font-light max-w-lg">
+                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                    Don't see a game that you want to host, no problem! Throw us a suggesting in the
+                                    Discord.
                                 </p>
                             </div>
                             <div className="flex w-full h-auto flex-wrap gap-6 items-center lg:items-start justify-center lg:justify-start">
@@ -181,80 +190,90 @@ export default function Home() {
                     <div className="background-br">
                         <div className="w-full max h-auto flex flex-col pb-48">
                             <div className="mb-20 flex flex-col gap-4">
-                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl text-center md:text-start">
-                                    Key Features
+                                <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
+                                    <p>FEATURES</p>
+                                </Button>
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                    Hosting tailored to your needs
                                 </p>
-                                <p className="opacity-50 font-light">
+                                <p className="opacity-50 font-light max-w-lg">
                                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                                     You shouldn't have to pay extra for basic features
                                 </p>
                             </div>
                             <div className="flex w-full h-auto flex-wrap gap-6 max-w-[100rem]">
                                 <Card
-                                    logo={<FaGlobeAfrica size={16}/>}
+                                    logo={<HiLightningBolt size={32}/>}
+                                    header={"99.99% Uptime"}
+                                    content={
+                                        "Uptime is critical for your operations, and reliable infrastructure is a must."
+                                    }
+                                />
+                                <Card
+                                    logo={<FaGlobeAfrica size={32}/>}
                                     header={"NA & EU Locations"}
                                     content={
                                         "We've got servers in locations such as NA & EU and expanding!"
                                     }
                                 />
                                 <Card
-                                    logo={<VscLayoutPanelRight size={16}/>}
+                                    logo={<VscLayoutPanelRight size={32}/>}
                                     header={"Custom Game Control Panel"}
                                     content={
                                         "Our Custom-made Power Panel is what powers all our servers!"
                                     }
                                 />
                                 <Card
-                                    logo={<TbChevronLeftPipe size={16}/>}
+                                    logo={<TbChevronLeftPipe size={32}/>}
                                     header={"Full FTP Access"}
                                     content={
                                         "Take full control of all of your file 24/7"
                                     }
                                 />
                                 <Card
-                                    logo={<VscGraph size={16}/>}
+                                    logo={<VscGraph size={32}/>}
                                     header={"Transparent Resource Analytics"}
                                     content={
                                         "We never oversell our servers and we want to be 100% transparent."
                                     }
                                 />
                                 <Card
-                                    logo={<HiLightningBolt size={16}/>}
+                                    logo={<HiLightningBolt size={32}/>}
                                     header={"Instant Deployments"}
                                     content={
                                         "Get started within minutes with our instant deployment technology."
                                     }
                                 />
                                 <Card
-                                    logo={<PiGameControllerFill size={16}/>}
+                                    logo={<PiGameControllerFill size={32}/>}
                                     header={"Easy to use Power Panel"}
                                     content={
                                         "We've compiled our best features into one single panel."
                                     }
                                 />
                                 <Card
-                                    logo={<FaShieldHeart size={16}/>}
+                                    logo={<FaShieldHeart size={32}/>}
                                     header={"DDoS Protection"}
                                     content={
                                         "All of our servers are outfitted with DDoS protection to help you avoid downtime."
                                     }
                                 />
                                 <Card
-                                    logo={<FaToolbox size={16}/>}
+                                    logo={<FaToolbox size={32}/>}
                                     header={"One-click Installer"}
                                     content={
                                         "Change games and modpacks with one click."
                                     }
                                 />
                                 <Card
-                                    logo={<LuNetwork size={16}/>}
+                                    logo={<LuNetwork size={32}/>}
                                     header={"Free Dedicated IP*"}
                                     content={
                                         "When you choose any of our servers above Basic you get a dedicated IP."
                                     }
                                 />
                                 <Card
-                                    logo={<RiHardDriveFill size={16}/>}
+                                    logo={<RiHardDriveFill size={32}/>}
                                     header={"Solid-Slate Drives"}
                                     content={
                                         "Our servers are exclusively hosted on NVMe Solid Slate Drives in RAID 0."
@@ -269,11 +288,16 @@ export default function Home() {
                     <div className="background-tr">
                         <div className="flex max flex-col w-full h-full  pb-40">
                             <div className="mb-20 flex flex-col gap-4">
-                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl text-center md:text-start">
-                                    Competition is key
+                                <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
+                                    <p>PRICING</p>
+                                </Button>
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                    We take the market into consideration
                                 </p>
-                                <p className="opacity-50 font-light">
-                                    {`We do more than the competition for less`}
+                                <p className="opacity-50 font-light max-w-lg">
+                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                    We provide the same, if not better hardware and support as the leading providers at
+                                    a fraction of the cost.
                                 </p>
                             </div>
                             <div className="flex">
@@ -395,11 +419,15 @@ export default function Home() {
                     <div className="background-br">
                         <div className="flex max flex-col justify-center item-center w-full h-full  pb-40">
                             <div className="mb-20 flex flex-col gap-4">
-                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl text-center md:text-start">
-                                    Custom Game Panel
+                                <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
+                                    <p>CUSTOM GAME PANEL</p>
+                                </Button>
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                    Custom Pterodactyl Panel
                                 </p>
-                                <p className="opacity-50 font-light">
-                                    {`We've compiled our best features into one single panel, easy to use and ready whenever you want.`}
+                                <p className="opacity-50 font-light max-w-lg">
+                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                    We've jam packed our custom game panel with features we know you'll enjoy! Want to suggest a feature, throw it in the Discord.
                                 </p>
                             </div>
                             <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4">
@@ -433,10 +461,14 @@ export default function Home() {
                     <div className="background-tr">
                         <div className="flex max flex-col justify-center item-center w-full h-auto pb-24">
                             <div className="mb-20 flex flex-col gap-4">
-                                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl text-center md:text-start">
+                                <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
+                                    <p>MONITORING</p>
+                                </Button>
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
                                     Great Transparency
                                 </p>
-                                <p className="opacity-50 font-light">
+                                <p className="opacity-50 font-light max-w-lg">
+                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                                     We want to be as open as possible with you guys! Feel free to see
                                     our server stats etc
                                 </p>
@@ -470,15 +502,15 @@ export default function Home() {
                                     className="div"
                                 >
                                     <div className="flex flex-col gap-4">
-                                        <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
-                                            Our Locations
+                                        <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
+                                            <p>LOCATIONS</p>
+                                        </Button>
+                                        <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                            Powerful servers across the globe
                                         </p>
-                                        <p className="opacity-50 font-light">
-                                            We have limited stock of servers, so keep an eye out here!
-                                        </p>
-                                        {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                        <p className="opacity-50 font-light">
-                                            Don&apos;t see the location that you want? Throw us a ticket in the
+                                        <p className="opacity-50 font-light max-w-lg">
+                                            {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                            We have limited stock of servers, so keep an eye out here! Don&apos;t see the location that you want? Throw us a ticket in the
                                             Discord!
                                         </p>
                                     </div>
@@ -498,7 +530,7 @@ export default function Home() {
                                             {
                                                 x: 92, y: 80, name: (
                                                     <div className="flex items-center justify-center flex-col">
-                                                        <p>Australia - MB</p>
+                                                        <p>Australia - SY</p>
                                                         <p className="opacity-50 text-xs">Coming soon</p>
                                                     </div>
                                                 )
@@ -511,11 +543,35 @@ export default function Home() {
                                                     </div>
                                                 )
                                             },
+                                            {
+                                                x: 70, y: 50, name: (
+                                                    <div className="flex items-center justify-center flex-col">
+                                                        <p>Asia - IN</p>
+                                                        <p className="opacity-50 text-xs">Coming soon</p>
+                                                    </div>
+                                                )
+                                            },
+                                            {
+                                                x: 96.5, y: 90, name: (
+                                                    <div className="flex items-center justify-center flex-col">
+                                                        <p>Asia - JP</p>
+                                                        <p className="opacity-50 text-xs">Coming soon</p>
+                                                    </div>
+                                                )
+                                            },
                                             {x: 25, y: 24, name: `America - NYC`},
                                             {
-                                                x: 8, y: 35, name: (
+                                                x: 8, y: 25, name: (
                                                     <div className="flex items-center justify-center flex-col">
-                                                        <p>America - LA</p>
+                                                        <p>America - SEA</p>
+                                                        <p className="opacity-50 text-xs">Coming soon</p>
+                                                    </div>
+                                                )
+                                            },
+                                            {
+                                                x: 18, y: 30, name: (
+                                                    <div className="flex items-center justify-center flex-col">
+                                                        <p>America - MIS</p>
                                                         <p className="opacity-50 text-xs">Coming soon</p>
                                                     </div>
                                                 )
