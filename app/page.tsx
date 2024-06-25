@@ -78,7 +78,7 @@ export default function Home() {
                 className="w-full h-full flex flex-col max-w-screen items-center">
                 <Promo/>
                 {/*<Space/>*/}
-                <BackgroundBeams/>
+                {/*<BackgroundBeams/>*/}
                 <div className="w-full h-auto background-tr flex items-center justify-center">
                     <div className="w-full h-full max pb-4 xl:pb-0">
                         <div
