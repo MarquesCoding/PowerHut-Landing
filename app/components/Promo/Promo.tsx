@@ -18,7 +18,7 @@ const Promo = () => {
                 opacity: {duration: 1},
                 translateY: {duration:1}
             }}
-            className="w-full h-auto py-2 bg-[#FF4D14]/10 backdrop-blur border border-[#FF4D14]/30 justify-between text-white fixed top-0 left-0 z-40 lg:text-lg text-sm flex lg:px-36 px-4 gap-2">
+            className="w-full h-auto py-2 bg-[#FF4D14]/10 backdrop-blur border-b border-[#FF4D14]/30 justify-between text-white fixed top-0 left-0 z-40 lg:text-lg text-sm flex lg:px-36 px-4 gap-2">
             <AnimatedCursor
                 innerSize={0}
                 outerSize={0}
@@ -27,7 +27,7 @@ const Promo = () => {
                 innerScale={0}
                 outerScale={0}
             >
-                <FaRegHandPointer rotate={45} className="-rotate-45" size={28} />
+                <FaRegHandPointer rotate={45} className="-rotate-45 text-main" size={28} />
             </AnimatedCursor>
             <p>New customer offer: Get 25% off your first order with promo code POWER</p>
             <p onClick={() => window.location.href="https://monitor.powerhut.pro"} className="cursor-pointer hover:opacity-50 duration-300">Server Status</p>

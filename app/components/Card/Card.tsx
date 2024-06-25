@@ -22,7 +22,7 @@ const Card: React.FunctionComponent<CardProps> = ({
                         <p className="text-main">{logo}</p>
                         <p className="font-semibold text-2xl">{header}</p>
                     </div>
-                    <p className="max-w-xs opacity-50 mt-3">{content}</p>
+                    <p className="max-w-md opacity-50 mt-3">{content}</p>
                 </div>
             </div>
 

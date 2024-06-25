@@ -8,7 +8,7 @@ import GameCard from "./components/GameCard/GameCard";
 import MapComponent from "./components/Globe/Globe";
 import { HiLightningBolt } from "react-icons/hi";
 import { PiGameControllerFill } from "react-icons/pi";
-import { FaShieldHeart, FaToolbox } from "react-icons/fa6";
+import {FaGaugeHigh, FaShieldHeart, FaToolbox} from "react-icons/fa6";
 import { LuNetwork } from "react-icons/lu";
 import { RiHardDriveFill } from "react-icons/ri";
 import Card from "@/app/components/Card/Card";
@@ -25,6 +25,9 @@ import {Button} from "@/app/components/ui/button";
 import AnimatedCursor from "react-animated-cursor";
 import Space from "@/app/components/Space/Space";
 import {BiSupport} from "react-icons/bi";
+import {IoArrowForwardCircle} from "react-icons/io5";
+import {IoMdCheckmarkCircleOutline} from "react-icons/io";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/app/components/ui/accordion";
 
 export default function Home() {
     Intercom({
@@ -38,7 +41,23 @@ export default function Home() {
 
     useEffect(() => {
        handlePing('https://geekflare.com').then((res) => console.log(res));
-    },[])
+    },[]);
+
+    const container = {
+        hidden: { opacity: 1, translateY: -40 },
+        visible: {
+            opacity: 1,
+            translateY: 0,
+            transition: {
+                staggerChildren: 0.5,
+            },
+        },
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+    };
 
 
     return (
@@ -57,7 +76,7 @@ export default function Home() {
                 }}
                 className="w-full h-full flex flex-col max-w-screen items-center">
                 <Promo/>
-                <Space/>
+                {/*<Space/>*/}
                 <BackgroundBeams/>
                 <div className="w-full h-auto background-tr flex items-center justify-center">
                     <div className="w-full h-[70vh] max">
@@ -68,27 +87,45 @@ export default function Home() {
                                 <div
                                     className="w-fit h-auto rounded-full mb-4 text-sm flex items-center gap-4 py-1 px-2 border border-[#FF4D14]/50 bg-[#FF4D14]/10"
                                 >
-                                    <TbBrandMinecraft fill={"#141414"} size={22}/>
                                     Minecraft 1.21: The Tricky Trails Update, released!
+                                    <IoArrowForwardCircle className="text-main" size={22}/>
                                 </div>
-                                <div className="text-5xl lg:text-9xl font-semibold selection:bg-white">
-                                <span className="selection:bg-main ">
+                                <motion.div
+                                    className="text-5xl lg:text-9xl font-bold selection:bg-white"
+                                    variants={container}
+                                    initial="hidden"
+                                    animate="visible"
+                                >
+                                  <span className="selection:bg-main">
                                     Power up your play.
-                                </span>
+                                  </span>
                                     {' '}
                                     <br/>
-                                    <span className="text-zinc-400 selection:bg-white">
-                                    Host
-                                </span>,
-                                    {' '}
-                                    <span className="text-zinc-400 selection:bg-white">
-                                    Game
-                                </span>,
-                                    {' '}
-                                    <span className="text-main selection:bg-white">
-                                    Dominate
-                                </span>.
-                                </div>
+                                    <motion.span
+                                        className="text-zinc-400 selection:bg-white"
+                                        variants={item}
+                                        transition={{delay: 0.5}}
+                                    >
+                                        Host,
+                                        {' '}
+                                    </motion.span>
+
+                                    <motion.span
+                                        className="text-zinc-400 selection:bg-white"
+                                        variants={item}
+                                        transition={{delay: 1}}
+                                    >
+                                        Game,
+                                        {' '}
+                                    </motion.span>
+                                    <motion.span
+                                        className="text-main selection:bg-white"
+                                        variants={item}
+                                        transition={{delay: 1.5}}
+                                    >
+                                        Dominate.
+                                    </motion.span>
+                                </motion.div>
                                 <div>
                                     <p className="mt-8 max-w-[40rem] selection:bg-main">
                                         We are committed to transparency and user-friendly features, ensuring a superior
@@ -96,11 +133,13 @@ export default function Home() {
                                     </p>
                                 </div>
                                 <div className="flex flex-row gap-5 mt-12">
-                                    <Button variant="secondary" onClick={() => window.location.href = "https://billing.powerhut.pro"}>
+                                    <Button variant="secondary"
+                                            onClick={() => window.location.href = "https://billing.powerhut.pro"}>
                                         GET STARTED
                                     </Button>
-                                    <Button variant="outline" className={"flex gap-2"} onClick={() => window.location.href = "https://billing.powerhut.pro/knowledgebase"}>
-                                        <BiSupport size={22} />SUPPORT
+                                    <Button variant="outline" className={"flex gap-2"}
+                                            onClick={() => window.location.href = "https://billing.powerhut.pro/knowledgebase"}>
+                                        <BiSupport size={22}/>SUPPORT
                                     </Button>
                                 </div>
                             </div>
@@ -124,7 +163,7 @@ export default function Home() {
                                             }
                                         </div>
                                     </div>
-                                    <div className="md:w-0.5 md:h-96 w-96 h-0.5 bg-orange-500 opacity-50"></div>
+                                    <div className="md:w-0.5 md:h-96 w-96 h-0.5 bg-main"></div>
                                     <div>
                                         {/*<p className="mb-2 opacity-50 text-xl text-center">Game Hosting</p>*/}
                                         <div className="flex w-fit h-fit flex-wrap justify-center gap-2">
@@ -144,22 +183,22 @@ export default function Home() {
                                         href="/plans" className="underline">Server Hosting</a>.
                                     </p>
                                     <p className="opacity-60 text-center text-white w-full text-xs">*CPU will vary
-                                            based
-                                            on
-                                            server
-                                            location - will be equivalent</p>
-                                        <p className="opacity-60 text-center text-white w-full text-xs">
-                                            ** Additional RAM can be purchased through a support ticket
-                                            (billing / discord)
-                                        </p>
-                                        <p className=" opacity-60 text-center text-white w-full text-xs">
-                                            *** Fair Use Policy
-                                        </p>
-                                    </div>
+                                        based
+                                        on
+                                        server
+                                        location - will be equivalent</p>
+                                    <p className="opacity-60 text-center text-white w-full text-xs">
+                                        ** Additional RAM can be purchased through a support ticket
+                                        (billing / discord)
+                                    </p>
+                                    <p className=" opacity-60 text-center text-white w-full text-xs">
+                                        *** Fair Use Policy
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div className="background-tr">
+                    </div>
+                    <div className="background-tr">
                         <div className="w-full h-auto pb-24 max">
                             <div className="mb-20 flex flex-col gap-4 items-center lg:items-start">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
@@ -174,7 +213,8 @@ export default function Home() {
                                     Discord.
                                 </p>
                             </div>
-                            <div className="flex w-full h-auto flex-wrap gap-6 items-center lg:items-start justify-center lg:justify-start">
+                            <div
+                                className="flex w-full h-auto flex-wrap gap-6 items-center lg:items-start justify-center lg:justify-start">
                                 <GameCard imageSrc={"/minecraft.webp"}/>
                                 <GameCard imageSrc={"/rust.webp"}/>
                                 <GameCard imageSrc={"/satisfactory.webp"}/>
@@ -183,7 +223,7 @@ export default function Home() {
                                 <GameCard imageSrc={"/tf2.webp"}/>
                                 <GameCard imageSrc={"/garrys.jpg"}/>
                                 <GameCard imageSrc={"/cs2.jpg"}/>
-                                <GameCard />
+                                <GameCard/>
                             </div>
                         </div>
                     </div>
@@ -207,6 +247,20 @@ export default function Home() {
                                     header={"99.99% Uptime"}
                                     content={
                                         "Uptime is critical for your operations, and reliable infrastructure is a must."
+                                    }
+                                />
+                                <Card
+                                    logo={<FaShieldHeart size={32}/>}
+                                    header={"DDoS Protection"}
+                                    content={
+                                        "All of our servers are outfitted with DDoS protection to help you avoid downtime."
+                                    }
+                                />
+                                <Card
+                                    logo={<FaGaugeHigh size={32}/>}
+                                    header={"High performance"}
+                                    content={
+                                        "All of our services use high end AMD & Intel CPUs and enterprise level NVMe or SATA SSD storage."
                                     }
                                 />
                                 <Card
@@ -252,13 +306,6 @@ export default function Home() {
                                     }
                                 />
                                 <Card
-                                    logo={<FaShieldHeart size={32}/>}
-                                    header={"DDoS Protection"}
-                                    content={
-                                        "All of our servers are outfitted with DDoS protection to help you avoid downtime."
-                                    }
-                                />
-                                <Card
                                     logo={<FaToolbox size={32}/>}
                                     header={"One-click Installer"}
                                     content={
@@ -270,13 +317,6 @@ export default function Home() {
                                     header={"Free Dedicated IP*"}
                                     content={
                                         "When you choose any of our servers above Basic you get a dedicated IP."
-                                    }
-                                />
-                                <Card
-                                    logo={<RiHardDriveFill size={32}/>}
-                                    header={"Solid-Slate Drives"}
-                                    content={
-                                        "Our servers are exclusively hosted on NVMe Solid Slate Drives in RAID 0."
                                     }
                                 />
                                 {/*<Card logo={(<FaGlobeEurope size={44}/>)}*/}
@@ -409,7 +449,8 @@ export default function Home() {
                                         Comparison data accurate as of June 1st, 2024
                                     </p>
                                     <p className="text-xs mt-2 opacity-50">
-                                        * This is currently a work in progress, but you might see it in the panel already!
+                                        * This is currently a work in progress, but you might see it in the panel
+                                        already!
                                     </p>
                                 </div>
                             </div>
@@ -427,33 +468,78 @@ export default function Home() {
                                 </p>
                                 <p className="opacity-50 font-light max-w-lg">
                                     {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                    We've jam packed our custom game panel with features we know you'll enjoy! Want to suggest a feature, throw it in the Discord.
+                                    We've jam packed our custom game panel with features we know you'll enjoy! Want to
+                                    suggest a feature, throw it in the Discord.
                                 </p>
                             </div>
                             <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4">
-                                <div
-                                    className="w-full flex items-center justify-center max-w-2xl p-4 hover:scale-150 duration-300 hover:z-20 ">
-                                    <img
-                                        src={"/panel-01.png"}
-                                        alt="panel"
-                                        className="rounded-lg"
-                                    />
-                                </div>
-                                <div
-                                    className="w-full flex items-center justify-center max-w-5xl relative z-10 hover:scale-150 duration-300 p-4 hover:z-20">
+                                <div className="flex flex-row-reverse gap-4 w-full">
                                     <img
                                         src={"/panel.png"}
                                         alt="panel"
-                                        className="rounded-lg"
+                                        className="rounded-lg max-w-4xl"
                                     />
-                                </div>
-                                <div
-                                    className="w-full flex items-center justify-center max-w-2xl p-4 hover:scale-150 duration-300 hover:z-20">
-                                    <img
-                                        src={"/panel-02.png"}
-                                        alt="panel"
-                                        className="rounded-lg"
-                                    />
+                                    <div>
+                                        <p className="text-3xl font-bold">Proudly powered by <span
+                                            className="text-main">BOLT</span></p>
+                                        {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                        <p className="mt-4 opacity-80">
+                                            <span className="text-main opacity-100">BOLT</span> is our custom in-house
+                                            developed game server management panel based on the very popular <span
+                                            className="text-main">Pterodactyl Panel</span>.
+                                            {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                            With this, you're able to do
+                                            anything from viewing the console at real time, browsing or editing files
+                                            and much more!
+                                        </p>
+                                        <div className="w-full flex gap-4 flex-row mt-4">
+                                            <ul>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Automatic Updates</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Powerful Game Switcher</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Backup Manager</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-main/50"/>
+                                                    <span className="font-light">Free Subdomain*</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-main/50"/>
+                                                    <span className="font-light">Free Reverse Proxy*</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Advanced Schedular</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Advanced File Manager</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Real-Time Console</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Crash Logs</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-main/50"/>
+                                                    <span className="font-light">Server Splitting*</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p className="mt-4 opacity-20 text-sm">* Early Access -- Coming soon</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -473,13 +559,65 @@ export default function Home() {
                                     our server stats etc
                                 </p>
                             </div>
-                            <div className="flex w-full h-auto flex-col">
-                                <img
-                                    onClick={() => (window.location.href = "https://grafana.powerhut.pro")}
-                                    src={"/grafana.png"}
-                                    alt="panel"
-                                    className="rounded-lg border-2 border-[#FF4D14] shadow-2xl shadow-[#FF4D14]/30 cursor-pointer hover:opacity-50 duration-300 transition-all"
-                                />
+                            <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4">
+                                <div className="flex flex-row gap-4 w-full">
+                                    <img
+                                        src={"/grafana.png"}
+                                        alt="panel"
+                                        className="rounded-lg max-w-4xl"
+                                    />
+                                    <div>
+                                        <p className="text-3xl font-bold">24/7 Monitoring provided by <span
+                                            className="text-main">Grafana</span></p>
+                                        {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                        <p className="mt-4 opacity-80">
+                                            <span className="text-main opacity-100">Grafana</span> is what we use for
+                                            technical support and we want to be 100% transparent and share what we use
+                                            to help you guys out! Grafana provide monitoring, logs & statistics for our
+                                            nodes. Go take a look!
+                                        </p>
+                                        <div className="w-full flex gap-4 flex-row mt-4">
+                                            <ul>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Server Logs*</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Network Traffic Graphs</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Memory Usage Graphs</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-main"/>
+                                                    <span className="font-light">CPU usage Graphs</span>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Advanced Node Selector</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Disk Usage Graphs</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Hardware Information</span>
+                                                </li>
+                                                <li className="flex items-center py-2 gap-2">
+                                                    <IoMdCheckmarkCircleOutline size={22} className="text-[#FF4D14]"/>
+                                                    <span className="font-light">Hardware Location</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p className="mt-4 opacity-20 text-sm">* This feature is only for support staff
+                                            due to personal information.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -502,7 +640,8 @@ export default function Home() {
                                     className="div"
                                 >
                                     <div className="flex flex-col gap-4">
-                                        <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
+                                        <Button className="w-fit h-fit font-mono text-black" variant="secondary"
+                                                size="sm">
                                             <p>LOCATIONS</p>
                                         </Button>
                                         <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
@@ -510,7 +649,8 @@ export default function Home() {
                                         </p>
                                         <p className="opacity-50 font-light max-w-lg">
                                             {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                            We have limited stock of servers, so keep an eye out here! Don&apos;t see the location that you want? Throw us a ticket in the
+                                            We have limited stock of servers, so keep an eye out here! Don&apos;t see
+                                            the location that you want? Throw us a ticket in the
                                             Discord!
                                         </p>
                                     </div>
@@ -559,7 +699,14 @@ export default function Home() {
                                                     </div>
                                                 )
                                             },
-                                            {x: 25, y: 24, name: `America - NYC`},
+                                            {
+                                                x: 25, y: 24, name: (
+                                                    <div className="flex items-center justify-center flex-col">
+                                                        <p>America - NYC</p>
+                                                        <p className="text-xs font-bold">Most Popular</p>
+                                                    </div>
+                                                ), showTooltip: true
+                                            },
                                             {
                                                 x: 8, y: 25, name: (
                                                     <div className="flex items-center justify-center flex-col">
@@ -585,11 +732,175 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="background-tr">
+                    <div className="flex max flex-row  md:h-auto w-full">
+                        <div
+                            className="mx-auto w-full relative overflow-hidden h-full py-24 px-4 flex flex-col">
+                            <motion.div
+                                initial={{
+                                    opacity: 0,
+                                    y: 20,
+                                }}
+                                animate={{
+                                    opacity: 1,
+                                    y: 0,
+                                }}
+                                transition={{
+                                    duration: 1,
+                                }}
+                                className="div"
+                            >
+                                <div className="flex flex-col gap-4">
+                                    <Button className="w-fit h-fit font-mono text-black" variant="secondary"
+                                            size="sm">
+                                        <p>FREQUENTLY ASKED QUESTIONS</p>
+                                    </Button>
+                                    <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                        Have any questions?
+                                    </p>
+                                    <p className="opacity-50 font-light max-w-lg">
+                                        {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                        Don't worry if you don't right now, you can always throw us a ticket - either through Discord or the billing area!
+                                    </p>
+                                </div>
+                            </motion.div>
+                            <div className="flex flex-row gap-4 w-full mt-4">
+                                <div className="w-full flex flex-col gap-4">
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1">
+                                            <AccordionTrigger>How can I contact support?</AccordionTrigger>
+                                            <AccordionContent>
+                                                <p className="leading-7 mt-6 text-white/50">
+                                                    We utilize Discord to provide realtime support!
+                                                    Moreover, we can also be contacted through our Billing Portal.
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1">
+                                            <AccordionTrigger>How long does it take for a server to be
+                                                ready?</AccordionTrigger>
+                                            <AccordionContent>
+                                                <p className="leading-7 mt-6 text-white/50">
+                                                    Servers are available as soon as your payment has been processed,
+                                                    typically
+                                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                                    {' '}within a few minutes. If they aren't throw us a message.
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1">
+                                            <AccordionTrigger>Can I transfer my current server to
+                                                PowerHut?</AccordionTrigger>
+                                            <AccordionContent>
+                                                <p className="leading-7 mt-6 text-white/50">
+                                                    Of course! Feel free to create a ticket on our Discord Server and we
+                                                    will
+                                                    help you out.
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1">
+                                            <AccordionTrigger>What game panel do you use?</AccordionTrigger>
+                                            <AccordionContent>
+                                                <p className="leading-7 mt-6 text-white/50">
+                                                    We use a heavily customized version of the Pterodactyl panel.
+                                                    As such, you can expect a fast, lag-free, and secure experience to take
+                                                    care
+                                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                                    {' '}of all your server's needs!
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1">
+                                            <AccordionTrigger>Which payment methods do you accept?</AccordionTrigger>
+                                            <AccordionContent>
+                                                <p className="leading-7 mt-6 text-white/50">
+                                                    We currently accept payments through Stripe and PayPal.
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                </div>
+                                <div className="w-full flex flex-col gap-4">
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1">
+                                            <AccordionTrigger>Can I upgrade or downgrade my server in the
+                                                future?</AccordionTrigger>
+                                            <AccordionContent>
+                                                <p className="leading-7 mt-6 text-white/50">
+                                                    Absolutely, just create a ticket and we will handle everything!
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1">
+                                            <AccordionTrigger>Where are your servers located?</AccordionTrigger>
+                                            <AccordionContent>
+                                                <p className="leading-7 mt-6 text-white/50">
+                                                    We have servers in Germany & USA with more locations coming soon!
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1">
+                                            {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                            <AccordionTrigger>Can I change my server location after I've
+                                                purchased?</AccordionTrigger>
+                                            <AccordionContent>
+                                                <p className="leading-7 mt-6 text-white/50">
+                                                    We can only transfer servers as needed, as it depends on the situation
+                                                    and
+                                                    available stock.
+                                                    Feel free to open a ticket with us if you wish to change your location!
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1">
+                                            <AccordionTrigger>Which games do you support?</AccordionTrigger>
+                                            <AccordionContent>
+                                                <p className="leading-7 mt-6 text-white/50">
+                                                    We have a huge variety of supported games such as Minecraft, Valheim,
+                                                    Terria, Factorio, Rust, Satisfactory and much more! Feel free to
+                                                    recommend a
+                                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                                    {' '}game in the discord if we don't currently support it!
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1">
+                                            <AccordionTrigger>How can I cancel my server?</AccordionTrigger>
+                                            <AccordionContent>
+                                                <p className="leading-7 mt-6 text-white/50">
+                                                    Damn, that sucks for you to go. But no worries. You can request a
+                                                    cancellation through the billing panel!
+                                                </p>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <Footer/>
+                </div>
+                <Footer/>
             </motion.div>
         </>
 // </FollowerPointerCard>
-)
-    ;
+    )
+        ;
 }

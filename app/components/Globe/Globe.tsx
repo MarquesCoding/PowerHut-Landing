@@ -5,6 +5,7 @@ interface Location {
     x: number;
     y: number;
     name: string | JSX.Element;
+    showTooltip?: boolean;
 }
 
 interface MapProps {
@@ -29,7 +30,7 @@ const MapComponent: React.FC<MapProps> = ({ mapSrc, locations }) => {
                     }}
                 >
                     <TooltipProvider key={`tooltip-${index}`}>
-                        <Tooltip>
+                        <Tooltip open={location.showTooltip}>
                             <TooltipTrigger>
                                 <span className="relative flex sm:h-4 sm:w-4 w-1 h-1">
                                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF4D14] opacity-75"></span>
