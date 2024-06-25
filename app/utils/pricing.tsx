@@ -2,7 +2,7 @@ import {PricingTier} from "@/app/components/PricingCard/PricingCard";
 import {MdCode, MdGroup, MdSignalWifi1Bar, MdSignalWifi2Bar, MdSignalWifi3Bar, MdSignalWifi4Bar} from "react-icons/md";
 import React from "react";
 import {HiMiniUserGroup} from "react-icons/hi2";
-import {FaBolt, FaGamepad, FaUserFriends} from "react-icons/fa";
+import {FaBolt, FaDiscord, FaGamepad, FaUserFriends} from "react-icons/fa";
 
 export const pricingTiers: PricingTier[] = [
     {
@@ -129,6 +129,26 @@ export const pricingTiers: PricingTier[] = [
 ];
 
 export const webTiers: PricingTier[] = [
+    {
+        logo: (
+            <FaDiscord
+                className="p-2 bg-white/10 w-10 h-10 flex  items-center justify-center rounded-xl"/>
+        ),
+        title: 'Discord',
+        description: 'Perfect for Discord Bots',
+        cpu: 'Ryzen 7 8700GE*',
+        price: 0.5,
+        features: ['Shared CPU Core', '512MB DDR5 RAM','1GBit/s Connection', '5GB NVMe SSD', 'Shared IP', 'Custom Game Changer'],
+        button: {
+            text: 'Purchase',
+            link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/bot"
+        },
+        type: 'game',
+        countries: {
+            europe: true,
+            america: true
+        }
+    },
     {
         logo: (
             <MdSignalWifi1Bar

@@ -158,16 +158,16 @@ export default function Home() {
                     <div className="background-br">
                         <div className="flex flex-col justify-center max item-center w-full h-auto pb-24">
                             <div className="flex w-full h-auto justify-center items-center flex-col">
-                                <div className="flex w-fit h-fit flex-wrap flex-row justify-center px-8 xl:p-8 md:justify-center items-start md:items-center gap-2">
+                                <div className="flex w-fit h-fit flex-wrap flex-row justify-center px-8 lg:p-0 md:justify-center items-start md:items-center gap-2">
                                     {webTiers
-                                        .filter((_, index) => [0].includes(index))
+                                        .filter((_, index) => [0, 1].includes(index))
                                         .map((tier, index) => (
                                             // @ts-ignore
                                             <PricingCard type="web" key={index} {...tier} />
                                         ))
                                     }
                                     {pricingTiers
-                                        .filter((_, index) => [2, 3, 5].includes(index))
+                                        .filter((_, index) => [0, 2, 3, 4, 5].includes(index))
                                         .map((tier, index) => (
                                             // @ts-ignore
                                             <PricingCard type="game" key={index} {...tier} />
