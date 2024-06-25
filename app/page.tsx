@@ -143,6 +143,12 @@ export default function Home() {
                                     </Button>
                                 </div>
                             </div>
+                            <div
+                                className="w-full flex flex-row gap-4 grayscale opacity-50 mt-8">
+                                <img src='/1.png' alt="icon" className="w-auto h-8"/>
+                                <img src='/5.png' alt="icon" className="w-auto h-8"/>
+                                <img src='/4.png' alt="icon" className="w-auto h-8"/>
+                            </div>
                         </div>
                         {/*<BackgroundBeams/>*/}
                     </div>

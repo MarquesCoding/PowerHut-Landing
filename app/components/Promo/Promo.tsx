@@ -1,7 +1,7 @@
 import {motion} from "framer-motion";
 import React from "react";
 import AnimatedCursor from "react-animated-cursor";
-import {FaRegHandPointer} from "react-icons/fa";
+import {FaHandPointer, FaRegHandPointer} from "react-icons/fa";
 
 const Promo = () => {
     return (
@@ -27,7 +27,10 @@ const Promo = () => {
                 innerScale={0}
                 outerScale={0}
             >
-                <FaRegHandPointer rotate={45} className="-rotate-45 text-main" size={28} />
+                <div className="flex items-center justify-center relative">
+                    <FaHandPointer rotate={45} className="-rotate-45 absolute -z-10 text-main" size={28} />
+                    <FaRegHandPointer rotate={45} className="-rotate-45 absolute z-10 text-white" size={28} />
+                </div>
             </AnimatedCursor>
             <p>New customer offer: Get 25% off your first order with promo code POWER</p>
             <p onClick={() => window.location.href="https://monitor.powerhut.pro"} className="cursor-pointer hover:opacity-50 duration-300">Server Status</p>
