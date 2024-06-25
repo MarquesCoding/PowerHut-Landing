@@ -18,7 +18,7 @@ const Promo = () => {
                 opacity: {duration: 1},
                 translateY: {duration:1}
             }}
-            className="w-full h-auto py-2 bg-[#FF4D14]/10 backdrop-blur border-b border-[#FF4D14]/30 justify-between text-white fixed top-0 left-0 z-40 lg:text-lg text-sm flex lg:px-36 px-4 gap-2">
+            className="w-full h-auto py-2 bg-[#FF4D14]/10 z-50 backdrop-blur border-b border-[#FF4D14]/30 justify-between text-white fixed top-0 left-0 lg:text-lg text-sm flex lg:px-36 px-4 gap-2">
             <AnimatedCursor
                 innerSize={0}
                 outerSize={0}

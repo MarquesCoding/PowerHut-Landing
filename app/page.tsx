@@ -28,6 +28,7 @@ import {BiSupport} from "react-icons/bi";
 import {IoArrowForwardCircle} from "react-icons/io5";
 import {IoMdCheckmarkCircleOutline} from "react-icons/io";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/app/components/ui/accordion";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/app/components/ui/tooltip";
 
 export default function Home() {
     Intercom({
@@ -79,11 +80,11 @@ export default function Home() {
                 {/*<Space/>*/}
                 <BackgroundBeams/>
                 <div className="w-full h-auto background-tr flex items-center justify-center">
-                    <div className="w-full h-[70vh] max">
-                        <NavigationBar/>
+                    <div className="w-full h-full max pb-4 xl:pb-0">
                         <div
-                            className="w-full h-full flex items-center justify-center relative z-10 flex-col pt-48">
-                            <div className="flex flex-col w-full px-4 md:p-0">
+                            className="w-full h-full flex items-center justify-center relative z-10 flex-col">
+                            <NavigationBar/>
+                            <div className="flex flex-col w-full px-8 xl:p-8">
                                 <div
                                     className="w-fit h-auto rounded-full mb-4 text-sm flex items-center gap-4 py-1 px-2 border border-[#FF4D14]/50 bg-[#FF4D14]/10"
                                 >
@@ -91,7 +92,7 @@ export default function Home() {
                                     <IoArrowForwardCircle className="text-main" size={22}/>
                                 </div>
                                 <motion.div
-                                    className="text-5xl lg:text-9xl font-bold selection:bg-white"
+                                    className="text-5xl md:text-6xl xl:text-8xl 2xl:text-9xl font-bold selection:bg-white"
                                     variants={container}
                                     initial="hidden"
                                     animate="visible"
@@ -142,12 +143,12 @@ export default function Home() {
                                         <BiSupport size={22}/>SUPPORT
                                     </Button>
                                 </div>
-                            </div>
-                            <div
-                                className="w-full flex flex-row gap-4 grayscale opacity-50 mt-8">
-                                <img src='/1.png' alt="icon" className="w-auto h-8"/>
-                                <img src='/5.png' alt="icon" className="w-auto h-8"/>
-                                <img src='/4.png' alt="icon" className="w-auto h-8"/>
+                                <div
+                                    className="w-full flex flex-row gap-4 grayscale opacity-50 pt-8">
+                                    <img src='/1.png' alt="icon" className="w-auto h-8"/>
+                                    <img src='/5.png' alt="icon" className="w-auto h-8"/>
+                                    <img src='/4.png' alt="icon" className="w-auto h-8"/>
+                                </div>
                             </div>
                         </div>
                         {/*<BackgroundBeams/>*/}
@@ -157,30 +158,21 @@ export default function Home() {
                     <div className="background-br">
                         <div className="flex flex-col justify-center max item-center w-full h-auto pb-24">
                             <div className="flex w-full h-auto justify-center items-center flex-col">
-                                <div className="flex flex-col md:flex-row gap-2 items-center">
-                                    <div>
-                                        {/*<p className="mb-2 opacity-50 text-xl text-center">Web Hosting</p>*/}
-                                        <div className="flex w-fit h-fit flex-wrap justify-center gap-2">
-                                            {webTiers
-                                                .filter((_, index) => [0].includes(index))
-                                                .map((tier, index) => (
-                                                    <PricingCard key={index} {...tier} />
-                                                ))
-                                            }
-                                        </div>
-                                    </div>
-                                    <div className="md:w-0.5 md:h-96 w-96 h-0.5 bg-main"></div>
-                                    <div>
-                                        {/*<p className="mb-2 opacity-50 text-xl text-center">Game Hosting</p>*/}
-                                        <div className="flex w-fit h-fit flex-wrap justify-center gap-2">
-                                            {pricingTiers
-                                                .filter((_, index) => [2, 3, 5].includes(index))
-                                                .map((tier, index) => (
-                                                    <PricingCard key={index} {...tier} />
-                                                ))
-                                            }
-                                        </div>
-                                    </div>
+                                <div className="flex w-fit h-fit flex-wrap flex-row justify-center px-8 xl:p-8 md:justify-center items-start md:items-center gap-2">
+                                    {webTiers
+                                        .filter((_, index) => [0].includes(index))
+                                        .map((tier, index) => (
+                                            // @ts-ignore
+                                            <PricingCard type="web" key={index} {...tier} />
+                                        ))
+                                    }
+                                    {pricingTiers
+                                        .filter((_, index) => [2, 3, 5].includes(index))
+                                        .map((tier, index) => (
+                                            // @ts-ignore
+                                            <PricingCard type="game" key={index} {...tier} />
+                                        ))
+                                    }
                                 </div>
                                 <div className="mt-4">
                                     <p className="mt-4 mb-3 font-bold text-center md:text-start">
@@ -206,11 +198,11 @@ export default function Home() {
                     </div>
                     <div className="background-tr">
                         <div className="w-full h-auto pb-24 max">
-                            <div className="mb-20 flex flex-col gap-4 items-center lg:items-start">
+                            <div className="mb-20 flex flex-col gap-4 items-start px-8 xl:p-8">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
                                     <p>SUPPORTED GAMES</p>
                                 </Button>
-                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl ">
                                     Old & New supported games
                                 </p>
                                 <p className="opacity-50 font-light max-w-lg">
@@ -220,7 +212,7 @@ export default function Home() {
                                 </p>
                             </div>
                             <div
-                                className="flex w-full h-auto flex-wrap gap-6 items-center lg:items-start justify-center lg:justify-start">
+                                className="flex w-full h-auto flex-wrap gap-6 items-center justify-center lg:justify-start px-8 xl:p-8">
                                 <GameCard imageSrc={"/minecraft.webp"}/>
                                 <GameCard imageSrc={"/rust.webp"}/>
                                 <GameCard imageSrc={"/satisfactory.webp"}/>
@@ -234,12 +226,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="background-br">
-                        <div className="w-full max h-auto flex flex-col pb-48">
+                        <div className="w-full max h-auto flex flex-col pb-48 px-8 xl:p-8">
                             <div className="mb-20 flex flex-col gap-4">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
                                     <p>FEATURES</p>
                                 </Button>
-                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl">
                                     Hosting tailored to your needs
                                 </p>
                                 <p className="opacity-50 font-light max-w-lg">
@@ -332,12 +324,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="background-tr">
-                        <div className="flex max flex-col w-full h-full  pb-40">
+                        <div className="flex max flex-col w-full h-full pb-40 px-8 xl:p-8">
                             <div className="mb-20 flex flex-col gap-4">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
                                     <p>PRICING</p>
                                 </Button>
-                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl">
                                     We take the market into consideration
                                 </p>
                                 <p className="opacity-50 font-light max-w-lg">
@@ -363,7 +355,7 @@ export default function Home() {
                                         </thead>
                                         <tbody>
                                         <tr className="hover:bg-white/10 duration-300">
-                                            <td className="p-4 lg:p-6">Server Splitting</td>
+                                            <td className="p-4 lg:p-6 w-72">Server Splitting</td>
                                             <td className="p-4 lg:p-6 opacity-50">Coming soon</td>
                                             <td className="p-4 lg:p-6 opacity-50"></td>
                                             <td className="p-4 lg:p-6 opacity-50"></td>
@@ -373,7 +365,7 @@ export default function Home() {
                                             <td className="p-4 lg:p-6 opacity-50"></td>
                                         </tr>
                                         <tr className="hover:bg-white/10 duration-300">
-                                            <td className="p-4 lg:p-6">Dedicated CPU cores</td>
+                                            <td className="p-4 lg:p-6 w-72">Dedicated CPU cores</td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
                                             <td className="p-4 lg:p-6 opacity-50"></td>
@@ -383,7 +375,7 @@ export default function Home() {
                                             <td className="p-4 lg:p-6 opacity-50"></td>
                                         </tr>
                                         <tr className="hover:bg-white/10 duration-300">
-                                            <td className="p-4 lg:p-6">Free dedicated IP</td>
+                                            <td className="p-4 lg:p-6 w-72">Free dedicated IP</td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
@@ -393,7 +385,7 @@ export default function Home() {
                                             <td className="p-4 lg:p-6 opacity-50"></td>
                                         </tr>
                                         <tr className="hover:bg-white/10 duration-300">
-                                            <td className="p-4 lg:p-6">Free user-managed off-site backups</td>
+                                            <td className="p-4 lg:p-6 w-72">Free user-managed off-site backups</td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
@@ -403,7 +395,7 @@ export default function Home() {
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
                                         </tr>
                                         <tr className="hover:bg-white/10 duration-300">
-                                            <td className="p-4 lg:p-6 ">Free reverse proxy</td>
+                                            <td className="p-4 lg:p-6 w-72">Free reverse proxy</td>
                                             <td className="p-4 lg:p-6 opacity-50">Coming soon</td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
                                             <td className="p-4 lg:p-6 opacity-50"></td>
@@ -413,7 +405,7 @@ export default function Home() {
                                             <td className="p-4 lg:p-6 opacity-50"></td>
                                         </tr>
                                         <tr className="hover:bg-white/10 duration-300">
-                                            <td className="p-4 lg:p-6 ">Free subdomain</td>
+                                            <td className="p-4 lg:p-6 w-72">Free subdomain</td>
                                             <td className="p-4 lg:p-6 opacity-50">Early Access*</td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
                                             <td className="p-4 lg:p-6 opacity-50"><FaRegCheckCircle size={24}/></td>
@@ -423,31 +415,195 @@ export default function Home() {
                                             <td className="p-4 lg:p-6 opacity-50"></td>
                                         </tr>
                                         <tr className="hover:bg-white/10 duration-300">
-                                            <td className="p-4 lg:p-6">Price</td>
-                                            <td className="p-4 lg:p-6 text-lg text-orange-600 font-bold">$12/mo. <span
+                                            <td className="p-4 lg:p-6 w-72">Price <span
                                                 className="text-xs">(8GB)</span></td>
-                                            <td className="p-4 lg:p-6">$28/mo. <span
-                                                className="text-xs">(8GB)</span></td>
-                                            <td className="p-4 lg:p-6">$42/mo. <span
-                                                className="text-xs">(8GB)</span></td>
-                                            <td className="p-4 lg:p-6">$20/mo. <span
-                                                className="text-xs">(8GB)</span></td>
-                                            <td className="p-4 lg:p-6">$40/mo. <span
-                                                className="text-xs">(8GB)</span></td>
-                                            <td className="p-4 lg:p-6">$42/mo. <span
-                                                className="text-xs">(8GB)</span></td>
-                                            <td className="p-4 lg:p-6 ">$40/mo. <span
-                                                className="text-xs">(8GB)</span></td>
+                                            <td className="p-4 lg:p-6 text-lg text-orange-600 font-bold">$12/mo.</td>
+                                            <td className="p-4 lg:p-6">$28/mo.</td>
+                                            <td className="p-4 lg:p-6">$42/mo.</td>
+                                            <td className="p-4 lg:p-6">$20/mo.</td>
+                                            <td className="p-4 lg:p-6">$40/mo.</td>
+                                            <td className="p-4 lg:p-6">$42/mo.</td>
+                                            <td className="p-4 lg:p-6 ">$40/mo.</td>
                                         </tr>
                                         <tr className="hover:bg-white/10 duration-300">
-                                            <td className="p-4 lg:p-6">CPU</td>
-                                            <td className="p-4 lg:p-6 opacity-50">8700GE*, 7950X*</td>
-                                            <td className="p-4 lg:p-6 opacity-50">3600, 5950X & 7950X</td>
+                                            <td className="p-4 lg:p-6 w-72">CPU</td>
+                                            <td className="p-4 lg:p-6 w-72">
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                8700GE <span
+                                                                className="text-xs italic">(8C/16T @ 3.6GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+PRO+8700GE&id=6001"
+                                                                className="underline">CPU Score - 31208</a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                7950X <span
+                                                                className="text-xs italic">(16C/32T @ 4.5GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+7950X&id=5031"
+                                                                className="underline">CPU Score - 62846</a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                            </td>
+                                            <td className="p-4 lg:p-6 w-72">
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                3600 <span
+                                                                className="text-xs italic">(6C/12T @ 3.6GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3600&id=3481"
+                                                                className="underline">CPU Score - 17758</a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                5950X <span
+                                                                className="text-xs italic">(16C/32T @ 3.4GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?id=3862"
+                                                                className="underline">CPU Score - 45654</a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                7950X <span
+                                                                className="text-xs italic">(16C/32T @ 4.5GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+7950X&id=5031"
+                                                                className="underline">CPU Score - 62846</a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                            </td>
                                             <td className="p-4 lg:p-6 opacity-50">Unknown</td>
-                                            <td className="p-4 lg:p-6 opacity-50">E-2386, 3600X</td>
+                                            <td className="p-4 lg:p-6 w-72">
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                E-2386G <span
+                                                                className="text-xs italic">(6C/12T @ 3.5GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E-2386G+%40+3.50GHz&id=4896"
+                                                                className="underline">CPU Score - 19613</a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                3600X <span
+                                                                className="text-xs italic">(6C/12T @ 3.8GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3600X&id=3494"
+                                                                className="underline">CPU Score - 18210</a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                            </td>
                                             <td className="p-4 lg:p-6 opacity-50">Unknown</td>
-                                            <td className="p-4 lg:p-6 opacity-50">E-1630V3, 7700K</td>
-                                            <td className="p-4 lg:p-6 opacity-50">5700X, 5900X</td>
+                                            <td className="p-4 lg:p-6 w-72">
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                E-1630V3<span
+                                                                className="text-xs italic">(4C/8T @ 3.7GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-1630+v3+%40+3.70GHz&id=2384"
+                                                                className="underline">CPU Score - 7391</a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                7700K <span
+                                                                className="text-xs italic">(4C/8T @ 4.2GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-7700K+%40+4.20GHz&id=2874"
+                                                                className="underline">CPU Score - 9653</a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                            </td>
+                                            <td className="p-4 lg:p-6 w-72">
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                5700X<span
+                                                                className="text-xs italic">(8C/16T @ 3.4GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?id=4814&cpu=AMD+Ryzen+7+5700X"
+                                                                className="underline">CPU Score - 26695</a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger>
+                                                            <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
+                                                                5900X <span
+                                                                className="text-xs italic">(12C/24T @ 3.7GHz)</span>
+                                                            </p>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <a
+                                                                href="https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+5900X&id=3870"
+                                                                className="underline">CPU Score - 39167 </a>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                            </td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -464,12 +620,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="background-br">
-                        <div className="flex max flex-col justify-center item-center w-full h-full  pb-40">
+                        <div className="flex max flex-col justify-center item-center w-full h-full  pb-40 px-8 xl:p-8">
                             <div className="mb-20 flex flex-col gap-4">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
                                     <p>CUSTOM GAME PANEL</p>
                                 </Button>
-                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl">
                                     Custom Pterodactyl Panel
                                 </p>
                                 <p className="opacity-50 font-light max-w-lg">
@@ -479,7 +635,7 @@ export default function Home() {
                                 </p>
                             </div>
                             <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4">
-                                <div className="flex flex-row-reverse gap-4 w-full">
+                                <div className="flex flex-col xl:flex-row-reverse gap-4 w-full">
                                     <img
                                         src={"/panel.png"}
                                         alt="panel"
@@ -490,13 +646,11 @@ export default function Home() {
                                             className="text-main">BOLT</span></p>
                                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         <p className="mt-4 opacity-80">
-                                            <span className="text-main opacity-100">BOLT</span> is our custom in-house
-                                            developed game server management panel based on the very popular <span
+                                        <span className="text-main opacity-100">BOLT</span> is our bespoke game server management panel based on the very popular <span
                                             className="text-main">Pterodactyl Panel</span>.
+                                            {' '}
                                             {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                            With this, you're able to do
-                                            anything from viewing the console at real time, browsing or editing files
-                                            and much more!
+                                            We've jam packed our custom game panel with features we know you'll enjoy!
                                         </p>
                                         <div className="w-full flex gap-4 flex-row mt-4">
                                             <ul>
@@ -551,12 +705,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="background-tr">
-                        <div className="flex max flex-col justify-center item-center w-full h-auto pb-24">
+                        <div className="flex max flex-col justify-center item-center w-full h-auto pb-24 px-8 xl:p-8">
                             <div className="mb-20 flex flex-col gap-4">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
                                     <p>MONITORING</p>
                                 </Button>
-                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl">
                                     Great Transparency
                                 </p>
                                 <p className="opacity-50 font-light max-w-lg">
@@ -566,14 +720,14 @@ export default function Home() {
                                 </p>
                             </div>
                             <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4">
-                                <div className="flex flex-row gap-4 w-full">
+                                <div className="flex flex-col xl:flex-row gap-4 w-full">
                                     <img
                                         src={"/grafana.png"}
                                         alt="panel"
                                         className="rounded-lg max-w-4xl"
                                     />
                                     <div>
-                                        <p className="text-3xl font-bold">24/7 Monitoring provided by <span
+                                        <p className="text-3xl font-bold">24/7 Monitoring powered by <span
                                             className="text-main">Grafana</span></p>
                                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         <p className="mt-4 opacity-80">
@@ -598,7 +752,7 @@ export default function Home() {
                                                 </li>
                                                 <li className="flex items-center py-2 gap-2">
                                                     <IoMdCheckmarkCircleOutline size={22} className="text-main"/>
-                                                    <span className="font-light">CPU usage Graphs</span>
+                                                    <span className="font-light">CPU Usage Graphs</span>
                                                 </li>
                                             </ul>
                                             <ul>
@@ -628,7 +782,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="background-br">
-                        <div className="flex max flex-row  py-20 md:h-auto w-full">
+                        <div className="flex max flex-row  py-20 md:h-auto w-full px-8 xl:p-8">
                             <div
                                 className="mx-auto w-full relative overflow-hidden h-full md:h-[60rem] px-4 flex flex-col">
                                 <motion.div
@@ -650,10 +804,10 @@ export default function Home() {
                                                 size="sm">
                                             <p>LOCATIONS</p>
                                         </Button>
-                                        <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                        <p className="bg-clip-text drop-shadow-2xl text-white text-6xl">
                                             Powerful servers across the globe
                                         </p>
-                                        <p className="opacity-50 font-light max-w-lg">
+                                        <p className="opacity-50 font-light max-w-lg pb-12 mb:pb-0">
                                             {/* eslint-disable-next-line react/no-unescaped-entities */}
                                             We have limited stock of servers, so keep an eye out here! Don&apos;t see
                                             the location that you want? Throw us a ticket in the
@@ -740,7 +894,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="background-tr">
-                    <div className="flex max flex-row  md:h-auto w-full">
+                    <div className="flex max flex-row  md:h-auto w-full px-8 xl:p-8">
                         <div
                             className="mx-auto w-full relative overflow-hidden h-full py-24 px-4 flex flex-col">
                             <motion.div
@@ -762,7 +916,7 @@ export default function Home() {
                                             size="sm">
                                         <p>FREQUENTLY ASKED QUESTIONS</p>
                                     </Button>
-                                    <p className="bg-clip-text drop-shadow-2xl text-white text-6xl text-center md:text-start">
+                                    <p className="bg-clip-text drop-shadow-2xl text-white text-6xl">
                                         Have any questions?
                                     </p>
                                     <p className="opacity-50 font-light max-w-lg">
@@ -771,7 +925,7 @@ export default function Home() {
                                     </p>
                                 </div>
                             </motion.div>
-                            <div className="flex flex-row gap-4 w-full mt-4">
+                            <div className="flex flex-col lg:flex-row gap-4 w-full mt-4">
                                 <div className="w-full flex flex-col gap-4">
                                     <Accordion type="single" collapsible className="w-full">
                                         <AccordionItem value="item-1">

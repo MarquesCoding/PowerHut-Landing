@@ -7,6 +7,7 @@ import {Button} from "@/app/components/ui/button";
 import {IoMdCheckmarkCircleOutline} from "react-icons/io";
 import {describe} from "node:test";
 export interface PricingTier {
+    type: "web" | "game";
     logo: JSX.Element;
     title: string;
     description: string;
@@ -30,7 +31,7 @@ export interface PricingTier {
     }
 }
 
-const PricingCard: React.FC<PricingTier> = ({ logo, title, description, cpu, price, originalPrice, features, button, pill, countries }) => {
+const PricingCard: React.FC<PricingTier> = ({ logo, title , type , description, cpu, price, originalPrice, features, button, pill, countries }) => {
     return (
 
         <div className={`w-96 h-auto bg-[#141414]/60 hover:bg-[#141414] rounded-lg shadow text-white p-6 relative border border-white/10 hover:border-white/30 duration-300 hover:-translate-y-0.5`}>
@@ -42,11 +43,12 @@ const PricingCard: React.FC<PricingTier> = ({ logo, title, description, cpu, pri
                 </div>
             )}
             {logo}
-            <div className="divide-y divide-dashed divide-white/30 mt-4 flex flex-col gap-6">
+            <div className="divide-y divide-dashed divide-white/30 mt-2 flex flex-col gap-6">
                 <div>
                     <div>
                         <p className="text-2xl text-[#FF4D14] font-semibold">{title}</p>
                         <p className="text-gray-400">{description}</p>
+                        <p className="text-xs opacity-50">{type === 'web' ? "Web Hosting" : "Game Hosting"}</p>
                     </div>
                     <div className="mt-2 flex flex-row gap-4 items-center">
                         <p className="text-6xl text-white font-semibold">${price}</p>

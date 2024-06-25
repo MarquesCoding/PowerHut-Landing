@@ -13,7 +13,7 @@ const Card: React.FunctionComponent<CardProps> = ({
                                                   }) => {
     return (
         <div
-            className="w-96 h-32 flex-1 hover:scale-105 overflow-ellipsis overflow-hidden min-w-96 select-none rounded-lg hover:border-main border border-white/10 relative flex duration-300">
+            className="w-96 flex-1 h-auto hover:scale-105 overflow-ellipsis overflow-hidden min-w-96 select-none rounded-lg hover:border-main border border-white/10 relative flex duration-300">
             <div
                 className="w-full h-full absolute bg-dot-white/[0.23] rounded-2xl z-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
             <div className="flex flex-row justify-between p-4 gap-4 relative z-10">
