@@ -7,7 +7,7 @@ import {Button} from "@/app/components/ui/button";
 import {IoMdCheckmarkCircleOutline} from "react-icons/io";
 import {describe} from "node:test";
 export interface PricingTier {
-    type: "web" | "game";
+    type?: "web" | "game";
     logo: JSX.Element;
     title: string;
     description: string;
