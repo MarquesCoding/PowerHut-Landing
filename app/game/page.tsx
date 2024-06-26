@@ -102,6 +102,7 @@ export default function Page() {
                                 <div><IoIosSwitch size={32} className="text-[#FF4D14]"/></div>
                                 <p className="text-lg">Easily Switch your Jars and Games</p>
                             </div>
+                            {/* eslint-disable-next-line react/no-unescaped-entities */}
                             <p className="opacity-50">We understand that keeping your game jars updated can be a chore, so we've made it simpler. With our built-in jar-changer feature, you can easily switch or update your server jars directly through the panel, without the need to search and upload them manually.</p>
                         </div>
                     </div>
