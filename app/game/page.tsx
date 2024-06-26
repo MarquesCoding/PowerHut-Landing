@@ -80,44 +80,29 @@ export default function Page() {
                                 <div><LuDatabaseBackup size={32} className="text-[#FF4D14]"/></div>
                                 <p className="text-lg">Off-Site Regular Backups</p>
                             </div>
-                            <p className="opacity-50">Nobody likes losing data, and especially not for your
-                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                {' '}
-                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                game-servers. We've setup a reliable and easy to use backups system, that can
-                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                {' '}
-                                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                automatically create backups for you. Bonus points, they're all stored off-site in case
-                                of emergencies.</p>
+                            {/* eslint-disable-next-line react/no-unescaped-entities */}
+                            <p className="opacity-50">We understand the importance of safeguarding your game server data. That's why we've implemented a dependable and user-friendly backup system that automatically creates backups for you. Plus, for added security, all backups are stored off-site to protect against emergencies.</p>
                         </div>
                         <div className="max-w-xl">
                             <div className="flex gap-4 items-center">
                                 <div><MdOutlineSwitchAccessShortcutAdd size={32} className="text-[#FF4D14]"/></div>
                                 <p className="text-lg">Host Games, Tools & More</p>
                             </div>
-                            <p className="opacity-50">Sometimes you just want to play another game, as you should. With
-                                our Panel, you can easily switch between your favorite games, and even host a multitude
-                                of easy to use and useful tools, all from the same panel.</p>
+                            <p className="opacity-50">Sometimes you might feel like switching up your gaming experience, and our Panel makes that effortless. It allows you to seamlessly toggle between your favorite games and provides access to a variety of user-friendly tools, all from one convenient interface.</p>
                         </div>
                         <div className="max-w-xl">
                             <div className="flex gap-4 items-center">
                                 <div><RiHomeWifiFill size={32} className="text-[#FF4D14]"/></div>
                                 <p className="text-lg">Free Dedicated IPs</p>
                             </div>
-                            <p className="opacity-50">To give you the best possible experience, certain features are a
-                                must in our eyes. Features like free dedicated IPs*, multiple backup slots and more all
-                                from within our panel, at no additional cost.</p>
+                            <p className="opacity-50">To ensure you have the best possible experience, we believe some features are essential. Our panel includes perks like free dedicated IPs*, multiple backup slots, and more, all at no extra charge.</p>
                         </div>
                         <div className="max-w-xl">
                             <div className="flex gap-4 items-center">
                                 <div><IoIosSwitch size={32} className="text-[#FF4D14]"/></div>
                                 <p className="text-lg">Easily Switch your Jars and Games</p>
                             </div>
-                            <p className="opacity-50">Keeping all your game-jars up to date can be a hassle, to which we
-                                said; no more! Using our built-in jar-changer feature, easily switch or update your
-                                server jars without having to search for the proper one and upload them through the
-                                panel.</p>
+                            <p className="opacity-50">We understand that keeping your game jars updated can be a chore, so we've made it simpler. With our built-in jar-changer feature, you can easily switch or update your server jars directly through the panel, without the need to search and upload them manually.</p>
                         </div>
                     </div>
                     <div className="flex w-full h-auto flex-wrap justify-center gap-2 pb-24">
