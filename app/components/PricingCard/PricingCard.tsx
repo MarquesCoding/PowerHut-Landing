@@ -46,12 +46,13 @@ const PricingCard: React.FC<PricingTier> = ({ logo, title , type , description, 
             <div className="divide-y divide-dashed divide-white/30 mt-2 flex flex-col gap-6">
                 <div>
                     <div>
+                        <p className="text-xs opacity-50">{type === "game" ? '8700G, 5950X, 7950X*' : '8700G'}</p>
                         <p className="text-2xl text-[#FF4D14] font-semibold">{title}</p>
                         <p className="text-gray-400">{description}</p>
                         <p className="text-xs opacity-50">{type === 'web' ? "Web Hosting" : "Game Hosting"}</p>
                     </div>
                     <div className="mt-2 flex flex-row gap-4 items-center">
-                        <p className="text-6xl text-white font-semibold">${price}</p>
+                    <p className="text-6xl text-white font-semibold">${price}</p>
                         {originalPrice && (
                             <p className="text-6xl text-gray-400/20 line-through font-light">${originalPrice}</p>
                         )}

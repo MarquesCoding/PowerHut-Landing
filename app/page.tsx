@@ -432,7 +432,7 @@ export default function Home() {
                                                     <Tooltip>
                                                         <TooltipTrigger>
                                                             <p className="decoration-dotted underline opacity-50 hover:opacity-100 duration-300 text-start">
-                                                                8700GE <span
+                                                                8700G <span
                                                                 className="text-xs italic">(8C/16T @ 3.6GHz)</span>
                                                             </p>
                                                         </TooltipTrigger>
