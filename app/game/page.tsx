@@ -13,13 +13,14 @@ import {IoIosSwitch} from "react-icons/io";
 import Intercom from "@intercom/messenger-js-sdk";
 import Promo from "@/app/components/Promo/Promo";
 import NavigationBar from "@/app/components/NavigationBar/NavigationBar";
+import FAQ from "@/app/components/FAQ/FAQ";
 
 export default function Page() {
     Intercom({
         app_id: 'dcisso7v',
     });
     return (
-        <div className="w-full h-full flex flex-col">
+        <div className="w-full h-full flex flex-col items-center">
             <Promo/>
             <motion.div
                 initial={{
@@ -127,6 +128,11 @@ export default function Page() {
                     </div>
                 </div>
             </motion.div>
+            <div className="background-tr">
+                <div className="flex max flex-row  md:h-auto w-full px-8 xl:p-8">
+                    <FAQ/>
+                </div>
+            </div>
             <Footer/>
         </div>
     )

@@ -14,6 +14,7 @@ import Promo from "@/app/components/Promo/Promo";
 import NavigationBar from "@/app/components/NavigationBar/NavigationBar";
 import { FaCpanel } from "react-icons/fa6";
 import {FaArrowUp} from "react-icons/fa";
+import FAQ from "@/app/components/FAQ/FAQ";
 
 export default function Page() {
     Intercom({
@@ -55,7 +56,8 @@ export default function Page() {
                     >
                         <p className="text-8xl font-bold">Web <span className="text-[#FF4D14]">Hosting </span> Plans</p>
                         <div className="max-w-2xl mt-4 flex flex-col gap-4 opacity-50">
-                            <p>We had made our plans crazy price to performance inclined meaning that you get the best hardware for your money.</p>
+                            <p>We had made our plans crazy price to performance inclined meaning that you get the best
+                                hardware for your money.</p>
 
                         </div>
                     </motion.div>
@@ -94,7 +96,10 @@ export default function Page() {
                                 <p className="text-lg">Reliable Performance and Uptime</p>
                             </div>
                             {/* eslint-disable-next-line react/no-unescaped-entities */}
-                            <p className="opacity-50">When it comes to web hosting, consistent performance and reliability are crucial. Our hosting services ensure maximum uptime and seamless operation, providing your website with the stability it needs to thrive. Trust in our robust infrastructure to keep your site online and running smoothly.</p>
+                            <p className="opacity-50">When it comes to web hosting, consistent performance and
+                                reliability are crucial. Our hosting services ensure maximum uptime and seamless
+                                operation, providing your website with the stability it needs to thrive. Trust in our
+                                robust infrastructure to keep your site online and running smoothly.</p>
                         </div>
                     </div>
                     <div className="flex w-full h-auto flex-wrap justify-center gap-2 pb-24">
@@ -111,6 +116,11 @@ export default function Page() {
                     </div>
                 </div>
             </motion.div>
+            <div className="background-tr">
+                <div className="flex max flex-row  md:h-auto w-full px-8 xl:p-8">
+                    <FAQ/>
+                </div>
+            </div>
             <Footer/>
         </div>
     )

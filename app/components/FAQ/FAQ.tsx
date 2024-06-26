@@ -1,32 +1,43 @@
 import {motion} from "framer-motion";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/app/components/ui/accordion";
 import React from "react";
+import {Button} from "@/app/components/ui/button";
 
 const FAQ = () => {
     return (
-        <motion.div
-            initial={{
-                opacity: 0
-            }}
-            animate={{
-                opacity: 100
-            }}
-            transition={{
-                ease: "linear",
-                opacity: {duration: 1}
-            }}
-
-            className="w-full h-auto flex items-center justify-center flex-col bg-gradient-to-tr from-[#FF4D14]/10 to-transparent bg-opacity-50 pb-24 p-4 lg:0">
-            <div className="mb-20 text-center flex flex-col gap-4">
-                <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 text-6xl">
-                    FAQs
-                </p>
-                <p className="opacity-50 font-light">
-                    Our frequently asked questions
-                </p>
-            </div>
-            <div className="flex flex-col min-w-2xl w-full items-center">
-                <div className="flex flex-col gap-4 max-w-2xl min-w-2xl w-full">
+        <div
+            className="mx-auto w-full relative overflow-hidden h-full py-24 px-4 flex flex-col">
+            <motion.div
+                initial={{
+                    opacity: 0,
+                    y: 20,
+                }}
+                animate={{
+                    opacity: 1,
+                    y: 0,
+                }}
+                transition={{
+                    duration: 1,
+                }}
+                className="div"
+            >
+                <div className="flex flex-col gap-4">
+                    <Button className="w-fit h-fit font-mono text-black" variant="secondary"
+                            size="sm">
+                        <p>FREQUENTLY ASKED QUESTIONS</p>
+                    </Button>
+                    <p className="bg-clip-text drop-shadow-2xl text-white text-6xl">
+                        Have any questions?
+                    </p>
+                    <p className="opacity-50 font-light max-w-lg">
+                        {/* eslint-disable-next-line react/no-unescaped-entities */}
+                        Don't worry if you don't right now, you can always throw us a ticket - either
+                        through Discord or the billing area!
+                    </p>
+                </div>
+            </motion.div>
+            <div className="flex flex-col lg:flex-row gap-4 w-full mt-4">
+                <div className="w-full flex flex-col gap-4">
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger>How can I contact support?</AccordionTrigger>
@@ -40,10 +51,12 @@ const FAQ = () => {
                     </Accordion>
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger>How long does it take for a server to be ready?</AccordionTrigger>
+                            <AccordionTrigger>How long does it take for a server to be
+                                ready?</AccordionTrigger>
                             <AccordionContent>
                                 <p className="leading-7 mt-6 text-white/50">
-                                    Servers are available as soon as your payment has been processed, typically
+                                    Servers are available as soon as your payment has been processed,
+                                    typically
                                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                                     {' '}within a few minutes. If they aren't throw us a message.
                                 </p>
@@ -52,10 +65,12 @@ const FAQ = () => {
                     </Accordion>
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
-                            <AccordionTrigger>Can I transfer my current server to PowerHut?</AccordionTrigger>
+                            <AccordionTrigger>Can I transfer my current server to
+                                PowerHut?</AccordionTrigger>
                             <AccordionContent>
                                 <p className="leading-7 mt-6 text-white/50">
-                                    Of course! Feel free to create a ticket on our Discord Server and we will
+                                    Of course! Feel free to create a ticket on our Discord Server and we
+                                    will
                                     help you out.
                                 </p>
                             </AccordionContent>
@@ -67,7 +82,8 @@ const FAQ = () => {
                             <AccordionContent>
                                 <p className="leading-7 mt-6 text-white/50">
                                     We use a heavily customized version of the Pterodactyl panel.
-                                    As such, you can expect a fast, lag-free, and secure experience to take care
+                                    As such, you can expect a fast, lag-free, and secure experience to take
+                                    care
                                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                                     {' '}of all your server's needs!
                                 </p>
@@ -84,6 +100,8 @@ const FAQ = () => {
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
+                </div>
+                <div className="w-full flex flex-col gap-4">
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger>Can I upgrade or downgrade my server in the
@@ -112,7 +130,8 @@ const FAQ = () => {
                                 purchased?</AccordionTrigger>
                             <AccordionContent>
                                 <p className="leading-7 mt-6 text-white/50">
-                                    We can only transfer servers as needed, as it depends on the situation and
+                                    We can only transfer servers as needed, as it depends on the situation
+                                    and
                                     available stock.
                                     Feel free to open a ticket with us if you wish to change your location!
                                 </p>
@@ -125,7 +144,8 @@ const FAQ = () => {
                             <AccordionContent>
                                 <p className="leading-7 mt-6 text-white/50">
                                     We have a huge variety of supported games such as Minecraft, Valheim,
-                                    Terria, Factorio, Rust, Satisfactory and much more! Feel free to recommend a
+                                    Terria, Factorio, Rust, Satisfactory and much more! Feel free to
+                                    recommend a
                                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                                     {' '}game in the discord if we don't currently support it!
                                 </p>
@@ -145,7 +165,8 @@ const FAQ = () => {
                     </Accordion>
                 </div>
             </div>
-        </motion.div>
+        </div>
+
     )
 };
 export default FAQ;
