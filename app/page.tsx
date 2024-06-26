@@ -15,7 +15,7 @@ import Card from "@/app/components/Card/Card";
 import Footer from "@/app/components/Footer";
 import {VscGraph, VscLayoutPanelRight} from "react-icons/vsc";
 import {TbBrandMinecraft, TbChevronLeftPipe} from "react-icons/tb";
-import {FaBolt, FaGlobeAfrica, FaRegCheckCircle, FaRegHandPointer} from "react-icons/fa";
+import {FaBolt, FaGlobeAfrica, FaRegCheckCircle, FaRegHandPointer, FaTicketAlt} from "react-icons/fa";
 import {pricingTiers, webTiers} from "@/app/utils/pricing";
 import axios from "axios";
 import Intercom from "@intercom/messenger-js-sdk";
@@ -25,10 +25,11 @@ import {Button} from "@/app/components/ui/button";
 import AnimatedCursor from "react-animated-cursor";
 import Space from "@/app/components/Space/Space";
 import {BiSupport} from "react-icons/bi";
-import {IoArrowForwardCircle} from "react-icons/io5";
+import {IoArrowForwardCircle, IoGameControllerSharp} from "react-icons/io5";
 import {IoMdCheckmarkCircleOutline} from "react-icons/io";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/app/components/ui/accordion";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/app/components/ui/tooltip";
+import {MdOutlineSecurity} from "react-icons/md";
 
 export default function Home() {
     Intercom({
@@ -158,7 +159,8 @@ export default function Home() {
                     <div className="background-br">
                         <div className="flex flex-col justify-center max item-center w-full h-auto pb-24">
                             <div className="flex w-full h-auto justify-center items-center flex-col">
-                                <div className="flex w-fit h-fit flex-wrap flex-row justify-center px-8 lg:p-0 md:justify-center items-start md:items-center gap-2">
+                                <div
+                                    className="flex w-fit h-fit flex-wrap flex-row justify-center px-8 lg:p-0 md:justify-center items-start md:items-center gap-2">
                                     {webTiers
                                         .filter((_, index) => [1, 0].includes(index))
                                         .map((tier, index) => (
@@ -200,6 +202,61 @@ export default function Home() {
                         <div className="w-full h-auto pb-24 max">
                             <div className="mb-20 flex flex-col gap-4 items-start px-8 xl:p-8">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
+                                    <p>EASY TRANSFER</p>
+                                </Button>
+                                <p className="bg-clip-text drop-shadow-2xl text-white text-6xl ">
+                                    Managed Server Migration
+                                </p>
+                                <p className="opacity-50 font-light max-w-lg">
+                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                    We know sometimes it's a lot of effort to transfer from one host to another, so
+                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                    we've decided to make that prices a whole lot smoother for you.
+                                </p>
+                            </div>
+                            <div className="flex flex-col lg:flex-row justify-between bg-zinc-800/50 rounded-lg items-center p-8 text-white">
+                                <div className="flex-1 text-center mb-4 lg:mb-4 lg:mr-4">
+                                    <div className="mb-4">
+                                        <FaTicketAlt className="mx-auto text-main" size={48}/>
+                                    </div>
+                                    <h2 className="text-xl font-bold">Create a Ticket</h2>
+                                    <p>
+                                        Purchased a server with us? Ready to migrate from your old host? Join our
+                                        <a href="https://discord.gg/powerhut" className="text-main"> Discord</a> and create a
+                                        support ticket to request migration!
+                                    </p>
+                                </div>
+                                <div className="flex-1 text-center border-t-2 border-b-2 lg:border-b-0 lg:border-t-0 lg:border-l-2 lg:border-r-2 border-main/50 px-8">
+                                    <div className="mb-4">
+                                        <MdOutlineSecurity className="mx-auto text-main" size={48}/>
+                                    </div>
+                                    <h2 className="text-xl font-bold">Provide SFTP Details</h2>
+                                    <p>
+                                        Provide us with the
+                                        <span className="text-main"> FTP/SFTP</span> details of your current host
+                                        and create a
+                                        <span className="text-main"> .zip</span> of all your files. We will then
+                                        migrate your files for you!
+                                    </p>
+                                </div>
+                                <div className="flex-1 text-center mt-4 lg:mt-0 lg:ml-4">
+                                    <div className="mb-4">
+                                        <IoGameControllerSharp className="mx-auto text-main" size={48}/>
+                                    </div>
+                                    <h2 className="text-xl font-bold">Enjoy the Game!</h2>
+                                    <p>
+                                        Once migrated, we will let you know when your server is ready to go. After that,
+                                        the
+                                        <span className="text-red-500"> fun</span> can begin! Any issues, throw us a message -- we are happy to help
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="background-br">
+                        <div className="w-full h-auto pb-24 max">
+                            <div className="mb-20 flex flex-col gap-4 items-start px-8 xl:p-8">
+                                <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
                                     <p>SUPPORTED GAMES</p>
                                 </Button>
                                 <p className="bg-clip-text drop-shadow-2xl text-white text-6xl ">
@@ -225,7 +282,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="background-br">
+                    <div className="background-tr">
                         <div className="w-full max h-auto flex flex-col pb-48 px-8 xl:p-8">
                             <div className="mb-20 flex flex-col gap-4">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
@@ -323,7 +380,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="background-tr">
+                    <div className="background-br">
                         <div className="flex max flex-col w-full h-full pb-40 px-8 xl:p-8">
                             <div className="mb-20 flex flex-col gap-4">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
@@ -619,7 +676,7 @@ export default function Home() {
 
                         </div>
                     </div>
-                    <div className="background-br">
+                    <div className="background-tr">
                         <div className="flex max flex-col justify-center item-center w-full h-full  pb-40 px-8 xl:p-8">
                             <div className="mb-20 flex flex-col gap-4">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
@@ -646,7 +703,8 @@ export default function Home() {
                                             className="text-main">BOLT</span></p>
                                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         <p className="mt-4 opacity-80">
-                                        <span className="text-main opacity-100">BOLT</span> is our bespoke game server management panel based on the very popular <span
+                                            <span className="text-main opacity-100">BOLT</span> is our bespoke game
+                                            server management panel based on the very popular <span
                                             className="text-main">Pterodactyl Panel</span>.
                                             {' '}
                                             {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -704,7 +762,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="background-tr">
+                    <div className="background-br">
                         <div className="flex max flex-col justify-center item-center w-full h-auto pb-24 px-8 xl:p-8">
                             <div className="mb-20 flex flex-col gap-4">
                                 <Button className="w-fit h-fit font-mono text-black" variant="secondary" size="sm">
@@ -781,7 +839,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="background-br">
+                    <div className="background-tr">
                         <div className="flex max flex-row  py-20 md:h-auto w-full px-8 xl:p-8">
                             <div
                                 className="mx-auto w-full relative overflow-hidden h-full md:h-[60rem] px-4 flex flex-col">
@@ -893,7 +951,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="background-tr">
+                <div className="background-br">
                     <div className="flex max flex-row  md:h-auto w-full px-8 xl:p-8">
                         <div
                             className="mx-auto w-full relative overflow-hidden h-full py-24 px-4 flex flex-col">
@@ -921,7 +979,8 @@ export default function Home() {
                                     </p>
                                     <p className="opacity-50 font-light max-w-lg">
                                         {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                        Don't worry if you don't right now, you can always throw us a ticket - either through Discord or the billing area!
+                                        Don't worry if you don't right now, you can always throw us a ticket - either
+                                        through Discord or the billing area!
                                     </p>
                                 </div>
                             </motion.div>
