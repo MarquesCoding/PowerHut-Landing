@@ -24,60 +24,74 @@ export default function Page() {
     Intercom({
         app_id: 'dcisso7v',
     });
+
+    const container = {
+        hidden: { opacity: 1, translateY: -40 },
+        visible: {
+            opacity: 1,
+            translateY: 0,
+            transition: {
+                staggerChildren: 0.5,
+            },
+        },
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     return (
         <div className="w-full h-full flex flex-col">
             <Promo/>
-            <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    opacity: 100
-                }}
-                transition={{
-                    ease: "linear",
-                    opacity: {duration: 1}
-                }}
+            <div className="w-full h-auto background-tr flex items-center justify-center">
+                <div className="w-full h-full max pb-4 xl:pb-0">
+                    <div
+                        className="w-full h-full flex items-center justify-center relative z-10 flex-col">
+                        <NavigationBar/>
+                        <div className="flex flex-col w-full px-8 xl:p-8">
+                            <motion.div
+                                className="text-5xl md:text-6xl xl:text-8xl 2xl:text-9xl font-bold selection:bg-white"
+                                variants={container}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                {/*<motion.span*/}
+                                {/*    className="text-zinc-400 selection:bg-white"*/}
+                                {/*    variants={item}*/}
+                                {/*    transition={{delay: 0.1}}*/}
+                                {/*>*/}
+                                {/*    PowerHut*/}
+                                {/*    {' '}*/}
+                                {/*</motion.span>*/}
 
-                className="w-full h-[50vh] bg-gradient-to-tr from-[#FF4D14]/10 to-transparent flex flex-col items-center bg-opacity-50 relative">
-                <div className="max w-full">
-                    <NavigationBar/>
-                </div>
-                <div
-                    className="w-full h-full flex items-center justify-center relative z-10 flex-col text-center">
-                    <motion.div
-                        initial={{
-                            opacity: 0,
-                        }}
-                        animate={{
-                            opacity: 100,
-                        }}
-                        transition={{
-                            ease: "linear",
-                            opacity: {duration: 1}
-                        }}
-                        className="flex flex-col items-center"
-                    >
-                        <p className="text-8xl font-bold">PowerHut <span
-                            className="text-[#FF4D14]">Partner </span> Program</p>
-                        <div className="max-w-2xl mt-4 flex flex-col gap-4 opacity-50">
-                            <p>We provide great products and services for you and your growing community!</p>
+                                <motion.span
+                                    className="text-main selection:bg-white"
+                                    variants={item}
+                                    transition={{delay: 0.2}}
+                                >
+                                    Partner
+                                    {' '}
+                                </motion.span>
+                                <motion.span
+                                    className="text-zinc-400 selection:bg-white"
+                                    variants={item}
+                                    transition={{delay: 0.3}}
+                                >
+                                    Program.
+                                </motion.span>
+                            </motion.div>
+                            <div>
+                                <p className="mt-8 max-w-[40rem] selection:bg-main">
+                                    We provide great products and services for you and your growing community!
+                                </p>
+                            </div>
                         </div>
-                    </motion.div>
+                    </div>
+                    {/*<BackgroundBeams/>*/}
                 </div>
-            </motion.div>
+            </div>
             <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    opacity: 100
-                }}
-                transition={{
-                    ease: "linear",
-                    opacity: {duration: 1}
-                }}
-
                 className="w-full h-auto flex items-center justify-center bg-gradient-to-br from-[#FF4D14]/10 to-transparent bg-opacity-50">
                 <div
                     className="flex flex-col lg:flex-row justify-between max bg-zinc-800/50 rounded-lg items-center p-8 text-white">
@@ -155,11 +169,12 @@ export default function Page() {
                     </div>
                     <p className="pt-4">You can apply to the partner program by simply creating a ticket in our <a
                         href="https://discord.gg/powerhut" className="underline decoration-dotted text-main">Discord</a>
-                    </p><p className="pt-4 opacity-50 text-sm">~ Note, you do not need to hit all these requirements to be eligible</p>
+                    </p><p className="pt-4 opacity-50 text-sm">~ Note, you do not need to hit all these requirements to
+                    be eligible</p>
                 </div>
             </div>
             <div className="background-br">
-                <div className="flex max flex-row  md:h-auto w-full px-8 xl:p-8">
+                <div className="flex max flex-row  md:h-auto w-full">
                     <FAQ/>
                 </div>
             </div>
