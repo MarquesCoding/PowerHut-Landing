@@ -52,10 +52,15 @@ const components: { title: string; href: string; description: string }[] = [
     },
 ]
 
-export function NavigationMenuDemo() {
+interface NavigationMenu {
+    className?: string;
+}
+export const NavigationMenuDemo: React.FunctionComponent<NavigationMenu> = ({
+                                                                                className
+                                                                            }) => {
     return (
-        <NavigationMenu>
-            <NavigationMenuList>
+        <NavigationMenu className="flex flex-col">
+            <NavigationMenuList className={className}>
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Hosting</NavigationMenuTrigger>
                     <NavigationMenuContent>
