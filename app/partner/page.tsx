@@ -94,7 +94,7 @@ export default function Page() {
                         </p>
                     </div>
                     <div
-                        className="flex-1 text-center border-t-2 border-b-2 lg:border-b-0 lg:border-t-0 lg:border-l-2 border-main/50 px-8">
+                        className="flex-1 text-center border-t-2 lg:border-t-0 lg:border-l-2 border-main/50 px-8">
                         <div className="mb-4">
                             <FaDollarSign className="mx-auto text-main" size={48}/>
                         </div>
@@ -153,7 +153,9 @@ export default function Page() {
                             }
                         />
                     </div>
-                    <p className="pt-4">You can apply to the partner program by simply creating a ticket in our <a href="https://discord.gg/powerhut" className="underline decoration-dotted text-main">Discord</a></p>
+                    <p className="pt-4">You can apply to the partner program by simply creating a ticket in our <a
+                        href="https://discord.gg/powerhut" className="underline decoration-dotted text-main">Discord</a>
+                    </p><p className="pt-4 opacity-50 text-sm">~ Note, you do not need to hit all these requirements to be eligible</p>
                 </div>
             </div>
             <div className="background-br">
