@@ -146,12 +146,15 @@ export default function Page() {
                                                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                                                     for the purpose of the CCPA (California Consumer Privacy Act),
                                                     refers to
+                                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                                                     the Company as the legal entity that collects Consumers' personal
                                                     information and determines the purposes and means of the processing
                                                     of
+                                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                                                     Consumers' personal information, or on behalf of which such
                                                     information
                                                     is collected and that alone, or jointly with others, determines the
+                                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                                                     purposes and means of the processing of consumers' personal
                                                     information,
                                                     that does business in the State of California.</b>
@@ -253,6 +256,7 @@ export default function Page() {
                                                     selling,
                                                     renting, releasing, disclosing, disseminating, making available,
                                                     transferring, or otherwise communicating orally, in writing, or by
+                                                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                                                     electronic or other means, a Consumer's personal information to
                                                     another
                                                     business or a third party for monetary or other valuable
@@ -566,6 +570,7 @@ export default function Page() {
                                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         Our Service may contain links to other websites that are not operated by Us. If
                                         You
+                                        {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         click on a third party link, You will be directed to that third party's site. We
                                         strongly advise You to review the Privacy Policy of every site You visit.
                                     </p>
@@ -589,6 +594,7 @@ export default function Page() {
                                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         We will let You know via email and/or a prominent notice on Our Service, prior
                                         to
+                                        {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         the change becoming effective and update the "Last updated" date at the top of
                                         this
                                         Privacy Policy.

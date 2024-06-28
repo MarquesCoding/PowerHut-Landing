@@ -525,6 +525,7 @@ export default function Page() {
                                         you through the
                                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         service are (except as expressly stated by us) provided 'as is' and 'as
+                                        {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         available'
                                         for
                                         your use, without
@@ -626,6 +627,7 @@ export default function Page() {
                                         time. If a
                                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         revision is material We will make reasonable efforts to provide at least 30
+                                        {/* eslint-disable-next-line react/no-unescaped-entities */}
                                         days'
                                         notice
                                         prior to any
