@@ -11,6 +11,7 @@ import {
     NavigationMenuTrigger, navigationMenuTriggerStyle
 } from "../ui/navigation-menu";
 import {cn} from "@/app/utils/cn";
+import {Button} from "@/app/components/ui/button";
 
 
 const components: { title: string; href: string; description: string }[] = [
@@ -86,6 +87,10 @@ export function NavigationMenuDemo() {
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
+               <Link href="/partner">
+                   <Button variant={"secondary"} className={"bg-main text-white"}
+                   >Partners</Button>
+               </Link>
                 <NavigationMenuItem>
                     <NavigationMenuTrigger
                         className="bg-white text-black hover:bg-[#FF4D14] hover:text-white"

@@ -5,7 +5,7 @@ import {Button} from "@/app/components/ui/button";
 interface CardProps {
     header: string;
     content: string;
-    logo: JSX.Element;
+    logo?: JSX.Element;
 }
 
 const Card: React.FunctionComponent<CardProps> = ({
