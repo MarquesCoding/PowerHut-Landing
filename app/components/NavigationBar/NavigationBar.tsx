@@ -1,3 +1,4 @@
+'use client'
 import {NavigationMenuDemo} from "@/app/components/Navigation/Navigation";
 import React, {useEffect, useState} from "react";
 import {PiHamburgerBold} from "react-icons/pi";
