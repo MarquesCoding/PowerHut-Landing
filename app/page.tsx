@@ -31,6 +31,7 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/ap
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/app/components/ui/tooltip";
 import {MdOutlineSecurity} from "react-icons/md";
 import GamePanel from "@/app/components/GamePanel/GamePanel";
+import Flag from 'react-world-flags'
 
 export default function Home() {
     Intercom({
@@ -760,7 +761,7 @@ export default function Home() {
                     <div className="background-tr">
                         <div className="flex max flex-row  py-20 md:h-auto w-full px-8 xl:p-8">
                             <div
-                                className="mx-auto w-full relative overflow-hidden h-full md:h-[60rem] px-4 flex flex-col">
+                                className="mx-auto w-full relative overflow-hidden h-full md:h-[70rem] px-4 flex flex-col">
                                 <motion.div
                                     initial={{
                                         opacity: 0,
@@ -789,9 +790,78 @@ export default function Home() {
                                             the location that you want? Throw us a ticket in the
                                             Discord!
                                         </p>
+
+                                        <h1 className="lg:text-4xl">
+                                            Nine global low-latency locations
+                                        </h1>
+                                        <div className="flex flex-row flex-wrap gap-4">
+                                            <div
+                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
+                                                <Flag code="USA" className="w-6"/>
+                                                <div>
+                                                    Seattle (West USA)
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
+                                                <Flag code="USA" className="w-6"/>
+                                                <div>
+                                                    St. Louis (Central USA)
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
+                                                <Flag code="USA" className="w-6"/>
+                                                <div>
+                                                    New York (East USA)
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
+                                                <Flag code="GBR" className="w-6"/>
+                                                <div>
+                                                    London (UK)
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
+                                                <Flag code="DEU" className="w-6"/>
+                                                <div>
+                                                    Falkenstein (Germany)
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
+                                                <Flag code="IND" className="w-6"/>
+                                                <div>
+                                                    India (Asia)
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
+                                                <Flag code="SGP" className="w-6"/>
+                                                <div>
+                                                    Singapore (Asia)
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
+                                                <Flag code="aus" className="w-6"/>
+                                                <div>
+                                                    Sydney (Australia)
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
+                                                <Flag code="jpn" className="w-6"/>
+                                                <div>
+                                                    Japan (Asia)
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </motion.div>
-                                <div className="w-full h-auto sm:h-[80rem] flex items-center justify-center">
+                                <div className="w-full h-auto sm:h-[90rem] flex items-center justify-center">
                                     <MapComponent
                                         locations={[
                                             {
