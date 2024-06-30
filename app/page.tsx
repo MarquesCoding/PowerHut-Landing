@@ -795,20 +795,20 @@ export default function Home() {
                                             Nine global low-latency locations
                                         </h1>
                                         <div className="flex flex-row flex-wrap gap-4">
-                                            <div
-                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
-                                                <Flag code="USA" className="w-6"/>
-                                                <div>
-                                                    Seattle (West USA)
-                                                </div>
-                                            </div>
-                                            <div
-                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
-                                                <Flag code="USA" className="w-6"/>
-                                                <div>
-                                                    St. Louis (Central USA)
-                                                </div>
-                                            </div>
+                                            {/*<div*/}
+                                            {/*    className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">*/}
+                                            {/*    <Flag code="USA" className="w-6"/>*/}
+                                            {/*    <div>*/}
+                                            {/*        Seattle (West USA)*/}
+                                            {/*    </div>*/}
+                                            {/*</div>*/}
+                                            {/*<div*/}
+                                            {/*    className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">*/}
+                                            {/*    <Flag code="USA" className="w-6"/>*/}
+                                            {/*    <div>*/}
+                                            {/*        St. Louis (Central USA)*/}
+                                            {/*    </div>*/}
+                                            {/*</div>*/}
                                             <div
                                                 className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
                                                 <Flag code="USA" className="w-6"/>
@@ -816,13 +816,13 @@ export default function Home() {
                                                     New York (East USA)
                                                 </div>
                                             </div>
-                                            <div
-                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
-                                                <Flag code="GBR" className="w-6"/>
-                                                <div>
-                                                    London (UK)
-                                                </div>
-                                            </div>
+                                            {/*<div*/}
+                                            {/*    className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">*/}
+                                            {/*    <Flag code="GBR" className="w-6"/>*/}
+                                            {/*    <div>*/}
+                                            {/*        London (UK)*/}
+                                            {/*    </div>*/}
+                                            {/*</div>*/}
                                             <div
                                                 className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
                                                 <Flag code="DEU" className="w-6"/>
@@ -830,81 +830,81 @@ export default function Home() {
                                                     Falkenstein (Germany)
                                                 </div>
                                             </div>
-                                            <div
-                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
-                                                <Flag code="IND" className="w-6"/>
-                                                <div>
-                                                    India (Asia)
-                                                </div>
-                                            </div>
-                                            <div
-                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
-                                                <Flag code="SGP" className="w-6"/>
-                                                <div>
-                                                    Singapore (Asia)
-                                                </div>
-                                            </div>
-                                            <div
-                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
-                                                <Flag code="aus" className="w-6"/>
-                                                <div>
-                                                    Sydney (Australia)
-                                                </div>
-                                            </div>
-                                            <div
-                                                className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">
-                                                <Flag code="jpn" className="w-6"/>
-                                                <div>
-                                                    Japan (Asia)
-                                                </div>
-                                            </div>
+                                            {/*<div*/}
+                                            {/*    className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">*/}
+                                            {/*    <Flag code="IND" className="w-6"/>*/}
+                                            {/*    <div>*/}
+                                            {/*        India (Asia)*/}
+                                            {/*    </div>*/}
+                                            {/*</div>*/}
+                                            {/*<div*/}
+                                            {/*    className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">*/}
+                                            {/*    <Flag code="SGP" className="w-6"/>*/}
+                                            {/*    <div>*/}
+                                            {/*        Singapore (Asia)*/}
+                                            {/*    </div>*/}
+                                            {/*</div>*/}
+                                            {/*<div*/}
+                                            {/*    className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">*/}
+                                            {/*    <Flag code="aus" className="w-6"/>*/}
+                                            {/*    <div>*/}
+                                            {/*        Sydney (Australia)*/}
+                                            {/*    </div>*/}
+                                            {/*</div>*/}
+                                            {/*<div*/}
+                                            {/*    className="flex flex-row gap-2 items-center bg-white px-2 rounded text-black opacity-50 duration-300 hover:opacity-100">*/}
+                                            {/*    <Flag code="jpn" className="w-6"/>*/}
+                                            {/*    <div>*/}
+                                            {/*        Japan (Asia)*/}
+                                            {/*    </div>*/}
+                                            {/*</div>*/}
                                         </div>
                                     </div>
                                 </motion.div>
                                 <div className="w-full h-auto sm:h-[90rem] flex items-center justify-center">
                                     <MapComponent
                                         locations={[
-                                            {
-                                                x: 44.5, y: 21.5, name: (
-                                                    <div className="flex items-center justify-center flex-col">
-                                                        <p>London - UK</p>
-                                                        <p className="opacity-50 text-xs">Coming soon</p>
-                                                    </div>
-                                                )
-                                            },
+                                            // {
+                                            //     x: 44.5, y: 21.5, name: (
+                                            //         <div className="flex items-center justify-center flex-col">
+                                            //             <p>London - UK</p>
+                                            //             <p className="opacity-50 text-xs">Coming soon</p>
+                                            //         </div>
+                                            //     )
+                                            // },
                                             {x: 46, y: 25.5, name: `Germany - FSN`},
-                                            {
-                                                x: 92, y: 80, name: (
-                                                    <div className="flex items-center justify-center flex-col">
-                                                        <p>Australia - SY</p>
-                                                        <p className="opacity-50 text-xs">Coming soon</p>
-                                                    </div>
-                                                )
-                                            },
-                                            {
-                                                x: 78, y: 60, name: (
-                                                    <div className="flex items-center justify-center flex-col">
-                                                        <p>Asia - SG</p>
-                                                        <p className="opacity-50 text-xs">Coming soon</p>
-                                                    </div>
-                                                )
-                                            },
-                                            {
-                                                x: 70, y: 50, name: (
-                                                    <div className="flex items-center justify-center flex-col">
-                                                        <p>Asia - IN</p>
-                                                        <p className="opacity-50 text-xs">Coming soon</p>
-                                                    </div>
-                                                )
-                                            },
-                                            {
-                                                x: 96.5, y: 90, name: (
-                                                    <div className="flex items-center justify-center flex-col">
-                                                        <p>Asia - JP</p>
-                                                        <p className="opacity-50 text-xs">Coming soon</p>
-                                                    </div>
-                                                )
-                                            },
+                                            // {
+                                            //     x: 92, y: 80, name: (
+                                            //         <div className="flex items-center justify-center flex-col">
+                                            //             <p>Australia - SY</p>
+                                            //             <p className="opacity-50 text-xs">Coming soon</p>
+                                            //         </div>
+                                            //     )
+                                            // },
+                                            // {
+                                            //     x: 78, y: 60, name: (
+                                            //         <div className="flex items-center justify-center flex-col">
+                                            //             <p>Asia - SG</p>
+                                            //             <p className="opacity-50 text-xs">Coming soon</p>
+                                            //         </div>
+                                            //     )
+                                            // },
+                                            // {
+                                            //     x: 70, y: 50, name: (
+                                            //         <div className="flex items-center justify-center flex-col">
+                                            //             <p>Asia - IN</p>
+                                            //             <p className="opacity-50 text-xs">Coming soon</p>
+                                            //         </div>
+                                            //     )
+                                            // },
+                                            // {
+                                            //     x: 96.5, y: 90, name: (
+                                            //         <div className="flex items-center justify-center flex-col">
+                                            //             <p>Asia - JP</p>
+                                            //             <p className="opacity-50 text-xs">Coming soon</p>
+                                            //         </div>
+                                            //     )
+                                            // },
                                             {
                                                 x: 25, y: 24, name: (
                                                     <div className="flex items-center justify-center flex-col">
@@ -913,22 +913,22 @@ export default function Home() {
                                                     </div>
                                                 ), showTooltip: true
                                             },
-                                            {
-                                                x: 8, y: 25, name: (
-                                                    <div className="flex items-center justify-center flex-col">
-                                                        <p>America - SEA</p>
-                                                        <p className="opacity-50 text-xs">Coming soon</p>
-                                                    </div>
-                                                )
-                                            },
-                                            {
-                                                x: 18, y: 30, name: (
-                                                    <div className="flex items-center justify-center flex-col">
-                                                        <p>America - MIS</p>
-                                                        <p className="opacity-50 text-xs">Coming soon</p>
-                                                    </div>
-                                                )
-                                            },
+                                            // {
+                                            //     x: 8, y: 25, name: (
+                                            //         <div className="flex items-center justify-center flex-col">
+                                            //             <p>America - SEA</p>
+                                            //             <p className="opacity-50 text-xs">Coming soon</p>
+                                            //         </div>
+                                            //     )
+                                            // },
+                                            // {
+                                            //     x: 18, y: 30, name: (
+                                            //         <div className="flex items-center justify-center flex-col">
+                                            //             <p>America - MIS</p>
+                                            //             <p className="opacity-50 text-xs">Coming soon</p>
+                                            //         </div>
+                                            //     )
+                                            // },
                                         ]}
                                         mapSrc={
                                             "https://upload.wikimedia.org/wikipedia/commons/a/a0/World_map_with_points.svg"
