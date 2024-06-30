@@ -24,7 +24,6 @@ export default function RootLayout({
         <meta content="PowerHut.pro" property="og:site_name"/>
         <meta content="PowerHut | Game Hosting" property="og:title"/>
         <meta content="en" property="og:locale"/>
-        <meta content="https://www.powerhut.pro/logo-white.png" property="og:image"/>
         <meta
             content="Want to play games friends, but don't have a huge budget? We offer the Latest Intel & AMD CPUs at competitive prices."
             property="og:description"/>
@@ -34,7 +33,6 @@ export default function RootLayout({
         <meta
             content="Want to play games friends, but don't have a huge budget? We offer the Latest Intel & AMD CPUs at competitive prices."
             property="twitter:description"/>
-        <meta content="https://www.powerhut.pro/logo-white.png" property="twitter:image"/>
         <meta content="#FF4D14" data-react-helmet="true" name="theme-color"/>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
