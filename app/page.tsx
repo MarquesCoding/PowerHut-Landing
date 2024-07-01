@@ -82,11 +82,11 @@ export default function Home() {
                 <Promo/>
                 {/*<Space/>*/}
                 {/*<BackgroundBeams/>*/}
-                <div className="w-full h-auto background-tr flex items-center justify-center">
+                <NavigationBar/>
+                <div className="w-full h-auto background-tr flex items-center justify-center pt-24">
                     <div className="w-full h-full max pb-4 xl:pb-0">
                         <div
                             className="w-full h-full flex items-center justify-center relative z-10 flex-col">
-                            <NavigationBar/>
                             <div className="flex flex-col w-full px-8 xl:p-8">
                                 <div
                                     className="w-fit h-auto rounded-full mb-4 text-sm flex items-center gap-4 py-1 px-2 border border-[#FF4D14]/50 bg-[#FF4D14]/10"
@@ -276,21 +276,21 @@ export default function Home() {
                                     logo={<HiLightningBolt size={32}/>}
                                     header={"99.99% Uptime"}
                                     content={
-                                        "Uptime is critical for your operations, and reliable infrastructure is a must."
+                                        "Maintaining continuous operations is essential, and dependable infrastructure is crucial."
                                     }
                                 />
                                 <Card
                                     logo={<FaShieldHeart size={32}/>}
                                     header={"DDoS Protection"}
                                     content={
-                                        "All of our servers are outfitted with DDoS protection to help you avoid downtime."
+                                        "All our servers are equipped with DDoS protection to minimize downtime."
                                     }
                                 />
                                 <Card
                                     logo={<FaGaugeHigh size={32}/>}
                                     header={"High performance"}
                                     content={
-                                        "All of our services use high end AMD & Intel CPUs and enterprise level NVMe or SATA SSD storage."
+                                        "All our services utilize top-tier AMD and Intel CPUs along with enterprise-grade NVMe or SATA SSD storage."
                                     }
                                 />
                                 <Card

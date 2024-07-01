@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" >
         <meta content="https://powerhut.pro" property="og:url"/>
         <meta content="website" property="og:type"/>
         <meta content="PowerHut.pro" property="og:site_name"/>
@@ -41,7 +41,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
-        <body className={inter.className}>{children}</body>
+        <body data-theme="dark" >{children}</body>
         </html>
     );
 }
