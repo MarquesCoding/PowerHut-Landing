@@ -174,13 +174,16 @@ export default function Home() {
                                 <div className="mt-4">
                                     <p className="mt-4 mb-3 font-bold">
                                         Looking for more prices? These are only some of our plans. Take a look at <a
-                                        href="/game" className="underline text-main decoration-dotted">Server Hosting</a>.
+                                        href="/game" className="underline text-main decoration-dotted">Server
+                                        Hosting</a>.
                                     </p>
                                     <p className="opacity-60 text-white w-full text-xs">*CPU will vary
                                         based
                                         on
                                         server
-                                        location - will be equivalent | *** Fair Use Policy</p>
+                                        location - will be equivalent</p>
+                                    <p className="opacity-60 text-white w-full text-xs">** More backups can be purchased at checkout</p>
+                                    <p className="opacity-60 text-white w-full text-xs">*** Fair Use Policy</p>
                                 </div>
                             </div>
                         </div>

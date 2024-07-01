@@ -14,7 +14,7 @@ export const pricingTiers: PricingTier[] = [
         description: 'Perfect for proxy servers',
         cpu: 'Ryzen 7 8700GE*',
         price: 2,
-        features: ['Shared CPU Core', '2GB DDR5 RAM','1GBit/s Connection', '10GB NVMe SSD', 'Shared IP', 'Custom Game Changer'],
+        features: ['Shared CPU Core', '2GB DDR5 RAM','1GBit/s Connection', '10GB NVMe SSD', 'Shared IP', '3 Backups**', '3 Allocations', 'Custom Game Changer'],
         button: {
             text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/test-server"
@@ -33,7 +33,7 @@ export const pricingTiers: PricingTier[] = [
         description: 'Recommended for 4-8 friends',
         cpu: 'Ryzen 7 8700GE*',
         price: 4,
-        features: ['Shared CPU Core', '4GB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP' , 'Custom Game Changer'],
+        features: ['Shared CPU Core', '4GB DDR5 RAM','1GBit/s Connection', '15GB NVMe SSD', 'Shared IP' , '3 Backups**', '3 Allocations', 'Custom Game Changer'],
         button: {
             text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/friends"
@@ -53,7 +53,7 @@ export const pricingTiers: PricingTier[] = [
         cpu: 'Ryzen 7 8700GE*',
         price: 8,
         originalPrice: 12,
-        features: ['Shared CPU Core', '6GB DDR5 RAM**','1GBit/s Connection', '30GB NVMe SSD', 'Shared IP', 'Custom Game Changer'],
+        features: ['Shared CPU Core', '6GB DDR5 RAM**','1GBit/s Connection', '30GB NVMe SSD', 'Shared IP', '3 Backups**', '3 Allocations', 'Custom Game Changer'],
         button: {
             text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/basic"
@@ -73,7 +73,7 @@ export const pricingTiers: PricingTier[] = [
         cpu: 'Ryzen 7 8700GE*',
         price: 12,
         originalPrice: 16,
-        features: ['Dedicated CPU Core', '8GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP', 'Custom Game Changer'],
+        features: ['Dedicated CPU Core', '8GB DDR5 RAM**','1GBit/s Connection', '50GB NVMe SSD', 'Dedicated IP', '3 Backups**', '5 Allocations', 'Custom Game Changer'],
         button: {
             text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/advanced"
@@ -96,7 +96,7 @@ export const pricingTiers: PricingTier[] = [
         cpu: 'Ryzen 9 7950X*',
         price: 16,
         originalPrice: 20,
-        features: ['Dedicated CPU Core', '12GB DDR5 RAM**','1GBit/s Connection', '100GB NVMe SSD', 'Dedicated IP' , 'Custom Game Changer'],
+        features: ['Dedicated CPU Core', '12GB DDR5 RAM**','1GBit/s Connection', '100GB NVMe SSD', 'Dedicated IP', '3 Backups**', '5 Allocations', 'Custom Game Changer'],
         button: {
             text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/pro"
@@ -116,7 +116,7 @@ export const pricingTiers: PricingTier[] = [
         cpu: 'Ryzen 9 7950X*',
         price: 20,
         originalPrice: 24,
-        features: ['Dedicated CPU Core', '16GB DDR5 RAM**','1GBit/s Connection', 'Unmetered NVMe SSD***', 'Dedicated IP' , 'Custom Game Changer'],
+        features: ['Dedicated CPU Core', '16GB DDR5 RAM**','1GBit/s Connection', 'Unmetered NVMe SSD***', 'Dedicated IP' , '3 Backups**', '5 Allocations', 'Custom Game Changer'],
         button: {
             text: 'Purchase',
             link: "https://billing.powerhut.pro/index.php?rp=/store/game-server-hosting/top"
