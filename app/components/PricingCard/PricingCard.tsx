@@ -74,8 +74,8 @@ const PricingCard: React.FC<PricingTier> = ({ logo, title , type , description, 
                             <TooltipTrigger>
                                 <Flag code="us" className="w-8"/>
                             </TooltipTrigger>
-                            <TooltipContent>
-                                New York City
+                            <TooltipContent className="text-center">
+                                New York City <p className="opacity-80 font-bold">(5950X, 7950X)</p>
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
@@ -98,8 +98,8 @@ const PricingCard: React.FC<PricingTier> = ({ logo, title , type , description, 
                             <TooltipTrigger>
                                 <Flag code="EU" className="w-8"/>
                             </TooltipTrigger>
-                            <TooltipContent>
-                                Falkenstein
+                            <TooltipContent className="text-center">
+                                Falkenstein <p className="opacity-80 font-bold">(8700G)</p>
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
