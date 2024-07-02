@@ -53,17 +53,9 @@ const NavigationBar = () => {
                     alt={"logo"}
                 />
             </div>
-            <div className="lg:flex hidden">
-                <NavigationMenuDemo />
-            </div>
             <div className="lg:hidden flex">
                 <PiHamburgerBold size={32} onClick={() => setIsOpen(!isOpen)} />
             </div>
-            {isOpen && (
-                <div className="w-full min-h-32 h-auto top-[4rem] left-0 items-center justify-center flex absolute bg-zinc-900 z-[100]">
-                    <NavigationMenuDemo className="flex flex-row gap-0 items-center justify-center" />
-                </div>
-            )}
         </div>
     );
 };
