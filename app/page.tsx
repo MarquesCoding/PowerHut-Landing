@@ -119,6 +119,7 @@ export default function Home() {
                                         variants={item}
                                         transition={{delay: 1}}
                                     >
+
                                         Game,
                                         {' '}
                                     </motion.span>
