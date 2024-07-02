@@ -105,8 +105,7 @@ export default function Home() {
                         </div>
                         {/*<BackgroundBeams/>*/}
                     </div>
-                </div>
-                <Footer/>
+                </div>=
             </motion.div>
         </>
 // </FollowerPointerCard>
